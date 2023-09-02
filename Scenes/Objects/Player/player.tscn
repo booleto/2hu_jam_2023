@@ -1,18 +1,63 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1qx1q2ylej3m"]
+[gd_scene load_steps=11 format=3 uid="uid://c1qx1q2ylej3m"]
 
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_vfgup"]
 [ext_resource type="Texture2D" uid="uid://cnpqh0tfojtxj" path="res://icon.svg" id="2_xdxv1"]
+[ext_resource type="AnimationNodeStateMachine" uid="uid://b2lxvso4dptkf" path="res://Resources/AnimationNode/Player/player_animation_node_state_machine.tres" id="3_y7nai"]
+
+[sub_resource type="Animation" id="Animation_l0fj7"]
+resource_name = "idle"
+
+[sub_resource type="Animation" id="Animation_227mn"]
+resource_name = "attack"
+length = 0.2
+
+[sub_resource type="Animation" id="Animation_jwgep"]
+resource_name = "death"
+
+[sub_resource type="Animation" id="Animation_6npac"]
+resource_name = "respawn"
+
+[sub_resource type="Animation" id="Animation_173l6"]
+resource_name = "walk"
+length = 0.5
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2t2c3"]
+_data = {
+"attack": SubResource("Animation_227mn"),
+"death": SubResource("Animation_jwgep"),
+"idle": SubResource("Animation_l0fj7"),
+"respawn": SubResource("Animation_6npac"),
+"walk": SubResource("Animation_173l6")
+}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bw3gt"]
 radius = 59.0
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 7
 script = ExtResource("1_vfgup")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_xdxv1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_2t2c3")
+}
 
 [node name="CollisionBox" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_bw3gt")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = ExtResource("3_y7nai")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/conditions/moving = false
+parameters/conditions/player_attack = false
+parameters/conditions/player_death = false
+parameters/conditions/respawning = false
+
+[node name="Inventory" type="Node" parent="."]

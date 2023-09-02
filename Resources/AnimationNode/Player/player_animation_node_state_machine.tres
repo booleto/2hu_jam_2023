@@ -1,0 +1,80 @@
+[gd_resource type="AnimationNodeStateMachine" load_steps=19 format=3 uid="uid://b2lxvso4dptkf"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1ie67"]
+animation = &"attack"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_06c7h"]
+animation = &"death"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kcjmm"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2qhcm"]
+animation = &"respawn"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uax3f"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_62vkf"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ouc6h"]
+advance_mode = 2
+advance_condition = &"player_attack"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3efo7"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_v2hyd"]
+advance_mode = 2
+advance_condition = &"player_death"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bpbsg"]
+advance_mode = 2
+advance_condition = &"player_death"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ut4xe"]
+advance_mode = 2
+advance_condition = &"respawning"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2uo4b"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_aki8l"]
+advance_mode = 2
+advance_condition = &"respawning"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6lsx3"]
+advance_mode = 2
+advance_condition = &"moving"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qvfdx"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_g5yad"]
+advance_mode = 2
+advance_condition = &"respawning"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_g6n3k"]
+advance_mode = 2
+advance_condition = &"player_attack"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_eqd8j"]
+advance_mode = 2
+
+[resource]
+states/Start/position = Vector2(155, 106)
+states/attack/node = SubResource("AnimationNodeAnimation_1ie67")
+states/attack/position = Vector2(461, 27)
+states/death/node = SubResource("AnimationNodeAnimation_06c7h")
+states/death/position = Vector2(717, 190)
+states/idle/node = SubResource("AnimationNodeAnimation_kcjmm")
+states/idle/position = Vector2(436, 218)
+states/respawn/node = SubResource("AnimationNodeAnimation_2qhcm")
+states/respawn/position = Vector2(745, 74)
+states/walk/node = SubResource("AnimationNodeAnimation_uax3f")
+states/walk/position = Vector2(310, 95)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_62vkf"), "idle", "attack", SubResource("AnimationNodeStateMachineTransition_ouc6h"), "attack", "idle", SubResource("AnimationNodeStateMachineTransition_3efo7"), "idle", "death", SubResource("AnimationNodeStateMachineTransition_v2hyd"), "attack", "death", SubResource("AnimationNodeStateMachineTransition_bpbsg"), "attack", "respawn", SubResource("AnimationNodeStateMachineTransition_ut4xe"), "respawn", "idle", SubResource("AnimationNodeStateMachineTransition_2uo4b"), "idle", "respawn", SubResource("AnimationNodeStateMachineTransition_aki8l"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_6lsx3"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_qvfdx"), "walk", "respawn", SubResource("AnimationNodeStateMachineTransition_g5yad"), "walk", "attack", SubResource("AnimationNodeStateMachineTransition_g6n3k"), "walk", "death", SubResource("AnimationNodeStateMachineTransition_eqd8j")]
