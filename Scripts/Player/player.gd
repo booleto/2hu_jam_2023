@@ -80,7 +80,7 @@ func take_damage(dmg):
 
 # Tấn công
 func attack():
-	get_parent().spawn_danmaku(fire_position.global_position, get_global_mouse_position() - position, dmk_speed, dmk_damage)
+	get_parent().spawn_danmaku(fire_position.global_position, get_global_mouse_position() - position, dmk_damage, dmk_speed)
 
 
 func _on_footstep_finished():
