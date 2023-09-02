@@ -15,6 +15,22 @@
 [node name="Enemy" parent="GameEntities" instance=ExtResource("2_xe5fl")]
 
 [node name="Danmaku" parent="GameEntities" instance=ExtResource("3_7x6lx")]
+position = Vector2(470, 52)
+
+[node name="Danmaku5" parent="GameEntities" instance=ExtResource("3_7x6lx")]
+position = Vector2(551, 46)
+
+[node name="Danmaku3" parent="GameEntities" instance=ExtResource("3_7x6lx")]
+position = Vector2(518, -35)
+
+[node name="Danmaku4" parent="GameEntities" instance=ExtResource("3_7x6lx")]
+position = Vector2(382, 45)
+
+[node name="Danmaku2" parent="GameEntities" instance=ExtResource("3_7x6lx")]
+position = Vector2(424, -24)
+
+[node name="Danmaku6" parent="GameEntities" instance=ExtResource("3_7x6lx")]
+position = Vector2(323, -26)
 
 [node name="PItem" parent="GameEntities" instance=ExtResource("4_4s0vl")]
 

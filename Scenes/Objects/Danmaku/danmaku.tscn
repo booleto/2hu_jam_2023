@@ -1,3 +1,32 @@
-[gd_scene format=3 uid="uid://dt2kf02le6ak"]
+[gd_scene load_steps=5 format=3 uid="uid://dt2kf02le6ak"]
 
-[node name="Danmaku" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://cnpqh0tfojtxj" path="res://icon.svg" id="1_a46lh"]
+[ext_resource type="Script" path="res://Scripts/Danmaku/danmaku.gd" id="1_usq5i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tppep"]
+radius = 29.14
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gllf0"]
+radius = 277.96
+
+[node name="Danmaku" type="Area2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_usq5i")
+
+[node name="CollisionBox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tppep")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("1_a46lh")
+
+[node name="SoundBox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SoundBox"]
+visible = false
+shape = SubResource("CircleShape2D_gllf0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
