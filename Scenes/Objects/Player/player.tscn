@@ -1,12 +1,25 @@
-[gd_scene load_steps=12 format=3 uid="uid://c1qx1q2ylej3m"]
+[gd_scene load_steps=14 format=3 uid="uid://c1qx1q2ylej3m"]
 
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_vfgup"]
 [ext_resource type="Texture2D" uid="uid://bxul2vhtttb31" path="res://Assets/Sprites/Player/Mokou.png" id="2_4ebf5"]
+[ext_resource type="Texture2D" uid="uid://j5tw7ejn15ov" path="res://Assets/Sprites/Player/Mokou_attack.png" id="3_w6b4a"]
 [ext_resource type="AnimationNodeStateMachine" uid="uid://b2lxvso4dptkf" path="res://Resources/AnimationNode/Player/player_animation_node_state_machine.tres" id="3_y7nai"]
 
 [sub_resource type="Animation" id="Animation_227mn"]
 resource_name = "attack"
 length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mokou:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("3_w6b4a"), ExtResource("2_4ebf5")]
+}
 
 [sub_resource type="Animation" id="Animation_jwgep"]
 resource_name = "death"
@@ -21,8 +34,12 @@ resource_name = "respawn"
 resource_name = "walk"
 length = 0.5
 
+[sub_resource type="Animation" id="Animation_308ks"]
+length = 0.001
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2t2c3"]
 _data = {
+"RESET": SubResource("Animation_308ks"),
 "attack": SubResource("Animation_227mn"),
 "death": SubResource("Animation_jwgep"),
 "idle": SubResource("Animation_l0fj7"),
@@ -36,7 +53,7 @@ _data = {
 radius = 20.0
 
 [node name="Player" type="CharacterBody2D"]
-rotation = 55.9078
+rotation = 85.4101
 collision_layer = 2
 collision_mask = 3
 motion_mode = 1

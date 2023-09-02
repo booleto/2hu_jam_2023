@@ -10,7 +10,7 @@ func set_data():
 	$Soundbox/Area.shape.radius = sound_detection_radius
 	$Hitbox.shape.radius = hitbox_radius
 	$Hurtbox/Shape.shape.radius = hurtbox_radius
-	$Sprite.texture = sprite
+	#$Sprite.texture = sprite
 
 func _ready():
 	set_data()

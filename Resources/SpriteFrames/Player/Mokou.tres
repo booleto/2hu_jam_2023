@@ -1,0 +1,26 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://cs18w6tf6gq1v"]
+
+[ext_resource type="Texture2D" uid="uid://bxul2vhtttb31" path="res://Assets/Sprites/Player/Mokou.png" id="1_iqcys"]
+[ext_resource type="Texture2D" uid="uid://j5tw7ejn15ov" path="res://Assets/Sprites/Player/Mokou_attack.png" id="2_q0taa"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_iqcys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_q0taa")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_iqcys")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
