@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://ca04c5obu5g44"]
+
+[ext_resource type="Texture2D" uid="uid://dyhg447brg885" path="res://Assets/Sprites/Danmaku/preview.png" id="1_m3wrd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydgm4"]
+atlas = ExtResource("1_m3wrd")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1w1bs"]
+atlas = ExtResource("1_m3wrd")
+region = Rect2(416, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_no4hp"]
+atlas = ExtResource("1_m3wrd")
+region = Rect2(448, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbu2m"]
+atlas = ExtResource("1_m3wrd")
+region = Rect2(480, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydgm4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1w1bs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_no4hp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbu2m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
