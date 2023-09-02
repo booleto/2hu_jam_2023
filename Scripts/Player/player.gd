@@ -65,8 +65,9 @@ func take_damage(dmg):
 	health -= dmg
 	print("Took damage. Health:", health)
 
+# Tấn công
 func attack():
-	get_parent().spawn_danmaku(fire_position.position, get_global_mouse_position() - position, dmk_speed, dmk_damage)
+	get_parent().spawn_danmaku(fire_position.global_position, get_global_mouse_position() - position, dmk_speed, dmk_damage)
 
 
 func _on_footstep_finished():
