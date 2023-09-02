@@ -53,7 +53,7 @@ _data = {
 radius = 20.0
 
 [node name="Player" type="CharacterBody2D"]
-rotation = 85.4101
+rotation = 81.4509
 collision_layer = 2
 collision_mask = 3
 motion_mode = 1
