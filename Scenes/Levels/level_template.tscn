@@ -14,6 +14,7 @@
 script = ExtResource("1_rh6ip")
 
 [node name="Player" parent="GameEntities" groups=["Player"] instance=ExtResource("1_ifevs")]
+rotation = -50.5589
 
 [node name="Enemy" parent="GameEntities" instance=ExtResource("2_xe5fl")]
 

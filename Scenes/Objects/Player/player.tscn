@@ -42,7 +42,7 @@ collision_mask = 3
 motion_mode = 1
 script = ExtResource("1_vfgup")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Mokou" type="Sprite2D" parent="."]
 scale = Vector2(4, 4)
 texture = ExtResource("2_4ebf5")
 
@@ -73,6 +73,7 @@ collision_mask = 4
 
 [node name="Shape" type="CollisionShape2D" parent="Hurtbox"]
 shape = SubResource("CircleShape2D_3q74r")
+debug_color = Color(0, 0.639216, 0.388235, 0.419608)
 
 [node name="FirePosition" type="Marker2D" parent="."]
 position = Vector2(40, 0)

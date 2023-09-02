@@ -10,7 +10,7 @@ func set_direction(dir : Vector2):
 	direction = dir.normalized()
 
 # Đạn bay
-func _physics_process(delta):
+func _physics_process(_delta):
 	var velocity = direction * speed
 	look_at(position + velocity)
 	position = position + velocity
