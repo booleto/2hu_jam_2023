@@ -31,12 +31,12 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bw3gt"]
-radius = 22.86
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3q74r"]
-radius = 18.0
+radius = 20.0
 
 [node name="Player" type="CharacterBody2D"]
+rotation = -5.96991
 collision_layer = 2
 collision_mask = 3
 motion_mode = 1
@@ -78,8 +78,12 @@ debug_color = Color(0, 0.639216, 0.388235, 0.419608)
 [node name="FirePosition" type="Marker2D" parent="."]
 position = Vector2(40, 0)
 
-[node name="Footstep" type="AudioStreamPlayer2D" parent="."]
-max_distance = 10.0
-area_mask = 8
+[node name="Footstep" type="AudioStreamPlayer" parent="."]
+
+[node name="Soundbox" type="Area2D" parent="."]
+
+[node name="Shape" type="CollisionShape2D" parent="Soundbox"]
+shape = SubResource("CircleShape2D_3q74r")
+debug_color = Color(0.937255, 0, 0.647059, 0.419608)
 
 [connection signal="finished" from="Footstep" to="." method="_on_footstep_finished"]

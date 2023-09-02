@@ -18,10 +18,13 @@ signal player_respawn
 var health : int = 100
 var respawns_left : int = 5
 
-func _ready():
+func set_data():
 	$CollisionBox.shape.radius = hitbox_radius
 	$Hurtbox/Shape.shape.radius = hurtbox_radius
-	$Footstep.max_distance = footstep_radius
+	$Soundbox/Shape.shape.radius = footstep_radius
+
+func _ready():
+	set_data()
 
 # Lấy vector input người dùng để di chuyểm
 func get_input():
@@ -41,8 +44,7 @@ func _physics_process(_delta):
 	look_at(get_global_mouse_position())
 
 	if Engine.is_editor_hint():
-		$CollisionBox.shape.radius = hitbox_radius
-		$Hurtbox/Shape.shape.radius = hurtbox_radius
+		set_data()
 	else:
 		move_and_slide()
 
