@@ -34,10 +34,6 @@ advance_condition = &"player_death"
 advance_mode = 2
 advance_condition = &"player_death"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ut4xe"]
-advance_mode = 2
-advance_condition = &"respawning"
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2uo4b"]
 switch_mode = 2
 advance_mode = 2
@@ -64,6 +60,11 @@ advance_condition = &"player_attack"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_eqd8j"]
 advance_mode = 2
+advance_condition = &"player_death"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mytfu"]
+advance_mode = 2
+advance_condition = &"respawning"
 
 [resource]
 states/Start/position = Vector2(155, 106)
@@ -77,4 +78,4 @@ states/respawn/node = SubResource("AnimationNodeAnimation_2qhcm")
 states/respawn/position = Vector2(745, 74)
 states/walk/node = SubResource("AnimationNodeAnimation_uax3f")
 states/walk/position = Vector2(310, 95)
-transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_62vkf"), "idle", "attack", SubResource("AnimationNodeStateMachineTransition_ouc6h"), "attack", "idle", SubResource("AnimationNodeStateMachineTransition_3efo7"), "idle", "death", SubResource("AnimationNodeStateMachineTransition_v2hyd"), "attack", "death", SubResource("AnimationNodeStateMachineTransition_bpbsg"), "attack", "respawn", SubResource("AnimationNodeStateMachineTransition_ut4xe"), "respawn", "idle", SubResource("AnimationNodeStateMachineTransition_2uo4b"), "idle", "respawn", SubResource("AnimationNodeStateMachineTransition_aki8l"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_6lsx3"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_qvfdx"), "walk", "respawn", SubResource("AnimationNodeStateMachineTransition_g5yad"), "walk", "attack", SubResource("AnimationNodeStateMachineTransition_g6n3k"), "walk", "death", SubResource("AnimationNodeStateMachineTransition_eqd8j")]
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_62vkf"), "idle", "attack", SubResource("AnimationNodeStateMachineTransition_ouc6h"), "attack", "idle", SubResource("AnimationNodeStateMachineTransition_3efo7"), "idle", "death", SubResource("AnimationNodeStateMachineTransition_v2hyd"), "attack", "death", SubResource("AnimationNodeStateMachineTransition_bpbsg"), "respawn", "idle", SubResource("AnimationNodeStateMachineTransition_2uo4b"), "idle", "respawn", SubResource("AnimationNodeStateMachineTransition_aki8l"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_6lsx3"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_qvfdx"), "walk", "respawn", SubResource("AnimationNodeStateMachineTransition_g5yad"), "walk", "attack", SubResource("AnimationNodeStateMachineTransition_g6n3k"), "walk", "death", SubResource("AnimationNodeStateMachineTransition_eqd8j"), "attack", "respawn", SubResource("AnimationNodeStateMachineTransition_mytfu")]
