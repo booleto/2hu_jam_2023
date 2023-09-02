@@ -1,3 +1,37 @@
-[gd_scene format=3 uid="uid://chhsxxwlq64bs"]
+[gd_scene load_steps=5 format=3 uid="uid://chhsxxwlq64bs"]
 
-[node name="Enemy" type="Node2D"]
+[ext_resource type="Script" path="res://Scripts/Enemy/enemy.gd" id="1_4oga8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oj8rt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pimv7"]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ch317"]
+radius = 15.0
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_4oga8")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_oj8rt")
+
+[node name="Soundbox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+monitorable = false
+
+[node name="Area" type="CollisionShape2D" parent="Soundbox"]
+shape = SubResource("CircleShape2D_pimv7")
+debug_color = Color(0.945098, 0, 0.596078, 0.419608)
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+monitoring = false
+
+[node name="Shape" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("CircleShape2D_ch317")
+debug_color = Color(0, 0.647059, 0.207843, 0.419608)

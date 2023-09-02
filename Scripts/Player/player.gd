@@ -1,3 +1,4 @@
+@tool
 extends CharacterBody2D
 class_name Player
 
@@ -8,6 +9,7 @@ signal player_respawn
 @export var dmk_speed = 10
 @export var dmk_damage = 50
 @export var hitbox_radius = 10
+@export var hurtbox_radius = 10
 @export var footstep_radius = 20
 
 @onready var animation_tree : AnimationTree = $AnimationTree
@@ -17,23 +19,32 @@ var health : int = 100
 var respawns_left : int = 5
 
 func _ready():
-	$Hurtbox/Shape.shape.radius = hitbox_radius
+	$CollisionBox.shape.radius = hitbox_radius
+	$Hurtbox/Shape.shape.radius = hurtbox_radius
 	$Footstep.max_distance = footstep_radius
 
 # Lấy vector input người dùng để di chuyểm
 func get_input():
-	var input_direction = Input.get_vector("left", "right", "up", "down")
+	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = input_direction * speed
 
 # Update animation mỗi frame
 func _process(_delta):
-	update_animation_params()
+	if !Engine.is_editor_hint():
+		update_animation_params()
 	
 # Di chuyển theo thời gian
 func _physics_process(_delta):
-	get_input()
+	if !Engine.is_editor_hint():
+		get_input()
+
 	look_at(get_global_mouse_position())
-	move_and_slide()
+
+	if Engine.is_editor_hint():
+		$CollisionBox.shape.radius = hitbox_radius
+		$Hurtbox/Shape.shape.radius = hurtbox_radius
+	else:
+		move_and_slide()
 
 # Kiểm tra điều kiện để chỉnh animation tree
 func update_animation_params():
