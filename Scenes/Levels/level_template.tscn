@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://cedveobf44rv7"]
+
+[ext_resource type="PackedScene" uid="uid://c1qx1q2ylej3m" path="res://Scenes/Objects/Player/player.tscn" id="1_ifevs"]
+[ext_resource type="PackedScene" uid="uid://chhsxxwlq64bs" path="res://Scenes/Objects/Enemy/enemy.tscn" id="2_xe5fl"]
+[ext_resource type="PackedScene" uid="uid://dt2kf02le6ak" path="res://Scenes/Objects/Danmaku/danmaku.tscn" id="3_7x6lx"]
+[ext_resource type="TileSet" uid="uid://bhxmfe0msahhf" path="res://Resources/Tileset/tileset.tres" id="3_xmtiq"]
+[ext_resource type="PackedScene" uid="uid://cyb7mfpr6ll6d" path="res://Scenes/Objects/PItem/p_item.tscn" id="4_4s0vl"]
+
+[node name="Main" type="Node2D"]
+
+[node name="GameEntities" type="Node" parent="."]
+
+[node name="Player" parent="GameEntities" instance=ExtResource("1_ifevs")]
+
+[node name="Enemy" parent="GameEntities" instance=ExtResource("2_xe5fl")]
+
+[node name="Danmaku" parent="GameEntities" instance=ExtResource("3_7x6lx")]
+
+[node name="PItem" parent="GameEntities" instance=ExtResource("4_4s0vl")]
+
+[node name="GameStateService" type="Node" parent="."]
+
+[node name="Utils" type="Node" parent="."]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("3_xmtiq")
+format = 2
