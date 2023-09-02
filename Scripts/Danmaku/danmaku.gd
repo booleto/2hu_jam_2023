@@ -12,8 +12,9 @@ func set_direction(dir : Vector2):
 # Đạn bay
 func _physics_process(delta):
 	var velocity = direction * speed
+	look_at(position + velocity)
 	position = position + velocity
-
+	
 # Gọi khi đạn bay trúng vật khác
 func _on_body_entered(body):
 	if body is Player:

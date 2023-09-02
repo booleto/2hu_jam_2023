@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cedveobf44rv7"]
+[gd_scene load_steps=7 format=3 uid="uid://cedveobf44rv7"]
 
 [ext_resource type="PackedScene" uid="uid://c1qx1q2ylej3m" path="res://Scenes/Objects/Player/player.tscn" id="1_ifevs"]
+[ext_resource type="Script" path="res://Scripts/GameEntities/game_entities.gd" id="1_rh6ip"]
 [ext_resource type="PackedScene" uid="uid://chhsxxwlq64bs" path="res://Scenes/Objects/Enemy/enemy.tscn" id="2_xe5fl"]
 [ext_resource type="PackedScene" uid="uid://dt2kf02le6ak" path="res://Scenes/Objects/Danmaku/danmaku.tscn" id="3_7x6lx"]
 [ext_resource type="TileSet" uid="uid://bhxmfe0msahhf" path="res://Resources/Tileset/tileset.tres" id="3_xmtiq"]
@@ -9,28 +10,14 @@
 [node name="Main" type="Node2D"]
 
 [node name="GameEntities" type="Node" parent="."]
+script = ExtResource("1_rh6ip")
 
 [node name="Player" parent="GameEntities" groups=["Player"] instance=ExtResource("1_ifevs")]
 
 [node name="Enemy" parent="GameEntities" instance=ExtResource("2_xe5fl")]
 
 [node name="Danmaku" parent="GameEntities" instance=ExtResource("3_7x6lx")]
-position = Vector2(470, 52)
-
-[node name="Danmaku5" parent="GameEntities" instance=ExtResource("3_7x6lx")]
-position = Vector2(551, 46)
-
-[node name="Danmaku3" parent="GameEntities" instance=ExtResource("3_7x6lx")]
-position = Vector2(518, -35)
-
-[node name="Danmaku4" parent="GameEntities" instance=ExtResource("3_7x6lx")]
-position = Vector2(382, 45)
-
-[node name="Danmaku2" parent="GameEntities" instance=ExtResource("3_7x6lx")]
-position = Vector2(424, -24)
-
-[node name="Danmaku6" parent="GameEntities" instance=ExtResource("3_7x6lx")]
-position = Vector2(323, -26)
+position = Vector2(210, 23)
 
 [node name="PItem" parent="GameEntities" instance=ExtResource("4_4s0vl")]
 
