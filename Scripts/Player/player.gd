@@ -40,13 +40,11 @@ func _process(_delta):
 func _physics_process(_delta):
 	if !Engine.is_editor_hint():
 		get_input()
-
-	look_at(get_global_mouse_position())
-
-	if Engine.is_editor_hint():
-		set_data()
-	else:
+		look_at(get_global_mouse_position())
 		move_and_slide()
+	else:
+		set_data()
+		
 
 # Kiểm tra điều kiện để chỉnh animation tree
 func update_animation_params():
