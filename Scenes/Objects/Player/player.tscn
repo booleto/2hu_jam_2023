@@ -4,15 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://bxul2vhtttb31" path="res://Assets/Sprites/Player/Mokou.png" id="2_4ebf5"]
 [ext_resource type="AnimationNodeStateMachine" uid="uid://b2lxvso4dptkf" path="res://Resources/AnimationNode/Player/player_animation_node_state_machine.tres" id="3_y7nai"]
 
-[sub_resource type="Animation" id="Animation_l0fj7"]
-resource_name = "idle"
-
 [sub_resource type="Animation" id="Animation_227mn"]
 resource_name = "attack"
 length = 0.2
 
 [sub_resource type="Animation" id="Animation_jwgep"]
 resource_name = "death"
+
+[sub_resource type="Animation" id="Animation_l0fj7"]
+resource_name = "idle"
 
 [sub_resource type="Animation" id="Animation_6npac"]
 resource_name = "respawn"
@@ -71,8 +71,14 @@ parameters/conditions/respawning = false
 collision_layer = 4
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+[node name="Shape" type="CollisionShape2D" parent="Hurtbox"]
 shape = SubResource("CircleShape2D_3q74r")
 
 [node name="FirePosition" type="Marker2D" parent="."]
 position = Vector2(40, 0)
+
+[node name="Footstep" type="AudioStreamPlayer2D" parent="."]
+max_distance = 10.0
+area_mask = 8
+
+[connection signal="finished" from="Footstep" to="." method="_on_footstep_finished"]
