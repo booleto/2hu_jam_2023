@@ -1,8 +1,14 @@
-[gd_scene load_steps=27 format=3 uid="uid://chhsxxwlq64bs"]
+[gd_scene load_steps=33 format=3 uid="uid://chhsxxwlq64bs"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy/enemy.gd" id="1_4oga8"]
 [ext_resource type="Texture2D" uid="uid://diwh8amqgbxwm" path="res://Assets/Sprites/Enemy/enemyfairy1combat.png" id="2_nfrxj"]
 [ext_resource type="Texture2D" uid="uid://d1jie7bkl52cs" path="res://Assets/Sprites/Enemy/enemyfairy1idle.png" id="2_x4ovc"]
+[ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/BTRoot.gd" id="4_vfk6x"]
+[ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Composite/BTSelector.gd" id="5_v2t6w"]
+[ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Composite/BTSequence.gd" id="6_662v7"]
+[ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Leaves/BTActionBlackboardSet.gd" id="7_fj5sb"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/chase.gd" id="8_2m5mj"]
+[ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Leaves/BTActionWait.gd" id="9_5l4jl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oj8rt"]
 
@@ -304,7 +310,8 @@ transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_4oga8")
-move_speed = 250.0
+walk_speed = 150.0
+run_speed = 250.0
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_oj8rt")
@@ -350,7 +357,8 @@ parameters/conditions/moving = false
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_desired_distance = 58.1
-target_desired_distance = 60.0
+target_desired_distance = 70.0
+max_speed = 99999.0
 
 [node name="VisionBox" type="Area2D" parent="."]
 collision_layer = 2
@@ -358,6 +366,29 @@ collision_mask = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="VisionBox"]
 polygon = PackedVector2Array(-28, -26, -28, 26, 259, 84, 259, -84)
+
+[node name="BTRoot" type="Node" parent="." node_paths=PackedStringArray("blackboard")]
+script = ExtResource("4_vfk6x")
+actor_path = NodePath("..")
+blackboard = NodePath("@Node@53007")
+
+[node name="main" type="Node" parent="BTRoot"]
+script = ExtResource("5_v2t6w")
+
+[node name="Chase" type="Node" parent="BTRoot/main"]
+script = ExtResource("6_662v7")
+
+[node name="SetSeesPlayer" type="Node" parent="BTRoot/main/Chase"]
+script = ExtResource("7_fj5sb")
+blackboard_key = "sees_player"
+expression = "actor.sees_player"
+can_overwrite_value = true
+
+[node name="ChaseIfSeesPlayer" type="Node" parent="BTRoot/main/Chase"]
+script = ExtResource("8_2m5mj")
+
+[node name="BTActionWait" type="Node" parent="BTRoot/main"]
+script = ExtResource("9_5l4jl")
 
 [connection signal="target_reached" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_target_reached"]
 [connection signal="body_entered" from="VisionBox" to="." method="_on_vision_box_body_entered"]
