@@ -1,3 +1,134 @@
-[gd_scene format=3 uid="uid://dxi0fnvj5y78i"]
+[gd_scene load_steps=8 format=3 uid="uid://dxi0fnvj5y78i"]
 
-[node name="HUD" type="Node2D"]
+[ext_resource type="Script" path="res://Scenes/Overlay/hp_label.gd" id="1_m10vh"]
+[ext_resource type="Script" path="res://Scenes/Overlay/hp_bar.gd" id="1_ubtj7"]
+[ext_resource type="Script" path="res://Scenes/Overlay/danger_bar.gd" id="3_xhd2x"]
+[ext_resource type="Script" path="res://addons/segmented_bar/segmented_bar.gd" id="4_2br3r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pjxci"]
+bg_color = Color(0.705882, 0, 0, 1)
+
+[sub_resource type="Gradient" id="Gradient_d8f16"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_60418"]
+gradient = SubResource("Gradient_d8f16")
+width = 20
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="HP" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -50.0
+offset_right = 272.0
+grow_vertical = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Panel" type="Panel" parent="HP"]
+layout_mode = 2
+
+[node name="Bar" type="ProgressBar" parent="HP"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/fill = SubResource("StyleBoxFlat_pjxci")
+max_value = 5.0
+step = 1.0
+value = 3.0
+rounded = true
+show_percentage = false
+script = ExtResource("1_ubtj7")
+
+[node name="Text" type="Label" parent="HP"]
+layout_mode = 2
+text = "0 / 5"
+horizontal_alignment = 1
+script = ExtResource("1_m10vh")
+
+[node name="Danger" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -50.0
+offset_right = 96.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Panel" type="Panel" parent="Danger"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Danger"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Danger/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Danger/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+script = ExtResource("3_xhd2x")
+
+[node name="SegmentedBar" type="HBoxContainer" parent="Danger/HBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 7
+script = ExtResource("4_2br3r")
+foreground_color = Color(0.454902, 0.466667, 0, 1)
+background_color = Color(0.2, 0.2, 0.2, 1)
+max_value = 5.0
+value = 1.0
+segment_texture = SubResource("GradientTexture1D_60418")
+total_segments = 5
+seperation = 7
+
+[node name="Fairies" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -272.0
+offset_top = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Panel" type="Panel" parent="Fairies"]
+layout_mode = 2
+
+[node name="Bar" type="ProgressBar" parent="Fairies"]
+layout_mode = 2
+size_flags_vertical = 1
+rounded = true
+show_percentage = false
+script = ExtResource("1_ubtj7")
+
+[node name="Text" type="Label" parent="Fairies"]
+layout_mode = 2
+text = "0 / 5"
+horizontal_alignment = 1
+script = ExtResource("1_m10vh")

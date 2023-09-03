@@ -18,10 +18,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameState="*res://Scripts/GameState/game_state.gd"
+PlayerData="*res://Scripts/Player/player_data.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/yet_another_behavior_tree/plugin.cfg")
+enabled=PackedStringArray("res://addons/segmented_bar/plugin.cfg", "res://addons/yet_another_behavior_tree/plugin.cfg")
 
 [input]
 
