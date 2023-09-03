@@ -1,12 +1,10 @@
-[gd_scene load_steps=53 format=3 uid="uid://chhsxxwlq64bs"]
+[gd_scene load_steps=44 format=3 uid="uid://chhsxxwlq64bs"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy/enemy.gd" id="1_4oga8"]
 [ext_resource type="Texture2D" uid="uid://diwh8amqgbxwm" path="res://Assets/Sprites/Enemy/enemyfairy1combat.png" id="2_nfrxj"]
-[ext_resource type="Script" path="res://Scripts/Enemy/Soundbox.gd" id="2_tetot"]
+[ext_resource type="Script" path="res://Scripts/Enemy/SoundsMonitor.gd" id="2_nhqfj"]
 [ext_resource type="Texture2D" uid="uid://d1jie7bkl52cs" path="res://Assets/Sprites/Enemy/enemyfairy1idle.png" id="2_x4ovc"]
-[ext_resource type="Texture2D" uid="uid://d2v1lxcvdr3qg" path="res://Assets/Sprites/Visual effect/EnemySpottedMokou.png" id="4_ekvq8"]
 [ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/BTRoot.gd" id="4_vfk6x"]
-[ext_resource type="Texture2D" uid="uid://5hkvugg085ha" path="res://Assets/Sprites/Visual effect/MokouStunnedtheEnemyohgodohfuck.png" id="5_44tqv"]
 [ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Composite/BTSelector.gd" id="5_v2t6w"]
 [ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Composite/BTSequence.gd" id="6_662v7"]
 [ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/SetState.gd" id="7_2j6yi"]
@@ -15,15 +13,12 @@
 [ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/RaycastCheck.gd" id="8_6eetk"]
 [ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/CheckViewbox.gd" id="8_ojp6s"]
 [ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Leaves/BTActionWait.gd" id="9_5l4jl"]
-[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsProcess.gd" id="9_elgba"]
 [ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/Attack.gd" id="9_yu6x7"]
 [ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/SetActorMoveSpeed.gd" id="10_kmp4m"]
 [ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/MoveToTarget.gd" id="11_ehnue"]
 [ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/SetActorAttackAnim.gd" id="11_w1ce1"]
 [ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Blackboard/BTBlackboard.gd" id="14_s55ac"]
 [ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/MoveToInvestigate.gd" id="16_a3i3y"]
-[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsHearingSounds.gd" id="17_d2bvp"]
-[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/SetActorAlertAnim.gd" id="20_skrji"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oj8rt"]
 
@@ -35,35 +30,6 @@ radius = 15.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7n0n0"]
 size = Vector2(11.8149, 20)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_axfs6"]
-atlas = ExtResource("5_44tqv")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8w4mc"]
-atlas = ExtResource("5_44tqv")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bo5ya"]
-atlas = ExtResource("5_44tqv")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_u6xea"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_axfs6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8w4mc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bo5ya")
-}],
-"loop": true,
-"name": &"default",
-"speed": 7.0
-}]
 
 [sub_resource type="Animation" id="Animation_0h2ai"]
 length = 0.001
@@ -113,43 +79,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [2]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../StatusSprite:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("../StatusSprite:frame")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("..:process_mode")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
+"values": [3]
 }
 
 [sub_resource type="Animation" id="Animation_kwkii"]
@@ -202,30 +132,6 @@ tracks/3/keys = {
 "update": 1,
 "values": [3]
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../StatusSprite:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("../StatusSprite:frame")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [2]
-}
 
 [sub_resource type="Animation" id="Animation_5l0tk"]
 resource_name = "death"
@@ -273,18 +179,6 @@ tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [4]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("..:process_mode")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0.1),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [4]
@@ -357,30 +251,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [7, 6, 8, 6]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../StatusSprite:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../StatusSprite:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_coylj"]
 _data = {
@@ -449,7 +319,7 @@ states/move/node = SubResource("AnimationNodeAnimation_xyrc2")
 states/move/position = Vector2(305, 211)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_34o8p"), "idle", "move", SubResource("AnimationNodeStateMachineTransition_045mt"), "move", "idle", SubResource("AnimationNodeStateMachineTransition_qw3uh"), "idle", "attack", SubResource("AnimationNodeStateMachineTransition_6chry"), "move", "attack", SubResource("AnimationNodeStateMachineTransition_0w8sg"), "attack", "idle", SubResource("AnimationNodeStateMachineTransition_3bt53"), "idle", "death", SubResource("AnimationNodeStateMachineTransition_k0rjh"), "attack", "death", SubResource("AnimationNodeStateMachineTransition_ly7f3"), "move", "death", SubResource("AnimationNodeStateMachineTransition_55r7u")]
 
-[node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
+[node name="Enemy" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_4oga8")
@@ -457,19 +327,20 @@ walk_speed = 150.0
 run_speed = 250.0
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CircleShape2D_oj8rt")
 
 [node name="Soundbox" type="Area2D" parent="."]
 collision_layer = 8
 collision_mask = 8
 monitorable = false
-script = ExtResource("2_tetot")
 
 [node name="Area" type="CollisionShape2D" parent="Soundbox"]
 shape = SubResource("CircleShape2D_pimv7")
 debug_color = Color(0.945098, 0, 0.596078, 0.419608)
 
 [node name="Hurtbox" type="Area2D" parent="."]
+visible = false
 collision_layer = 4
 collision_mask = 4
 monitoring = false
@@ -486,7 +357,6 @@ collision_mask = 2
 polygon = PackedVector2Array(-28, -26, -28, 26, 259, 84, 259, -84)
 
 [node name="AttackBox" type="Area2D" parent="."]
-visible = false
 collision_layer = 0
 collision_mask = 2
 
@@ -495,34 +365,15 @@ position = Vector2(28.8015, 0)
 scale = Vector2(7.16934, 3.59667)
 shape = SubResource("RectangleShape2D_7n0n0")
 
-[node name="InvulTimer" type="Timer" parent="."]
-wait_time = 0.1
-one_shot = true
-
-[node name="StunTimer" type="Timer" parent="."]
-wait_time = 5.0
-one_shot = true
+[node name="SoundsMonitor" type="Node" parent="."]
+script = ExtResource("2_nhqfj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(4, 4)
 texture = ExtResource("2_nfrxj")
-hframes = 2
+hframes = 3
 vframes = 4
 frame = 7
-
-[node name="StatusSprite" type="Sprite2D" parent="."]
-position = Vector2(9, -44)
-scale = Vector2(4, 4)
-texture = ExtResource("4_ekvq8")
-hframes = 3
-frame = 1
-
-[node name="EffectSprite" type="AnimatedSprite2D" parent="."]
-visible = false
-position = Vector2(-2, -37)
-scale = Vector2(2, 2)
-sprite_frames = SubResource("SpriteFrames_u6xea")
-frame_progress = 0.513732
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Sprite2D")
@@ -551,9 +402,6 @@ blackboard = NodePath("../BTBlackboard")
 [node name="main" type="Node" parent="BTRoot"]
 script = ExtResource("5_v2t6w")
 
-[node name="IsProcess" type="Node" parent="BTRoot/main"]
-script = ExtResource("9_elgba")
-
 [node name="Attack" type="Node" parent="BTRoot/main"]
 script = ExtResource("6_662v7")
 
@@ -563,9 +411,6 @@ script = ExtResource("6_662v7")
 [node name="AddToBBoard" type="Node" parent="BTRoot/main/Attack/IsAttack"]
 script = ExtResource("7_gb1p3")
 key = "player_in_view_box"
-
-[node name="SetActorAttackAnim" type="Node" parent="BTRoot/main/Attack/IsAttack"]
-script = ExtResource("11_w1ce1")
 
 [node name="CheckViewbox" type="Node" parent="BTRoot/main/Attack/IsAttack"]
 script = ExtResource("8_ojp6s")
@@ -605,18 +450,14 @@ can_overwrite_value = true
 [node name="Attack" type="Node" parent="BTRoot/main/Attack/MoveAndAttack/Attack"]
 script = ExtResource("9_yu6x7")
 
+[node name="SetActorAttackAnim" type="Node" parent="BTRoot/main"]
+script = ExtResource("11_w1ce1")
+
 [node name="Alerted" type="Node" parent="BTRoot/main"]
 script = ExtResource("6_662v7")
 
-[node name="SetActorAlertAnimFalse" type="Node" parent="BTRoot/main/Alerted"]
-script = ExtResource("20_skrji")
-
 [node name="IsHearingSounds" type="Node" parent="BTRoot/main/Alerted"]
-script = ExtResource("17_d2bvp")
-
-[node name="SetActorAlertAnimTrue" type="Node" parent="BTRoot/main/Alerted"]
-script = ExtResource("20_skrji")
-is_moving = true
+script = ExtResource("6_662v7")
 
 [node name="InvestigateSound" type="Node" parent="BTRoot/main/Alerted"]
 script = ExtResource("6_662v7")
@@ -633,9 +474,9 @@ script = ExtResource("9_5l4jl")
 [node name="BTBlackboard" type="Node" parent="."]
 script = ExtResource("14_s55ac")
 
+[connection signal="area_entered" from="Soundbox" to="SoundsMonitor" method="_on_soundbox_area_entered"]
 [connection signal="body_entered" from="VisionBox" to="." method="_on_vision_box_body_entered"]
 [connection signal="body_exited" from="VisionBox" to="." method="_on_vision_box_body_exited"]
 [connection signal="body_entered" from="AttackBox" to="." method="_on_attack_box_body_entered"]
 [connection signal="body_exited" from="AttackBox" to="." method="_on_attack_box_body_exited"]
-[connection signal="timeout" from="StunTimer" to="." method="_on_stun_timer_timeout"]
 [connection signal="target_reached" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_target_reached"]

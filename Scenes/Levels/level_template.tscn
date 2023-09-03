@@ -17,9 +17,7 @@ script = ExtResource("1_rh6ip")
 rotation = -44.5128
 
 [node name="Enemy" parent="GameEntities" instance=ExtResource("2_xe5fl")]
-position = Vector2(-378, 51)
-walk_speed = null
-run_speed = null
+position = Vector2(181, 146)
 
 [node name="Danmaku" parent="GameEntities" instance=ExtResource("3_7x6lx")]
 position = Vector2(210, 23)

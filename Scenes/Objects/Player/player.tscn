@@ -58,6 +58,7 @@ collision_layer = 2
 collision_mask = 3
 motion_mode = 1
 script = ExtResource("1_vfgup")
+dmk_damage = 10
 
 [node name="Mokou" type="Sprite2D" parent="."]
 scale = Vector2(4, 4)
