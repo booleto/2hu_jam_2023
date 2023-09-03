@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://5hkvugg085ha"
+=======
+uid="uid://b6qfgm8fqlop"
+>>>>>>> e343b5c6f1849bb69c706966bb41b5b449f1a16b
 path="res://.godot/imported/MokouStunnedtheEnemyohgodohfuck.png-7f4a64dd33404fc054d09ea22b3a3caa.ctex"
 metadata={
 "vram_texture": false

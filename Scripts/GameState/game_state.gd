@@ -12,9 +12,9 @@ signal stage_won
 signal stage_lose
 
 func _process(_delta):
-	if Input.is_action_just_pressed("ui_pause") && current_scene == STAGE && current_state not in [WIN, LOSE]:
+	if Input.is_action_just_pressed("ui_pause") && current_scene == STAGE && current_state <= WIN:
 		get_tree().paused = !get_tree().paused
-		current_state = PAUSE if get_tree().paused else ACTIVE
+		current_state = !get_tree().paused
 
 func set_won():
 	current_state = WIN

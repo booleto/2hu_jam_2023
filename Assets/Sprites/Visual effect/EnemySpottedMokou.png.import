@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://d2v1lxcvdr3qg"
+=======
+uid="uid://bacsiyjt61a3n"
+>>>>>>> e343b5c6f1849bb69c706966bb41b5b449f1a16b
 path="res://.godot/imported/EnemySpottedMokou.png-97775bcc63ebbd9ba608bdbdde69e588.ctex"
 metadata={
 "vram_texture": false

@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://dd7jsuuv4sogn"
-=======
-uid="uid://bjoti8avao20"
->>>>>>> e343b5c6f1849bb69c706966bb41b5b449f1a16b
-path="res://.godot/imported/MokouShootBooletAndEnemyFartThisWoohoo.png-83ebffca97d43a07ca9cd1aa15cddfae.ctex"
+uid="uid://d28ppwseitj54"
+path="res://.godot/imported/icon.png-ae7e44b2cd86676ea809067705af8770.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Visual effect/MokouShootBooletAndEnemyFartThisWoohoo.png"
-dest_files=["res://.godot/imported/MokouShootBooletAndEnemyFartThisWoohoo.png-83ebffca97d43a07ca9cd1aa15cddfae.ctex"]
+source_file="res://addons/segmented_bar/assets/icon.png"
+dest_files=["res://.godot/imported/icon.png-ae7e44b2cd86676ea809067705af8770.ctex"]
 
 [params]
 
