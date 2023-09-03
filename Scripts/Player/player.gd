@@ -5,18 +5,23 @@ class_name Player
 signal player_death
 signal player_respawn
 
+@export var max_health : int = 3
 @export var speed = 400
 @export var dmk_speed = 10
-@export var dmk_damage = 50
+@export var dmk_damage = 1
 @export var hitbox_radius = 10
 @export var hurtbox_radius = 10
 @export var footstep_radius = 20
+@export var is_respawning : bool = false
 
 @onready var animation_tree : AnimationTree = $AnimationTree
 @onready var fire_position : Marker2D = $FirePosition
 
-var health : int = 100
+var health = max_health
 var respawns_left : int = 5
+
+var knockback : Vector2 = Vector2.ZERO
+var knockback_decay : float = 0.5
 
 func init_data():
 	$CollisionBox.shape.radius = hitbox_radius
@@ -36,10 +41,17 @@ func _physics_process(_delta):
 	if !Engine.is_editor_hint():
 		update_input()
 		look_at(get_global_mouse_position())
+		update_knockback()
 		move_and_slide()
 	else:
 		init_data()
 		
+# Cập nhật knockback
+func update_knockback():
+	if knockback.length() < 5:
+		knockback = Vector2.ZERO
+		return
+	knockback = knockback * knockback_decay
 
 # Kiểm tra điều kiện để chỉnh animation tree
 func update_animation_params():
@@ -53,23 +65,8 @@ func update_animation_params():
 		animation_tree["parameters/conditions/moving"] = true
 	else:
 		animation_tree["parameters/conditions/moving"] = false
-		
-	if health <= 0 and respawns_left > 0:
-		health = 100
-		respawns_left -= 1
-		animation_tree["parameters/conditions/respawning"] = true
-		emit_signal("player_respawn")
-	else:
-		animation_tree["parameters/conditions/respawning"] = false
-		
-	if health <= 0 and respawns_left <= 0:
-		emit_signal("player_death")
-		animation_tree["parameters/conditions/player_death"] = true
 
-# Chịu sát thương
-func take_damage(dmg):
-	health -= dmg
-	print("Took damage. Health:", health)
+		
 
 # Tiếng bước chân, nếu còn di chuyển thì phát tiếp
 func _on_footstep_finished():
@@ -79,7 +76,7 @@ func _on_footstep_finished():
 func update_input():
 	# Lấy vector input người dùng để di chuyển
 	var input_direction = Input.get_vector("left", "right", "up", "down")
-	velocity = input_direction * speed
+	velocity = input_direction * speed + knockback
 	
 	# Các thao tác phím đặc biệt
 	if Input.is_action_just_pressed("activate_fairy"):
@@ -101,8 +98,39 @@ func switch_fairy():
 
 # Tấn công
 func attack():
-	get_parent().spawn_danmaku(fire_position.global_position, get_global_mouse_position() - position, dmk_damage, dmk_speed)
+	animation_tree["parameters/conditions/player_attack"] = true
 
 # Xài đạn mạc
 func danmaku():
-	pass
+	get_parent().spawn_danmaku(fire_position.global_position, get_global_mouse_position() - position, dmk_damage, dmk_speed)
+
+# Chịu sát thương
+func take_damage(dmg: float, knockback_dir: Vector2, knockback_force: float = 1000, decay : float = 0.5):
+	if is_respawning:
+		return
+	
+	health = health - dmg
+	if health <= 0 and respawns_left > 0:
+		emit_signal("player_respawn")
+		health = max_health
+		respawns_left -= 1
+		animation_tree["parameters/conditions/respawning"] = true
+		get_parent().play_respawn_effect(self)
+		print("respawn. Lives left: ", respawns_left)
+		
+	if health <=0 and respawns_left <= 0:
+		print("player lost")
+		emit_signal("player_death")
+		animation_tree["parameters/conditions/player_death"] = true
+		
+	print("player took dmg. Health: ", health)
+	knockback = knockback_dir * knockback_force
+	knockback_decay = decay
+
+
+func _on_hitbox_body_entered(body):
+	if body is Enemy:
+		body.take_damage(1, false)
+		if body.is_marked:
+			health += 1
+			print("recovered. Health: ", health)

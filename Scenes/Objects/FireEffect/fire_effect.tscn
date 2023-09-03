@@ -1,0 +1,129 @@
+[gd_scene load_steps=10 format=3 uid="uid://wuqex3cffmsj"]
+
+[ext_resource type="Texture2D" uid="uid://ctkm5ttm5r17t" path="res://Assets/Sprites/Visual effect/fireBIG.png" id="1_rs7ih"]
+[ext_resource type="Script" path="res://Scripts/FireEffect/fire_effect.gd" id="2_u3nom"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjnqg"]
+atlas = ExtResource("1_rs7ih")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8eisn"]
+atlas = ExtResource("1_rs7ih")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fo475"]
+atlas = ExtResource("1_rs7ih")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5b8k8"]
+atlas = ExtResource("1_rs7ih")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pe0kc"]
+atlas = ExtResource("1_rs7ih")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jihp"]
+atlas = ExtResource("1_rs7ih")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pj68u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjnqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8eisn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fo475")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5b8k8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fo475")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5b8k8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fo475")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5b8k8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe0kc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jihp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe0kc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jihp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe0kc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jihp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe0kc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jihp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe0kc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jihp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe0kc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jihp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe0kc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jihp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe0kc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jihp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="FireEffect" type="AnimatedSprite2D"]
+position = Vector2(0, -10)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_pj68u")
+autoplay = "default"
+frame_progress = 0.805701
+script = ExtResource("2_u3nom")
+
+[node name="EffectDelay" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+autostart = true
+
+[node name="EffectEnd" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="EffectDelay" to="." method="_on_effect_delay_timeout"]
+[connection signal="timeout" from="EffectEnd" to="." method="_on_effect_end_timeout"]

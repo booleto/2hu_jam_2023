@@ -1,12 +1,12 @@
-[gd_scene load_steps=53 format=3 uid="uid://chhsxxwlq64bs"]
+[gd_scene load_steps=54 format=3 uid="uid://chhsxxwlq64bs"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy/enemy.gd" id="1_4oga8"]
 [ext_resource type="Texture2D" uid="uid://diwh8amqgbxwm" path="res://Assets/Sprites/Enemy/enemyfairy1combat.png" id="2_nfrxj"]
 [ext_resource type="Script" path="res://Scripts/Enemy/Soundbox.gd" id="2_tetot"]
 [ext_resource type="Texture2D" uid="uid://d1jie7bkl52cs" path="res://Assets/Sprites/Enemy/enemyfairy1idle.png" id="2_x4ovc"]
-[ext_resource type="Texture2D" uid="uid://d2v1lxcvdr3qg" path="res://Assets/Sprites/Visual effect/EnemySpottedMokou.png" id="4_ekvq8"]
+[ext_resource type="Texture2D" uid="uid://dowl7fiy46y20" path="res://Assets/Sprites/Visual effect/EnemySpottedMokou.png" id="4_ekvq8"]
 [ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/BTRoot.gd" id="4_vfk6x"]
-[ext_resource type="Texture2D" uid="uid://5hkvugg085ha" path="res://Assets/Sprites/Visual effect/MokouStunnedtheEnemyohgodohfuck.png" id="5_44tqv"]
+[ext_resource type="Texture2D" uid="uid://waoduubmh1xn" path="res://Assets/Sprites/Visual effect/MokouStunnedtheEnemyohgodohfuck.png" id="5_44tqv"]
 [ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Composite/BTSelector.gd" id="5_v2t6w"]
 [ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Composite/BTSequence.gd" id="6_662v7"]
 [ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/SetState.gd" id="7_2j6yi"]
@@ -23,6 +23,7 @@
 [ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Blackboard/BTBlackboard.gd" id="14_s55ac"]
 [ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/MoveToInvestigate.gd" id="16_a3i3y"]
 [ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsHearingSounds.gd" id="17_d2bvp"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsAttackCooldown.gd" id="19_3qyfc"]
 [ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/SetActorAlertAnim.gd" id="20_skrji"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oj8rt"]
@@ -34,7 +35,7 @@ radius = 20.0
 radius = 15.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7n0n0"]
-size = Vector2(11.8149, 20)
+size = Vector2(8.86428, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_axfs6"]
 atlas = ExtResource("5_44tqv")
@@ -486,14 +487,17 @@ collision_mask = 2
 polygon = PackedVector2Array(-28, -26, -28, 26, 259, 84, 259, -84)
 
 [node name="AttackBox" type="Area2D" parent="."]
-visible = false
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBox"]
-position = Vector2(28.8015, 0)
+position = Vector2(18.2245, 0)
 scale = Vector2(7.16934, 3.59667)
 shape = SubResource("RectangleShape2D_7n0n0")
+
+[node name="AttackDelay" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
 
 [node name="InvulTimer" type="Timer" parent="."]
 wait_time = 0.1
@@ -601,6 +605,9 @@ script = ExtResource("7_fj5sb")
 blackboard_key = "player_in_range"
 expression = "actor.player_in_range"
 can_overwrite_value = true
+
+[node name="IsAttackCooldown" type="Node" parent="BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("19_3qyfc")
 
 [node name="Attack" type="Node" parent="BTRoot/main/Attack/MoveAndAttack/Attack"]
 script = ExtResource("9_yu6x7")

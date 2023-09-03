@@ -16,10 +16,12 @@ script = ExtResource("1_rh6ip")
 [node name="Player" parent="GameEntities" groups=["Player"] instance=ExtResource("1_ifevs")]
 
 [node name="Enemy" parent="GameEntities" instance=ExtResource("2_xe5fl")]
-position = Vector2(181, 146)
+position = Vector2(-403, 128)
+health = 3
 
 [node name="Danmaku" parent="GameEntities" instance=ExtResource("3_7x6lx")]
-position = Vector2(210, 23)
+position = Vector2(190, -168)
+damage = 1
 
 [node name="PItem" parent="GameEntities" instance=ExtResource("4_4s0vl")]
 

@@ -4,7 +4,7 @@ class_name Enemy
 
 enum State {ATTACK, ALERTED, PATROL, IDLE}
 
-@export var health = 20
+@export var health = 2
 @export var sound_detection_radius = 20
 @export var hitbox_radius = 10 # bán kính hitbox <= bán kính hurtbox
 @export var hurtbox_radius = 15
@@ -20,6 +20,7 @@ enum State {ATTACK, ALERTED, PATROL, IDLE}
 @onready var stun_timer : Timer = $StunTimer
 @onready var effect_sprite : AnimatedSprite2D = $EffectSprite
 @onready var invul_timer : Timer = $InvulTimer
+@onready var attack_delay : Timer = $AttackDelay
 
 var move_speed: float
 var is_moving : bool
@@ -122,7 +123,6 @@ func take_damage(dmg : float, mark : bool = true, stun : bool = true):
 		return
 
 	health = health - dmg
-	print("health left: ", health)
 	if health <= 0:
 		is_dead = true
 		animation_tree["parameters/conditions/dead"] = true
