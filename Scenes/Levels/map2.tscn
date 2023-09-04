@@ -1,54 +1,54 @@
-[gd_scene load_steps=12 format=3 uid="uid://cedveobf44rv7"]
+[gd_scene load_steps=12 format=3 uid="uid://bebj1py6ix7yu"]
 
-[ext_resource type="PackedScene" uid="uid://c1qx1q2ylej3m" path="res://Scenes/Objects/Player/player.tscn" id="1_ifevs"]
-[ext_resource type="Script" path="res://Scripts/GameEntities/game_entities.gd" id="1_rh6ip"]
-[ext_resource type="PackedScene" uid="uid://chhsxxwlq64bs" path="res://Scenes/Objects/Enemy/enemy.tscn" id="2_xe5fl"]
-[ext_resource type="PackedScene" uid="uid://dt2kf02le6ak" path="res://Scenes/Objects/Danmaku/danmaku.tscn" id="3_7x6lx"]
-[ext_resource type="TileSet" uid="uid://bhxmfe0msahhf" path="res://Resources/Tileset/tileset.tres" id="3_xmtiq"]
-[ext_resource type="PackedScene" uid="uid://cyb7mfpr6ll6d" path="res://Scenes/Objects/PItem/p_item.tscn" id="4_4s0vl"]
-[ext_resource type="Script" path="res://Scripts/GameState/game_state.gd" id="5_05ol6"]
-[ext_resource type="PackedScene" uid="uid://c67qavicmv4cu" path="res://Scenes/Objects/Chest/chest.tscn" id="6_0xhgl"]
-[ext_resource type="Texture2D" uid="uid://brycb6r6ppqcb" path="res://Assets/Sprites/Visual effect/dragonjewel.png" id="7_3fwf5"]
-[ext_resource type="PackedScene" uid="uid://d2sasf8vv0m84" path="res://Scenes/Objects/Door/door.tscn" id="8_78w64"]
-[ext_resource type="PackedScene" uid="uid://ctluf3yg2l1l0" path="res://Scenes/Objects/Alarm/alarm.tscn" id="9_grg02"]
+[ext_resource type="Script" path="res://Scripts/GameEntities/game_entities.gd" id="1_gdflb"]
+[ext_resource type="PackedScene" uid="uid://c1qx1q2ylej3m" path="res://Scenes/Objects/Player/player.tscn" id="2_khspm"]
+[ext_resource type="PackedScene" uid="uid://chhsxxwlq64bs" path="res://Scenes/Objects/Enemy/enemy.tscn" id="3_12rc8"]
+[ext_resource type="PackedScene" uid="uid://dt2kf02le6ak" path="res://Scenes/Objects/Danmaku/danmaku.tscn" id="4_nc33w"]
+[ext_resource type="PackedScene" uid="uid://cyb7mfpr6ll6d" path="res://Scenes/Objects/PItem/p_item.tscn" id="5_n042s"]
+[ext_resource type="PackedScene" uid="uid://c67qavicmv4cu" path="res://Scenes/Objects/Chest/chest.tscn" id="6_g5432"]
+[ext_resource type="Texture2D" uid="uid://ipcdlx5fdlos" path="res://Assets/Sprites/Visual effect/dragonjewel.png" id="7_csnic"]
+[ext_resource type="PackedScene" uid="uid://d2sasf8vv0m84" path="res://Scenes/Objects/Door/door.tscn" id="8_ko0x3"]
+[ext_resource type="PackedScene" uid="uid://ctluf3yg2l1l0" path="res://Scenes/Objects/Alarm/alarm.tscn" id="9_njg5b"]
+[ext_resource type="Script" path="res://Scripts/GameState/game_state.gd" id="10_1a128"]
+[ext_resource type="TileSet" uid="uid://bhxmfe0msahhf" path="res://Resources/Tileset/tileset.tres" id="11_8stnh"]
 
 [node name="Main" type="Node2D"]
 
 [node name="GameEntities" type="Node" parent="."]
-script = ExtResource("1_rh6ip")
+script = ExtResource("1_gdflb")
 
-[node name="Player" parent="GameEntities" groups=["Player"] instance=ExtResource("1_ifevs")]
+[node name="Player" parent="GameEntities" groups=["Player"] instance=ExtResource("2_khspm")]
 
-[node name="Enemy" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("2_xe5fl")]
+[node name="Enemy" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_12rc8")]
 position = Vector2(-403, 128)
 designated_to_alarm = true
 designated_alarm = NodePath("../Alarm")
 
-[node name="Enemy2" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("2_xe5fl")]
+[node name="Enemy2" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_12rc8")]
 position = Vector2(287, -41)
 designated_to_alarm = false
 designated_alarm = NodePath("../Alarm")
 
-[node name="Danmaku" parent="GameEntities" instance=ExtResource("3_7x6lx")]
+[node name="Danmaku" parent="GameEntities" instance=ExtResource("4_nc33w")]
 position = Vector2(-54, -433)
 damage = 1
 
-[node name="PItem" parent="GameEntities" instance=ExtResource("4_4s0vl")]
+[node name="PItem" parent="GameEntities" instance=ExtResource("5_n042s")]
 
-[node name="Chest" parent="GameEntities" instance=ExtResource("6_0xhgl")]
+[node name="Chest" parent="GameEntities" instance=ExtResource("6_g5432")]
 position = Vector2(237, 187)
 is_true_chest = true
-treasure_sprite = ExtResource("7_3fwf5")
+treasure_sprite = ExtResource("7_csnic")
 
-[node name="Door" parent="GameEntities" instance=ExtResource("8_78w64")]
+[node name="Door" parent="GameEntities" instance=ExtResource("8_ko0x3")]
 position = Vector2(-8.99998, 151)
 rotation = -1.67552
 
-[node name="Alarm" parent="GameEntities" instance=ExtResource("9_grg02")]
+[node name="Alarm" parent="GameEntities" instance=ExtResource("9_njg5b")]
 position = Vector2(-381, -187)
 
 [node name="GameState" type="Node" parent="."]
-script = ExtResource("5_05ol6")
+script = ExtResource("10_1a128")
 
 [node name="Utils" type="Node" parent="."]
 
@@ -56,7 +56,7 @@ script = ExtResource("5_05ol6")
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(4, 4)
-tile_set = ExtResource("3_xmtiq")
+tile_set = ExtResource("11_8stnh")
 format = 2
 layer_0/name = "floor"
 layer_0/tile_data = PackedInt32Array(-131077, 65538, 0, -65541, 65538, 1, -5, 65538, 1, -4, 131074, 1, -3, 131074, 1, 65533, 131074, 2, 65534, 196610, 2, -2, 196610, 1, -65538, 196610, 1, -65540, 131074, 1, -131076, 131074, 0, -131075, 131074, 0, -65539, 131074, 1, 65532, 131074, 2, 65531, 65538, 2, -131074, 196610, 0, 196601, 2, 0, 196602, 2, 0, 196603, 2, 0, 196604, 2, 0, 196605, 2, 0, 196606, 2, 0, 131070, 2, 0, 131069, 2, 0, 131068, 2, 0, 131067, 2, 0, 131066, 2, 0, 131065, 2, 0, 65529, 2, 0, -7, 2, 0, -6, 2, 0, 65530, 2, 0)
