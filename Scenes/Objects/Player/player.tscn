@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://c1qx1q2ylej3m"]
+[gd_scene load_steps=41 format=3 uid="uid://c1qx1q2ylej3m"]
 
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_vfgup"]
 [ext_resource type="Texture2D" uid="uid://bxul2vhtttb31" path="res://Assets/Sprites/Player/Mokou.png" id="2_4ebf5"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://bgungolex0310" path="res://Assets/Sprites/Fairies/Lunaball activated.png" id="5_qlu70"]
 [ext_resource type="Texture2D" uid="uid://bve7fa7was1qq" path="res://Assets/Sprites/Fairies/Starball activated.png" id="7_xjgfr"]
 [ext_resource type="Texture2D" uid="uid://jkpwlq1xcqdn" path="res://Assets/Sprites/Fairies/Sunnyball activated.png" id="8_vm0nl"]
+[ext_resource type="AudioStream" uid="uid://bjhc7vcc3kii7" path="res://Assets/Sounds/FistPunch.wav" id="10_7e15d"]
+[ext_resource type="AudioStream" uid="uid://1ipw2pnjqgcf" path="res://Assets/Sounds/Playershooting.wav" id="10_r636n"]
+[ext_resource type="AudioStream" uid="uid://b2r0j61nejto2" path="res://Assets/Sounds/HPlosing.ogg" id="12_c3oiw"]
 
 [sub_resource type="Animation" id="Animation_308ks"]
 length = 0.001
@@ -333,6 +336,15 @@ visible = false
 position = Vector2(0, -63.345)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_mkc2j")
+
+[node name="DanmakuSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_r636n")
+
+[node name="PunchSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_7e15d")
+
+[node name="HpLosing" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_c3oiw")
 
 [connection signal="finished" from="Footstep" to="." method="_on_footstep_finished"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

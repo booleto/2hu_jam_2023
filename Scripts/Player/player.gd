@@ -19,6 +19,9 @@ signal player_respawn
 @onready var cirno_range : Area2D = $CirnoRange
 @onready var sunny_timer : Timer = $SunnyTimer
 @onready var fairy_effect : AnimatedSprite2D = $FairyEffect
+@onready var punch_sound : AudioStreamPlayer = $PunchSound
+@onready var danmaku_sound : AudioStreamPlayer = $DanmakuSound
+@onready var hp_losing_sound : AudioStreamPlayer = $HpLosing
 
 var enemies_in_range = []
 
@@ -137,6 +140,7 @@ func switch_fairy():
 
 # Tấn công
 func attack():
+	punch_sound.play()
 	if is_buff_sunny:
 		sunny_deactivate_effect()
 	animation_tree["parameters/conditions/player_attack"] = true
@@ -155,6 +159,7 @@ func danmaku():
 		sunny_deactivate_effect()
 	take_damage(1, Vector2.ZERO)
 	get_parent().spawn_danmaku(fire_position.global_position, get_global_mouse_position() - position, dmk_damage, dmk_speed)
+	danmaku_sound.play()
 
 # Chịu sát thương
 func take_damage(dmg: float, knockback_dir: Vector2, knockback_force: float = 5000, decay : float = 0.5):
@@ -174,8 +179,9 @@ func take_damage(dmg: float, knockback_dir: Vector2, knockback_force: float = 50
 		print("player lost")
 		emit_signal("player_death")
 		animation_tree["parameters/conditions/player_death"] = true
-		GameState.set_lose()
-		
+		get_tree().reload_current_scene()
+	
+	hp_losing_sound.play()
 	print("player took dmg. Health: ", PlayerData.hp)
 	knockback = knockback_dir * knockback_force
 	knockback_decay = decay

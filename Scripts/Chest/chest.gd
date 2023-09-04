@@ -2,6 +2,7 @@ extends Area2D
 
 signal treasure_obtained
 
+@export var next_scene : String
 @export var is_true_chest : bool
 @export var treasure_sprite : Texture2D
 
@@ -25,6 +26,11 @@ func _on_body_entered(body):
 	if is_true_chest:
 		emit_signal("treasure_obtained")
 		treasure.visible = true
-		GameState.set_won()
+		$TreasureFound.play()
 	else:
+		$OpeningSound.play()
 		label.visible = true
+
+
+func _on_treasure_found_finished():
+	get_tree().change_scene_to_file(next_scene)
