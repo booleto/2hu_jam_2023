@@ -10,19 +10,19 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hitbox:process_mode")
+tracks/0/path = NodePath("AnimationTree:parameters/conditions/player_attack")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0]
+"values": [false]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationTree:parameters/conditions/player_attack")
+tracks/1/path = NodePath("AnimationTree:parameters/conditions/respawning")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -34,7 +34,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_227mn"]
 resource_name = "attack"
-length = 0.2
+length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -42,7 +42,7 @@ tracks/0/path = NodePath("Mokou:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
+"times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [ExtResource("3_w6b4a"), ExtResource("2_4ebf5")]
@@ -50,23 +50,11 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Hitbox:process_mode")
+tracks/1/path = NodePath("AnimationTree:parameters/conditions/player_attack")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 4]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AnimationTree:parameters/conditions/player_attack")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.2),
+"times": PackedFloat32Array(0.1),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
@@ -81,6 +69,18 @@ resource_name = "idle"
 [sub_resource type="Animation" id="Animation_6npac"]
 resource_name = "respawn"
 length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationTree:parameters/conditions/respawning")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_173l6"]
 resource_name = "walk"
@@ -102,7 +102,7 @@ _data = {
 radius = 20.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cf71i"]
-size = Vector2(80, 70)
+size = Vector2(120, 70)
 
 [node name="Player" type="CharacterBody2D"]
 rotation = 81.4509
@@ -156,7 +156,8 @@ shape = SubResource("CircleShape2D_3q74r")
 debug_color = Color(0.937255, 0, 0.647059, 0.419608)
 
 [node name="Hitbox" type="Area2D" parent="."]
-visible = false
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2(30, 0)
@@ -164,3 +165,4 @@ shape = SubResource("RectangleShape2D_cf71i")
 
 [connection signal="finished" from="Footstep" to="." method="_on_footstep_finished"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_body_exited"]

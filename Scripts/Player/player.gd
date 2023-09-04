@@ -19,6 +19,7 @@ signal player_respawn
 
 var health = max_health
 var respawns_left : int = 5
+var enemies_in_range = []
 
 var knockback : Vector2 = Vector2.ZERO
 var knockback_decay : float = 0.5
@@ -66,7 +67,7 @@ func update_animation_params():
 	else:
 		animation_tree["parameters/conditions/moving"] = false
 
-		
+	animation_tree["parameters/conditions/respawning"] = false
 
 # Tiếng bước chân, nếu còn di chuyển thì phát tiếp
 func _on_footstep_finished():
@@ -99,13 +100,20 @@ func switch_fairy():
 # Tấn công
 func attack():
 	animation_tree["parameters/conditions/player_attack"] = true
+	for enemy in enemies_in_range:
+		enemy.take_damage(1, false)
+		if enemy.is_marked:
+			health += 1
+			enemy.is_marked = false
+			print("recovered. Health: ", health)
 
 # Xài đạn mạc
 func danmaku():
+	take_damage(1, Vector2.ZERO)
 	get_parent().spawn_danmaku(fire_position.global_position, get_global_mouse_position() - position, dmk_damage, dmk_speed)
 
 # Chịu sát thương
-func take_damage(dmg: float, knockback_dir: Vector2, knockback_force: float = 1000, decay : float = 0.5):
+func take_damage(dmg: float, knockback_dir: Vector2, knockback_force: float = 5000, decay : float = 0.5):
 	if is_respawning:
 		return
 	
@@ -130,7 +138,10 @@ func take_damage(dmg: float, knockback_dir: Vector2, knockback_force: float = 10
 
 func _on_hitbox_body_entered(body):
 	if body is Enemy:
-		body.take_damage(1, false)
-		if body.is_marked:
-			health += 1
-			print("recovered. Health: ", health)
+		print("enemy in range")
+		enemies_in_range.append(body)
+
+
+func _on_hitbox_body_exited(body):
+	if body is Enemy:
+		enemies_in_range.erase(body)

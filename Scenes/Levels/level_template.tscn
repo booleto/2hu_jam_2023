@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cedveobf44rv7"]
+[gd_scene load_steps=12 format=3 uid="uid://cedveobf44rv7"]
 
 [ext_resource type="PackedScene" uid="uid://c1qx1q2ylej3m" path="res://Scenes/Objects/Player/player.tscn" id="1_ifevs"]
 [ext_resource type="Script" path="res://Scripts/GameEntities/game_entities.gd" id="1_rh6ip"]
@@ -7,6 +7,10 @@
 [ext_resource type="TileSet" uid="uid://bhxmfe0msahhf" path="res://Resources/Tileset/tileset.tres" id="3_xmtiq"]
 [ext_resource type="PackedScene" uid="uid://cyb7mfpr6ll6d" path="res://Scenes/Objects/PItem/p_item.tscn" id="4_4s0vl"]
 [ext_resource type="Script" path="res://Scripts/GameState/game_state.gd" id="5_05ol6"]
+[ext_resource type="PackedScene" uid="uid://c67qavicmv4cu" path="res://Scenes/Objects/Chest/chest.tscn" id="6_0xhgl"]
+[ext_resource type="Texture2D" uid="uid://brycb6r6ppqcb" path="res://Assets/Sprites/Visual effect/dragonjewel.png" id="7_3fwf5"]
+[ext_resource type="PackedScene" uid="uid://d2sasf8vv0m84" path="res://Scenes/Objects/Door/door.tscn" id="8_78w64"]
+[ext_resource type="PackedScene" uid="uid://ctluf3yg2l1l0" path="res://Scenes/Objects/Alarm/alarm.tscn" id="9_grg02"]
 
 [node name="Main" type="Node2D"]
 
@@ -15,15 +19,33 @@ script = ExtResource("1_rh6ip")
 
 [node name="Player" parent="GameEntities" groups=["Player"] instance=ExtResource("1_ifevs")]
 
-[node name="Enemy" parent="GameEntities" instance=ExtResource("2_xe5fl")]
+[node name="Enemy" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("2_xe5fl")]
 position = Vector2(-403, 128)
-health = 3
+designated_to_alarm = true
+designated_alarm = NodePath("../Alarm")
+
+[node name="Enemy2" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("2_xe5fl")]
+position = Vector2(287, -41)
+designated_to_alarm = false
+designated_alarm = NodePath("../Alarm")
 
 [node name="Danmaku" parent="GameEntities" instance=ExtResource("3_7x6lx")]
-position = Vector2(190, -168)
+position = Vector2(-54, -433)
 damage = 1
 
 [node name="PItem" parent="GameEntities" instance=ExtResource("4_4s0vl")]
+
+[node name="Chest" parent="GameEntities" instance=ExtResource("6_0xhgl")]
+position = Vector2(237, 187)
+is_true_chest = true
+treasure_sprite = ExtResource("7_3fwf5")
+
+[node name="Door" parent="GameEntities" instance=ExtResource("8_78w64")]
+position = Vector2(-8.99998, 151)
+rotation = -1.67552
+
+[node name="Alarm" parent="GameEntities" instance=ExtResource("9_grg02")]
+position = Vector2(-381, -187)
 
 [node name="GameState" type="Node" parent="."]
 script = ExtResource("5_05ol6")

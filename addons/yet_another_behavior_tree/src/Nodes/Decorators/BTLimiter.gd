@@ -43,21 +43,21 @@ var _invocation_count:int = 0
 #------------------------------------------
 
 func tick(actor:Node, blackboard:BTBlackboard) -> int:
-    var limit_reached:bool = _invocation_count >= limit
-    if not include_limit:
-        limit_reached = _invocation_count >= limit - 1
+	var limit_reached:bool = _invocation_count >= limit
+	if not include_limit:
+		limit_reached = _invocation_count >= limit - 1
 
-    if limit_reached:
-        return BTTickResult.FAILURE
+	if limit_reached:
+		return BTTickResult.FAILURE
 
-    var result:int = _children[0]._execute(actor, blackboard)
-    if result != BTTickResult.RUNNING:
-        _invocation_count += 1
-    return result
+	var result:int = _children[0]._execute(actor, blackboard)
+	if result != BTTickResult.RUNNING:
+		_invocation_count += 1
+	return result
 
 func reset() -> void:
-    _invocation_count = 0
-    super.reset()
+	_invocation_count = 0
+	super.reset()
 
 #------------------------------------------
 # Fonctions privées

@@ -11,6 +11,8 @@ enum State {ATTACK, ALERTED, PATROL, IDLE}
 @export var sprite: Texture2D
 @export var walk_speed: float
 @export var run_speed: float
+@export var designated_to_alarm : bool = false
+@export var designated_alarm : Alarm
 
 @onready var nav_agent : NavigationAgent2D = $NavigationAgent2D
 @onready var sprite2d : Sprite2D = $Sprite2D
@@ -19,8 +21,10 @@ enum State {ATTACK, ALERTED, PATROL, IDLE}
 @onready var attack_box : Area2D = $AttackBox
 @onready var stun_timer : Timer = $StunTimer
 @onready var effect_sprite : AnimatedSprite2D = $EffectSprite
+@onready var status_sprite : Sprite2D = $StatusSprite
 @onready var invul_timer : Timer = $InvulTimer
 @onready var attack_delay : Timer = $AttackDelay
+@onready var turn_cooldown : Timer = $TurnCooldown
 
 var move_speed: float
 var is_moving : bool
@@ -31,6 +35,7 @@ var player_in_range : bool = false
 var current_state = State.IDLE
 var hearing_sounds : bool = false
 var sound_position : Vector2
+var running_to_alarm : bool
 
 var is_stunned : bool = false
 var is_marked : bool = false
@@ -58,6 +63,7 @@ func _physics_process(_delta):
 			velocity = dir * move_speed
 			look_towards(next_pos)
 			move_and_slide()
+			
 #		if player_in_view_box:
 #			if raycast_vision_check(raycast_target.position):
 #				is_moving = true
@@ -123,8 +129,11 @@ func take_damage(dmg : float, mark : bool = true, stun : bool = true):
 		return
 
 	health = health - dmg
+	print("enemy health:", health)
 	if health <= 0:
 		is_dead = true
+		effect_sprite.visible = false
+		status_sprite.visible = false
 		animation_tree["parameters/conditions/dead"] = true
 		return
 		

@@ -2,7 +2,7 @@ extends Node
 class_name GameEntities
 
 var danmaku_preload = preload("res://Scenes/Objects/Danmaku/danmaku.tscn")
-var fire_effect_preload = preload("res://Scenes/Objects/FireEffect/fire_effect.tscn")
+var fire_effect_preload = load("res://Scenes/Objects/FireEffect/fire_effect.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

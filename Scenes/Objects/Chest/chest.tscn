@@ -7,6 +7,7 @@
 size = Vector2(128, 64)
 
 [node name="Chest" type="Area2D"]
+collision_mask = 7
 script = ExtResource("1_5lktv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -15,5 +16,18 @@ texture = ExtResource("2_rxyc1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_vqhcc")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = -28.0
+offset_top = -59.0
+offset_right = 25.0
+offset_bottom = -33.0
+text = "EMPTY"
+
+[node name="Treasure" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -80)
+scale = Vector2(2, 2)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

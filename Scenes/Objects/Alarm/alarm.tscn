@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctluf3yg2l1l0"]
+
+[ext_resource type="Script" path="res://Scripts/Alarm/Alarm.gd" id="1_46ybx"]
+[ext_resource type="Texture2D" uid="uid://cda4r4d23awfh" path="res://Assets/Sprites/Alarm/alarm.png" id="1_fvkb1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_isrhy"]
+radius = 806.08
+
+[node name="Alarm" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_46ybx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_isrhy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_fvkb1")
+
+[node name="AlarmDuration" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="AlarmDuration" to="." method="_on_alarm_duration_timeout"]
