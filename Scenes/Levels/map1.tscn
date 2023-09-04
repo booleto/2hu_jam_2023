@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://cqd2r4ruru57n"]
+[gd_scene load_steps=43 format=3 uid="uid://dqfl0d4a6c1yk"]
 
 [ext_resource type="Script" path="res://Scripts/GameEntities/game_entities.gd" id="1_8a2ta"]
 [ext_resource type="PackedScene" uid="uid://c1qx1q2ylej3m" path="res://Scenes/Objects/Player/player.tscn" id="2_3bguk"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cyb7mfpr6ll6d" path="res://Scenes/Objects/PItem/p_item.tscn" id="5_jed56"]
 [ext_resource type="PackedScene" uid="uid://c67qavicmv4cu" path="res://Scenes/Objects/Chest/chest.tscn" id="6_76b0s"]
 [ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsProcess.gd" id="6_r5mxv"]
-[ext_resource type="Texture2D" uid="uid://brycb6r6ppqcb" path="res://Assets/Sprites/Visual effect/dragonjewel.png" id="7_6ktmx"]
+[ext_resource type="Texture2D" uid="uid://ipcdlx5fdlos" path="res://Assets/Sprites/Visual effect/dragonjewel.png" id="7_6ktmx"]
 [ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Composite/BTSequence.gd" id="7_ycyfp"]
 [ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsDesignatedToAlarm.gd" id="8_1ifia"]
 [ext_resource type="PackedScene" uid="uid://d2sasf8vv0m84" path="res://Scenes/Objects/Door/door.tscn" id="8_5xle7"]
@@ -1236,8 +1236,8 @@ script = ExtResource("33_shkh2")
 wait_time_ms = 3
 
 [node name="Enemy7" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
-position = Vector2(845, -682)
-default_rotation = 2.8
+position = Vector2(842, -623)
+default_rotation = 0.0
 designated_alarm = NodePath("../Alarm")
 
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy7" node_paths=PackedStringArray("blackboard")]
