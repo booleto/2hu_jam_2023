@@ -1,9 +1,15 @@
+@tool
 extends Node2D
 
 var in_range_list = []
 
+@export var door_scale : float = 1
+
 @onready var sound_duration : Timer = $SoundDuration
 
+func _process(_delta):
+	if Engine.is_editor_hint():
+		$Door/DoorSprite.apply_scale(Vector2(door_scale, door_scale)) 
 
 func emit_sound(body):
 	if not body is Player:

@@ -1,0 +1,189 @@
+[gd_scene load_steps=32 format=3 uid="uid://da010n85citpj"]
+
+[ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/BTRoot.gd" id="1_cklwv"]
+[ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Composite/BTSelector.gd" id="2_hgjyo"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsProcess.gd" id="3_domfv"]
+[ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Composite/BTSequence.gd" id="4_42gao"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsDesignatedToAlarm.gd" id="5_d70em"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsRunningToAlarm.gd" id="6_68s2q"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/SetActorMoveSpeed.gd" id="7_if704"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/MoveToAlarm.gd" id="8_umq3t"]
+[ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Decorators/BTSuccess.gd" id="9_xsgy0"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsNearAlarm.gd" id="10_t6plm"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/ActivateAlarm.gd" id="11_dcu4f"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/RemoveAlarmDesignation.gd" id="12_q6tc6"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/SetRunningToAlarm.gd" id="13_iisa1"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/AddToBBoard.gd" id="14_tirmy"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/SetActorAttackAnim.gd" id="15_mr2ss"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/CheckViewbox.gd" id="16_caq37"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/RaycastCheck.gd" id="17_t1yky"]
+[ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Decorators/BTInverter.gd" id="18_djck6"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/SetState.gd" id="19_glq6v"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/MoveToTarget.gd" id="20_awwuj"]
+[ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Leaves/BTActionBlackboardSet.gd" id="21_ljlad"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsAttackCooldown.gd" id="22_owkod"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/Attack.gd" id="23_gntkh"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/SetActorAlertAnim.gd" id="24_kk4ki"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsHearingSounds.gd" id="25_6xj8s"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/CheckTargetDist.gd" id="26_tu671"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/MoveToInvestigate.gd" id="27_lenrb"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsTurnCooldown.gd" id="28_c7522"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/TurnRandomly.gd" id="29_gmm5b"]
+[ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Leaves/BTActionWait.gd" id="30_uevi5"]
+[ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Blackboard/BTBlackboard.gd" id="31_1tvs3"]
+
+[node name="BehaviourTree" type="Node" node_paths=PackedStringArray("blackboard")]
+script = ExtResource("1_cklwv")
+actor_path = NodePath("..")
+blackboard = NodePath("")
+
+[node name="main" type="Node" parent="."]
+script = ExtResource("2_hgjyo")
+
+[node name="IsProcess" type="Node" parent="main"]
+script = ExtResource("3_domfv")
+
+[node name="SetOffAlarm" type="Node" parent="main"]
+script = ExtResource("4_42gao")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="main/SetOffAlarm"]
+script = ExtResource("5_d70em")
+
+[node name="IsRunningToAlarm" type="Node" parent="main/SetOffAlarm"]
+script = ExtResource("6_68s2q")
+
+[node name="SetActorMoveSpeed" type="Node" parent="main/SetOffAlarm"]
+script = ExtResource("7_if704")
+is_run_speed = true
+
+[node name="MoveToAlarm" type="Node" parent="main/SetOffAlarm"]
+script = ExtResource("8_umq3t")
+
+[node name="BTSuccess" type="Node" parent="main/SetOffAlarm"]
+script = ExtResource("9_xsgy0")
+
+[node name="BTSequence" type="Node" parent="main/SetOffAlarm/BTSuccess"]
+script = ExtResource("4_42gao")
+
+[node name="IsNearAlarm" type="Node" parent="main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("10_t6plm")
+
+[node name="ActivateAlarm" type="Node" parent="main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("11_dcu4f")
+
+[node name="RemoveAlarmDesignation" type="Node" parent="main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("12_q6tc6")
+
+[node name="SetRunningToAlarm" type="Node" parent="main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("13_iisa1")
+
+[node name="Attack" type="Node" parent="main"]
+script = ExtResource("4_42gao")
+
+[node name="IsAttack" type="Node" parent="main/Attack"]
+script = ExtResource("4_42gao")
+
+[node name="AddToBBoard" type="Node" parent="main/Attack/IsAttack"]
+script = ExtResource("14_tirmy")
+key = "player_in_view_box"
+
+[node name="SetActorAttackAnim" type="Node" parent="main/Attack/IsAttack"]
+script = ExtResource("15_mr2ss")
+
+[node name="CheckViewbox" type="Node" parent="main/Attack/IsAttack"]
+script = ExtResource("16_caq37")
+
+[node name="RaycastCheck" type="Node" parent="main/Attack/IsAttack"]
+script = ExtResource("17_t1yky")
+
+[node name="BTSelector" type="Node" parent="main/Attack/IsAttack"]
+script = ExtResource("2_hgjyo")
+
+[node name="BTInverter" type="Node" parent="main/Attack/IsAttack/BTSelector"]
+script = ExtResource("18_djck6")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="main/Attack/IsAttack/BTSelector/BTInverter"]
+script = ExtResource("5_d70em")
+
+[node name="SetRunningToAlarm" type="Node" parent="main/Attack/IsAttack/BTSelector"]
+script = ExtResource("13_iisa1")
+running_to_alarm = true
+
+[node name="SetState" type="Node" parent="main/Attack"]
+script = ExtResource("19_glq6v")
+
+[node name="MoveAndAttack" type="Node" parent="main/Attack"]
+script = ExtResource("4_42gao")
+
+[node name="Move" type="Node" parent="main/Attack/MoveAndAttack"]
+script = ExtResource("4_42gao")
+
+[node name="SetActorMoveSpeed" type="Node" parent="main/Attack/MoveAndAttack/Move"]
+script = ExtResource("7_if704")
+is_run_speed = true
+
+[node name="SetActorAttackAnim" type="Node" parent="main/Attack/MoveAndAttack/Move"]
+script = ExtResource("15_mr2ss")
+is_attacking = true
+
+[node name="MoveToTarget" type="Node" parent="main/Attack/MoveAndAttack/Move"]
+script = ExtResource("20_awwuj")
+
+[node name="Attack" type="Node" parent="main/Attack/MoveAndAttack"]
+script = ExtResource("4_42gao")
+
+[node name="IsPlayerInRange" type="Node" parent="main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("21_ljlad")
+blackboard_key = "player_in_range"
+expression = "actor.player_in_range"
+can_overwrite_value = true
+
+[node name="IsAttackCooldown" type="Node" parent="main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("22_owkod")
+
+[node name="Attack" type="Node" parent="main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("23_gntkh")
+
+[node name="Alerted" type="Node" parent="main"]
+script = ExtResource("4_42gao")
+
+[node name="SetActorAlertAnimFalse" type="Node" parent="main/Alerted"]
+script = ExtResource("24_kk4ki")
+
+[node name="IsHearingSounds" type="Node" parent="main/Alerted"]
+script = ExtResource("25_6xj8s")
+
+[node name="SetActorAlertAnimTrue" type="Node" parent="main/Alerted"]
+script = ExtResource("24_kk4ki")
+is_moving = true
+
+[node name="InvestigateSound" type="Node" parent="main/Alerted"]
+script = ExtResource("4_42gao")
+
+[node name="SetActorMoveSpeed" type="Node" parent="main/Alerted/InvestigateSound"]
+script = ExtResource("7_if704")
+
+[node name="CheckTargetDist" type="Node" parent="main/Alerted/InvestigateSound"]
+script = ExtResource("26_tu671")
+
+[node name="MoveToInvestigate" type="Node" parent="main/Alerted/InvestigateSound"]
+script = ExtResource("27_lenrb")
+
+[node name="BTSelector" type="Node" parent="main"]
+script = ExtResource("2_hgjyo")
+
+[node name="BTSequence" type="Node" parent="main/BTSelector"]
+script = ExtResource("4_42gao")
+
+[node name="IsTurnCooldown" type="Node" parent="main/BTSelector/BTSequence"]
+script = ExtResource("28_c7522")
+
+[node name="TurnRandomly" type="Node" parent="main/BTSelector/BTSequence"]
+script = ExtResource("29_gmm5b")
+
+[node name="Idle" type="Node" parent="main/BTSelector"]
+script = ExtResource("30_uevi5")
+wait_time_ms = 3
+
+[node name="_Node_127477" type="Node" parent="."]
+script = ExtResource("31_1tvs3")

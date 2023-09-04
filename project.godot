@@ -80,6 +80,7 @@ ui_pause={
 2d_physics/layer_3="danmaku"
 2d_physics/layer_4="sounds"
 2d_physics/layer_5="doors"
+2d_physics/layer_6="furniture"
 
 [rendering]
 

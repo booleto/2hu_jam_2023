@@ -4,6 +4,7 @@ class_name Enemy
 
 enum State {ATTACK, ALERTED, PATROL, IDLE}
 
+@export var default_rotation : float = 0
 @export var health = 2
 @export var sound_detection_radius = 20
 @export var hitbox_radius = 10 # bán kính hitbox <= bán kính hurtbox
@@ -45,6 +46,7 @@ func set_data():
 	$Soundbox/Area.shape.radius = sound_detection_radius
 	$Hitbox.shape.radius = hitbox_radius
 	$Hurtbox/Shape.shape.radius = hurtbox_radius
+	look_towards(position + Vector2(cos(default_rotation), sin(default_rotation)))
 	#$Sprite.texture = sprite
 
 func _ready():
@@ -116,9 +118,10 @@ func move_towards(pos : Vector2):
 	
 func raycast_vision_check(target : Vector2) -> bool:
 	var space_state = get_world_2d().direct_space_state
-	var query = PhysicsRayQueryParameters2D.create(position, target)
+	var query = PhysicsRayQueryParameters2D.create(position, target, 3)
 	var result = space_state.intersect_ray(query)
 	
+	print(result)
 	if result.get("collider") is Player:
 		return true
 	return false
