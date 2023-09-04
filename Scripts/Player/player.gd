@@ -13,13 +13,18 @@ signal player_respawn
 @export var footstep_radius = 20
 @export var is_respawning : bool = false
 
+@onready var sprite : Sprite2D = $Mokou
 @onready var animation_tree : AnimationTree = $AnimationTree
 @onready var fire_position : Marker2D = $FirePosition
+@onready var cirno_range : Area2D = $CirnoRange
+@onready var sunny_timer : Timer = $SunnyTimer
 
 var enemies_in_range = []
 
 var knockback : Vector2 = Vector2.ZERO
 var knockback_decay : float = 0.5
+var is_buff_star : bool = false
+var is_buff_sunny : bool = false
 
 func init_data():
 	$CollisionBox.shape.radius = hitbox_radius
@@ -88,7 +93,35 @@ func update_input():
 
 # Kích hoạt tiên
 func activate_fairy():
-	pass
+	if PlayerData.uses_left <= 0:
+		return
+	
+	match PlayerData.selected:
+		PlayerData.FAIRIES.BAKA: #cirno
+			var bodies = cirno_range.get_overlapping_bodies()
+			for body in bodies:
+				if body is Enemy:
+					body.take_damage(0, false, true)
+			PlayerData.uses_left -= 1
+		
+		PlayerData.FAIRIES.CLOWNPISS:
+			get_parent().spawn_clownpiece(get_global_mouse_position())
+			PlayerData.uses_left -= 1
+			
+		PlayerData.FAIRIES.SUNNY:
+			sunny_activate_effect()
+			PlayerData.uses_left -= 1
+			
+	if PlayerData.uses_left <= 1:
+		return
+		
+	match PlayerData.selected:
+		PlayerData.FAIRIES.LUNA:
+			PlayerData.danger -= 1
+			PlayerData.uses_left -= 2
+
+		PlayerData.FAIRIES.STAR:
+			pass
 
 # Đổi tiên
 func switch_fairy():
@@ -96,9 +129,13 @@ func switch_fairy():
 		PlayerData.selected = 0
 	else:
 		PlayerData.selected += 1
+	
+	print("Selected fairy: ", PlayerData.selected)
 
 # Tấn công
 func attack():
+	if is_buff_sunny:
+		sunny_deactivate_effect()
 	animation_tree["parameters/conditions/player_attack"] = true
 	for enemy in enemies_in_range:
 		enemy.take_damage(1, false)
@@ -109,6 +146,8 @@ func attack():
 
 # Xài đạn mạc
 func danmaku():
+	if is_buff_sunny:
+		sunny_deactivate_effect()
 	take_damage(1, Vector2.ZERO)
 	get_parent().spawn_danmaku(fire_position.global_position, get_global_mouse_position() - position, dmk_damage, dmk_speed)
 
@@ -136,6 +175,17 @@ func take_damage(dmg: float, knockback_dir: Vector2, knockback_force: float = 50
 	knockback = knockback_dir * knockback_force
 	knockback_decay = decay
 
+func sunny_activate_effect():
+	is_buff_sunny = true
+	set_collision_layer_value(2, false)
+	sunny_timer.start()
+	sprite.self_modulate.a = 0.5
+	
+func sunny_deactivate_effect():
+	is_buff_sunny = false
+	set_collision_layer_value(2, true)
+	sunny_timer.stop()
+	sprite.self_modulate.a = 1
 
 func _on_hitbox_body_entered(body):
 	if body is Enemy:

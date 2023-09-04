@@ -1,20 +1,17 @@
-@tool
 extends MarginContainer
-@export var texture: Texture2D
-@export var frame_color: Color = Color.WHITE
-
-func init_data():
-	if texture != null:
-		var atlas = AtlasTexture.new()
-		atlas.atlas = texture
-		atlas.region = Rect2i(8, 2, 16, 16)
-		%Image.texture = atlas
-	if frame_color != null:
-		$NinePatchRect.modulate = frame_color
-
-func _ready():
-	init_data()
-
-func _process(_delta):
-	if Engine.is_editor_hint():
-		init_data()
+@export var texture: Texture2D:
+	set (value):
+		if value != null:
+			var atlas = AtlasTexture.new()
+			atlas.atlas = value
+			atlas.region = Rect2i(8, 2, 16, 16)
+			%Image.texture = atlas
+		else:
+			%Image.texture = null
+	get: 
+		return %Image.texture.atlas if %Image.texture != null else null
+@export var frame_color: Color = Color.WHITE:
+	set (value):
+		$NinePatchRect.modulate = value
+	get: 
+		return $NinePatchRect.modulate
