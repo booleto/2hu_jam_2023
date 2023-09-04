@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_vfgup"]
 [ext_resource type="Texture2D" uid="uid://bxul2vhtttb31" path="res://Assets/Sprites/Player/Mokou.png" id="2_4ebf5"]
-[ext_resource type="Texture2D" uid="uid://j5tw7ejn15ov" path="res://Assets/Sprites/Player/Mokou_attack.png" id="3_w6b4a"]
+[ext_resource type="Texture2D" uid="uid://cq4pkckp55o4g" path="res://Assets/Sprites/Player/Mokou_attack.png" id="3_w6b4a"]
 [ext_resource type="AnimationNodeStateMachine" uid="uid://b2lxvso4dptkf" path="res://Resources/AnimationNode/Player/player_animation_node_state_machine.tres" id="3_y7nai"]
 
 [sub_resource type="Animation" id="Animation_308ks"]
@@ -102,7 +102,7 @@ _data = {
 radius = 20.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cf71i"]
-size = Vector2(120, 70)
+size = Vector2(89.1479, 70)
 
 [node name="Player" type="CharacterBody2D"]
 rotation = 81.4509
@@ -160,7 +160,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2(30, 0)
+position = Vector2(14.574, -4.76837e-07)
 shape = SubResource("RectangleShape2D_cf71i")
 
 [connection signal="finished" from="Footstep" to="." method="_on_footstep_finished"]
