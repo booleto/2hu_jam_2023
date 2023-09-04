@@ -102,7 +102,7 @@ _data = {
 radius = 20.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cf71i"]
-size = Vector2(89.1479, 70)
+size = Vector2(93.6195, 64.0157)
 
 [node name="Player" type="CharacterBody2D"]
 rotation = 81.4509
@@ -145,7 +145,7 @@ shape = SubResource("CircleShape2D_3q74r")
 debug_color = Color(0, 0.639216, 0.388235, 0.419608)
 
 [node name="FirePosition" type="Marker2D" parent="."]
-position = Vector2(60, 0)
+position = Vector2(49.0151, 1.23134)
 
 [node name="Footstep" type="AudioStreamPlayer" parent="."]
 
@@ -160,7 +160,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2(14.574, -4.76837e-07)
+position = Vector2(26.1964, 0.0990739)
 shape = SubResource("RectangleShape2D_cf71i")
 
 [connection signal="finished" from="Footstep" to="." method="_on_footstep_finished"]
