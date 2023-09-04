@@ -121,7 +121,8 @@ func activate_fairy():
 			PlayerData.uses_left -= 2
 
 		PlayerData.FAIRIES.STAR:
-			pass
+			is_buff_star = true
+			PlayerData.uses_left -= 2
 
 # Đổi tiên
 func switch_fairy():
@@ -139,6 +140,8 @@ func attack():
 	animation_tree["parameters/conditions/player_attack"] = true
 	for enemy in enemies_in_range:
 		enemy.take_damage(1, false)
+		if is_buff_star and enemy.health <= 0:
+			PlayerData.uses_left += 1
 		if enemy.is_marked:
 			PlayerData.hp += 1
 			enemy.is_marked = false
@@ -198,3 +201,5 @@ func _on_hitbox_body_exited(body):
 		enemies_in_range.erase(body)
 
 
+func _on_star_timer_timeout():
+	is_buff_star = false

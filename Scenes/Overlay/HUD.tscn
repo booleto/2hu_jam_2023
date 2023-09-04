@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://addons/segmented_bar/segmented_bar.gd" id="4_2br3r"]
 [ext_resource type="Script" path="res://Scenes/Overlay/fairies.gd" id="6_8ds88"]
 [ext_resource type="Texture2D" uid="uid://diemqdxg1vao0" path="res://Assets/Sprites/Fairies/Cirnoidle.png" id="6_8kwu5"]
-[ext_resource type="PackedScene" uid="uid://b4ph5f5xnthyl" path="res://Scenes/Overlay/frame.tscn" id="6_trqti"]
+[ext_resource type="PackedScene" path="res://Scenes/Overlay/frame.tscn" id="6_trqti"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pjxci"]
 bg_color = Color(0.705882, 0, 0, 1)
