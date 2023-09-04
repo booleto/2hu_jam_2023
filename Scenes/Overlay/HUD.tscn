@@ -1,11 +1,13 @@
-[gd_scene load_steps=19 format=3 uid="uid://dxi0fnvj5y78i"]
+[gd_scene load_steps=16 format=3 uid="uid://dxi0fnvj5y78i"]
 
 [ext_resource type="Script" path="res://Scenes/Overlay/hp_label.gd" id="1_m10vh"]
 [ext_resource type="Script" path="res://Scenes/Overlay/hp_bar.gd" id="1_ubtj7"]
 [ext_resource type="Texture2D" uid="uid://6m2ymt8gujgl" path="res://Assets/Sprites/HUD/danger.png" id="3_n1vt6"]
 [ext_resource type="Script" path="res://Scenes/Overlay/danger_bar.gd" id="3_xhd2x"]
 [ext_resource type="Script" path="res://addons/segmented_bar/segmented_bar.gd" id="4_2br3r"]
+[ext_resource type="Script" path="res://Scenes/Overlay/fairies.gd" id="6_8ds88"]
 [ext_resource type="Texture2D" uid="uid://diemqdxg1vao0" path="res://Assets/Sprites/Fairies/Cirnoidle.png" id="6_8kwu5"]
+[ext_resource type="PackedScene" uid="uid://b4ph5f5xnthyl" path="res://Scenes/Overlay/frame.tscn" id="6_trqti"]
 [ext_resource type="Texture2D" uid="uid://ijafuuyq4mx3" path="res://Assets/Sprites/Fairies/Clownidle.png" id="7_swlhf"]
 [ext_resource type="Texture2D" uid="uid://br6kc3ix5y8k4" path="res://Assets/Sprites/Fairies/Staridle.png" id="8_skm3k"]
 [ext_resource type="Texture2D" uid="uid://duisj0whkl5yl" path="res://Assets/Sprites/Fairies/SunnyIdle.png" id="9_vd3qs"]
@@ -20,26 +22,6 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_60418"]
 gradient = SubResource("Gradient_d8f16")
 width = 20
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_16qoa"]
-atlas = ExtResource("6_8kwu5")
-region = Rect2(8, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ypjn2"]
-atlas = ExtResource("7_swlhf")
-region = Rect2(8, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lcb6d"]
-atlas = ExtResource("8_skm3k")
-region = Rect2(8, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_soy6g"]
-atlas = ExtResource("9_vd3qs")
-region = Rect2(8, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hvs53"]
-atlas = ExtResource("10_tl43p")
-region = Rect2(8, 0, 16, 16)
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -147,63 +129,69 @@ segment_texture = SubResource("GradientTexture1D_60418")
 total_segments = 5
 seperation = 7
 
-[node name="Fairies" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -192.0
-offset_top = -60.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
+[node name="Fairies" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 905.0
+offset_top = 593.0
+offset_right = 1147.0
+offset_bottom = 643.0
+script = ExtResource("6_8ds88")
+
+[node name="Panel" type="PanelContainer" parent="Fairies"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="UsesLeft" type="Label" parent="Fairies/Panel"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "5"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Fairies"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Fairies/PanelContainer"]
+layout_mode = 2
+
+[node name="Selected" parent="Fairies/PanelContainer/HBoxContainer" instance=ExtResource("6_trqti")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("6_8kwu5")
+frame_color = Color(0.807843, 0.686275, 0, 1)
+
+[node name="Others" type="MarginContainer" parent="Fairies/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
 theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
 
-[node name="Panel" type="Panel" parent="Fairies"]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Fairies"]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="Fairies/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 3
-theme_override_constants/margin_top = 3
-theme_override_constants/margin_right = 3
-theme_override_constants/margin_bottom = 3
-
-[node name="Selected" type="TextureRect" parent="Fairies/HBoxContainer/MarginContainer"]
-custom_minimum_size = Vector2(40, 0)
-layout_mode = 2
-texture = SubResource("AtlasTexture_16qoa")
-
-[node name="CenterContainer" type="CenterContainer" parent="Fairies/HBoxContainer"]
-layout_mode = 2
-
-[node name="GridContainer" type="HBoxContainer" parent="Fairies/HBoxContainer/CenterContainer"]
+[node name="Frames" type="HBoxContainer" parent="Fairies/PanelContainer/HBoxContainer/Others"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/separation = 3
 
-[node name="1" type="TextureRect" parent="Fairies/HBoxContainer/CenterContainer/GridContainer"]
+[node name="1" parent="Fairies/PanelContainer/HBoxContainer/Others/Frames" instance=ExtResource("6_trqti")]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
-texture = SubResource("AtlasTexture_ypjn2")
+texture = ExtResource("7_swlhf")
+frame_color = Color(0.313726, 0.313726, 0.313726, 1)
 
-[node name="2" type="TextureRect" parent="Fairies/HBoxContainer/CenterContainer/GridContainer"]
+[node name="2" parent="Fairies/PanelContainer/HBoxContainer/Others/Frames" instance=ExtResource("6_trqti")]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
-texture = SubResource("AtlasTexture_lcb6d")
+texture = ExtResource("8_skm3k")
+frame_color = Color(0.313726, 0.313726, 0.313726, 1)
 
-[node name="3" type="TextureRect" parent="Fairies/HBoxContainer/CenterContainer/GridContainer"]
+[node name="3" parent="Fairies/PanelContainer/HBoxContainer/Others/Frames" instance=ExtResource("6_trqti")]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
-texture = SubResource("AtlasTexture_soy6g")
+texture = ExtResource("9_vd3qs")
+frame_color = Color(0.313726, 0.313726, 0.313726, 1)
 
-[node name="4" type="TextureRect" parent="Fairies/HBoxContainer/CenterContainer/GridContainer"]
+[node name="4" parent="Fairies/PanelContainer/HBoxContainer/Others/Frames" instance=ExtResource("6_trqti")]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
-texture = SubResource("AtlasTexture_hvs53")
+texture = ExtResource("10_tl43p")
+frame_color = Color(0.313726, 0.313726, 0.313726, 1)
