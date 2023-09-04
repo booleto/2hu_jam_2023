@@ -1,12 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4ph5f5xnthyl"]
+[gd_scene load_steps=3 format=3 uid="uid://b4ph5f5xnthyl"]
 
 [ext_resource type="Script" path="res://Scenes/Overlay/frame.gd" id="1_f5elu"]
-[ext_resource type="Texture2D" uid="uid://diemqdxg1vao0" path="res://Assets/Sprites/Fairies/Cirnoidle.png" id="1_msp8i"]
 [ext_resource type="Texture2D" uid="uid://khwovgkgovwg" path="res://Assets/Sprites/HUD/border.png" id="2_bw8sr"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_umv8t"]
-atlas = ExtResource("1_msp8i")
-region = Rect2(8, 2, 16, 16)
 
 [node name="Frame" type="MarginContainer"]
 offset_right = 50.0
@@ -24,7 +19,6 @@ theme_override_constants/margin_bottom = 3
 [node name="Image" type="TextureRect" parent="MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-texture = SubResource("AtlasTexture_umv8t")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 modulate = Color(0.156863, 0.156863, 0.156863, 1)

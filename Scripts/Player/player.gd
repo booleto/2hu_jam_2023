@@ -88,7 +88,7 @@ func update_input():
 
 # Kích hoạt tiên
 func activate_fairy():
-	pass
+	PlayerData.fairy_active = true
 
 # Đổi tiên
 func switch_fairy():
