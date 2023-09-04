@@ -435,7 +435,6 @@ transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition
 collision_layer = 2
 collision_mask = 19
 script = ExtResource("1_4oga8")
-default_rotation = null
 walk_speed = 150.0
 run_speed = 250.0
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://bqd0ot1uurjow"]
+[gd_scene load_steps=43 format=3 uid="uid://bqd0ot1uurjow"]
 
 [ext_resource type="Script" path="res://Scripts/GameEntities/game_entities.gd" id="1_idosq"]
 [ext_resource type="PackedScene" uid="uid://c1qx1q2ylej3m" path="res://Scenes/Objects/Player/player.tscn" id="2_6p1pc"]
@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c67qavicmv4cu" path="res://Scenes/Objects/Chest/chest.tscn" id="6_i705j"]
 [ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsProcess.gd" id="6_phi73"]
 [ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Composite/BTSequence.gd" id="7_1vap6"]
-[ext_resource type="Texture2D" uid="uid://ipcdlx5fdlos" path="res://Assets/Sprites/Visual effect/dragonjewel.png" id="7_qon2n"]
+[ext_resource type="Texture2D" uid="uid://brycb6r6ppqcb" path="res://Assets/Sprites/Visual effect/dragonjewel.png" id="7_qon2n"]
 [ext_resource type="PackedScene" uid="uid://d2sasf8vv0m84" path="res://Scenes/Objects/Door/door.tscn" id="8_brdno"]
 [ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsDesignatedToAlarm.gd" id="8_fprat"]
 [ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsRunningToAlarm.gd" id="9_gduxd"]
@@ -41,6 +41,7 @@
 [ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsTurnCooldown.gd" id="31_q856g"]
 [ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/TurnRandomly.gd" id="32_88hq3"]
 [ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Leaves/BTActionWait.gd" id="33_bwdgv"]
+[ext_resource type="PackedScene" uid="uid://dxi0fnvj5y78i" path="res://Scenes/Overlay/HUD.tscn" id="41_jwutd"]
 
 [node name="Main" type="Node2D"]
 
@@ -58,7 +59,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_ttxk2")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@20295")
+blackboard = NodePath("@Node@34209")
 
 [node name="main" type="Node" parent="GameEntities/Enemy/BTRoot"]
 script = ExtResource("5_vyara")
@@ -216,7 +217,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy2" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_ttxk2")
 actor_path = NodePath("../../Enemy")
-blackboard = NodePath("@Node@20296")
+blackboard = NodePath("@Node@34210")
 
 [node name="main" type="Node" parent="GameEntities/Enemy2/BTRoot"]
 script = ExtResource("5_vyara")
@@ -390,6 +391,8 @@ script = ExtResource("10_bh2xa")
 [node name="Utils" type="Node" parent="."]
 
 [node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="UI" instance=ExtResource("41_jwutd")]
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(4, 4)
