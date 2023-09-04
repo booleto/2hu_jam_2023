@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://d07f57jqol6xv"
-=======
-uid="uid://yi1smkisljrj"
->>>>>>> 1bf07f326a060b3e365b23a258ab796ff404acea
-path="res://.godot/imported/fireBIGfix.png-8b5cd7a376710650fdaa4126b02e7467.ctex"
+uid="uid://khwovgkgovwg"
+path="res://.godot/imported/border.png-22bb0217e45a9023ec65c50c7d3ee00b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Visual effect/fireBIGfix.png"
-dest_files=["res://.godot/imported/fireBIGfix.png-8b5cd7a376710650fdaa4126b02e7467.ctex"]
+source_file="res://Assets/Sprites/HUD/border.png"
+dest_files=["res://.godot/imported/border.png-22bb0217e45a9023ec65c50c7d3ee00b.ctex"]
 
 [params]
 
