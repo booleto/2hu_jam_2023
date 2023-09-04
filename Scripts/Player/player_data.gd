@@ -7,6 +7,7 @@ var danger: int = 0 # max là 5 (?)
 const MAX_DANGER: int = 5
 
 enum FAIRIES { BAKA, CLOWNPISS, STAR, SUNNY, LUNA }
+var selected : FAIRIES
 var fairies: Array = [] # ⑨ -> clownpiss -> kaguya cải trang -> sunny -> luna
 var uses_left: int = 4 # số lần dùng tiên còn lại
 

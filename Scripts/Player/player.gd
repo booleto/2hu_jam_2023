@@ -92,7 +92,10 @@ func activate_fairy():
 
 # Đổi tiên
 func switch_fairy():
-	pass
+	if PlayerData.selected == PlayerData.fairies.size() - 1:
+		PlayerData.selected = 0
+	else:
+		PlayerData.selected += 1
 
 # Tấn công
 func attack():
