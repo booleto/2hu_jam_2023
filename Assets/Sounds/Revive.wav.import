@@ -2,7 +2,11 @@
 
 importer="wav"
 type="AudioStreamWAV"
+<<<<<<< HEAD
 uid="uid://drx24n7keix2n"
+=======
+uid="uid://c7kmxpvngwu2x"
+>>>>>>> 3ee960f427ed252a16372b07099077d2cefc974a
 path="res://.godot/imported/Revive.wav-724f5662f250f1cafd154126c965d480.sample"
 
 [deps]

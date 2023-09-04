@@ -2,7 +2,11 @@
 
 importer="wav"
 type="AudioStreamWAV"
+<<<<<<< HEAD
 uid="uid://bwdwlki04dncp"
+=======
+uid="uid://bjhc7vcc3kii7"
+>>>>>>> 3ee960f427ed252a16372b07099077d2cefc974a
 path="res://.godot/imported/FistPunch.wav-3255fa25897b8fca93eb289573c520cf.sample"
 
 [deps]

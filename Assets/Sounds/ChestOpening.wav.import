@@ -2,7 +2,11 @@
 
 importer="wav"
 type="AudioStreamWAV"
+<<<<<<< HEAD
 uid="uid://dasqksro8j4rd"
+=======
+uid="uid://b608jpmcnwm3d"
+>>>>>>> 3ee960f427ed252a16372b07099077d2cefc974a
 path="res://.godot/imported/ChestOpening.wav-0e622a57ecbf9a4b114309deb5755149.sample"
 
 [deps]

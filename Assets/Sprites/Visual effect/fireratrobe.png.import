@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://raay3oydbfeq"
+=======
+uid="uid://5g2vrnm6o3qt"
+>>>>>>> 3ee960f427ed252a16372b07099077d2cefc974a
 path="res://.godot/imported/fireratrobe.png-42696fbab1d8a4c31fa5ea9e01d37953.ctex"
 metadata={
 "vram_texture": false

@@ -2,7 +2,11 @@
 
 importer="wav"
 type="AudioStreamWAV"
+<<<<<<< HEAD
 uid="uid://ce01c6t6arnql"
+=======
+uid="uid://c2quq4yqp5wfk"
+>>>>>>> 3ee960f427ed252a16372b07099077d2cefc974a
 path="res://.godot/imported/EnemySeesPlayer.wav-df454a3253d490c2bd23a4c0036c2243.sample"
 
 [deps]

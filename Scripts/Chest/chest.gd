@@ -25,5 +25,6 @@ func _on_body_entered(body):
 	if is_true_chest:
 		emit_signal("treasure_obtained")
 		treasure.visible = true
+		GameState.set_won()
 	else:
 		label.visible = true

@@ -6,7 +6,7 @@ var fire_effect_preload = load("res://Scenes/Objects/FireEffect/fire_effect.tscn
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	GameState.main_stage_node = self
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):

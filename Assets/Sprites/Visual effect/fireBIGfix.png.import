@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://c2iisgwv5jq8h"
+=======
+uid="uid://beifmuug00652"
+>>>>>>> 3ee960f427ed252a16372b07099077d2cefc974a
 path="res://.godot/imported/fireBIGfix.png-8b5cd7a376710650fdaa4126b02e7467.ctex"
 metadata={
 "vram_texture": false

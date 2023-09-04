@@ -2,7 +2,11 @@
 
 importer="wav"
 type="AudioStreamWAV"
+<<<<<<< HEAD
 uid="uid://d3ob8fdi8hq1p"
+=======
+uid="uid://46b520e2ust1"
+>>>>>>> 3ee960f427ed252a16372b07099077d2cefc974a
 path="res://.godot/imported/GotTreasure.wav-2a5928ed6850e989a28bbc888e3ddb92.sample"
 
 [deps]

@@ -5,7 +5,6 @@ class_name Player
 signal player_death
 signal player_respawn
 
-@export var max_health : int = 3
 @export var speed = 400
 @export var dmk_speed = 10
 @export var dmk_damage = 1
@@ -17,8 +16,6 @@ signal player_respawn
 @onready var animation_tree : AnimationTree = $AnimationTree
 @onready var fire_position : Marker2D = $FirePosition
 
-var health = max_health
-var respawns_left : int = 5
 var enemies_in_range = []
 
 var knockback : Vector2 = Vector2.ZERO
@@ -103,9 +100,9 @@ func attack():
 	for enemy in enemies_in_range:
 		enemy.take_damage(1, false)
 		if enemy.is_marked:
-			health += 1
+			PlayerData.hp += 1
 			enemy.is_marked = false
-			print("recovered. Health: ", health)
+			print("recovered. Health: ", PlayerData.hp)
 
 # Xài đạn mạc
 func danmaku():
@@ -117,21 +114,22 @@ func take_damage(dmg: float, knockback_dir: Vector2, knockback_force: float = 50
 	if is_respawning:
 		return
 	
-	health = health - dmg
-	if health <= 0 and respawns_left > 0:
+	PlayerData.hp -= dmg
+	if PlayerData.hp <= 0 and PlayerData.danger < PlayerData.MAX_DANGER:
 		emit_signal("player_respawn")
-		health = max_health
-		respawns_left -= 1
+		PlayerData.hp = PlayerData.MAX_HP
+		PlayerData.danger += 1
 		animation_tree["parameters/conditions/respawning"] = true
 		get_parent().play_respawn_effect(self)
-		print("respawn. Lives left: ", respawns_left)
+		print("respawn. Alarm: ", PlayerData.danger)
 		
-	if health <=0 and respawns_left <= 0:
+	if PlayerData.hp <= 0 and PlayerData.danger >= PlayerData.MAX_DANGER:
 		print("player lost")
 		emit_signal("player_death")
 		animation_tree["parameters/conditions/player_death"] = true
+		GameState.set_lose()
 		
-	print("player took dmg. Health: ", health)
+	print("player took dmg. Health: ", PlayerData.hp)
 	knockback = knockback_dir * knockback_force
 	knockback_decay = decay
 
@@ -145,3 +143,5 @@ func _on_hitbox_body_entered(body):
 func _on_hitbox_body_exited(body):
 	if body is Enemy:
 		enemies_in_range.erase(body)
+
+

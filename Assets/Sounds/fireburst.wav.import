@@ -2,7 +2,11 @@
 
 importer="wav"
 type="AudioStreamWAV"
+<<<<<<< HEAD
 uid="uid://dd3fx2f4kjbtc"
+=======
+uid="uid://cn3sfk86k3tjc"
+>>>>>>> 3ee960f427ed252a16372b07099077d2cefc974a
 path="res://.godot/imported/fireburst.wav-32c434bec61c2e949a862305f96e5109.sample"
 
 [deps]

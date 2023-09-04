@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Scenes/Levels/map2.tscn
 [gd_scene load_steps=12 format=3 uid="uid://bebj1py6ix7yu"]
 
 [ext_resource type="Script" path="res://Scripts/GameEntities/game_entities.gd" id="1_gdflb"]
@@ -11,6 +12,22 @@
 [ext_resource type="PackedScene" uid="uid://ctluf3yg2l1l0" path="res://Scenes/Objects/Alarm/alarm.tscn" id="9_njg5b"]
 [ext_resource type="Script" path="res://Scripts/GameState/game_state.gd" id="10_1a128"]
 [ext_resource type="TileSet" uid="uid://bhxmfe0msahhf" path="res://Resources/Tileset/tileset.tres" id="11_8stnh"]
+=======
+[gd_scene load_steps=13 format=3 uid="uid://cedveobf44rv7"]
+
+[ext_resource type="PackedScene" uid="uid://c1qx1q2ylej3m" path="res://Scenes/Objects/Player/player.tscn" id="1_ifevs"]
+[ext_resource type="Script" path="res://Scripts/GameEntities/game_entities.gd" id="1_rh6ip"]
+[ext_resource type="PackedScene" uid="uid://chhsxxwlq64bs" path="res://Scenes/Objects/Enemy/enemy.tscn" id="2_xe5fl"]
+[ext_resource type="PackedScene" uid="uid://dt2kf02le6ak" path="res://Scenes/Objects/Danmaku/danmaku.tscn" id="3_7x6lx"]
+[ext_resource type="TileSet" uid="uid://bhxmfe0msahhf" path="res://Resources/Tileset/tileset.tres" id="3_xmtiq"]
+[ext_resource type="PackedScene" uid="uid://cyb7mfpr6ll6d" path="res://Scenes/Objects/PItem/p_item.tscn" id="4_4s0vl"]
+[ext_resource type="Script" path="res://Scripts/GameState/game_state.gd" id="5_05ol6"]
+[ext_resource type="PackedScene" uid="uid://c67qavicmv4cu" path="res://Scenes/Objects/Chest/chest.tscn" id="6_0xhgl"]
+[ext_resource type="Texture2D" uid="uid://brycb6r6ppqcb" path="res://Assets/Sprites/Visual effect/dragonjewel.png" id="7_3fwf5"]
+[ext_resource type="PackedScene" uid="uid://d2sasf8vv0m84" path="res://Scenes/Objects/Door/door.tscn" id="8_78w64"]
+[ext_resource type="PackedScene" uid="uid://ctluf3yg2l1l0" path="res://Scenes/Objects/Alarm/alarm.tscn" id="9_grg02"]
+[ext_resource type="PackedScene" uid="uid://dxi0fnvj5y78i" path="res://Scenes/Overlay/HUD.tscn" id="11_8wmpp"]
+>>>>>>> 3ee960f427ed252a16372b07099077d2cefc974a:Scenes/Levels/level_template.tscn
 
 [node name="Main" type="Node2D"]
 
@@ -26,7 +43,6 @@ designated_alarm = NodePath("../Alarm")
 
 [node name="Enemy2" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_12rc8")]
 position = Vector2(287, -41)
-designated_to_alarm = false
 designated_alarm = NodePath("../Alarm")
 
 [node name="Danmaku" parent="GameEntities" instance=ExtResource("4_nc33w")]
@@ -53,6 +69,8 @@ script = ExtResource("10_1a128")
 [node name="Utils" type="Node" parent="."]
 
 [node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="UI" instance=ExtResource("11_8wmpp")]
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(4, 4)
