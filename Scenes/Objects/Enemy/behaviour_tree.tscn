@@ -35,7 +35,7 @@
 [node name="BehaviourTree" type="Node" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("1_cklwv")
 actor_path = NodePath("..")
-blackboard = NodePath("")
+blackboard = NodePath("@Node@147787")
 
 [node name="main" type="Node" parent="."]
 script = ExtResource("2_hgjyo")
@@ -187,3 +187,5 @@ wait_time_ms = 3
 
 [node name="_Node_127477" type="Node" parent="."]
 script = ExtResource("31_1tvs3")
+
+[node name="Node" type="Node" parent="."]

@@ -4,9 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://7mirmi0q4ysm" path="res://Assets/Sprites/Door/door.png" id="1_tokx2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_myohv"]
+radius = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o6dso"]
-size = Vector2(64, 20)
+size = Vector2(64, 3)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x61xq"]
 radius = 440.65
@@ -15,16 +16,14 @@ radius = 440.65
 script = ExtResource("1_akuol")
 
 [node name="PinJoint2D" type="PinJoint2D" parent="."]
-position = Vector2(5.915, 0)
 node_a = NodePath("../Anchor")
 node_b = NodePath("../Door")
 
 [node name="Anchor" type="StaticBody2D" parent="."]
-collision_layer = 3
-collision_mask = 3
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Anchor"]
-visible = false
 shape = SubResource("CircleShape2D_myohv")
 
 [node name="Door" type="RigidBody2D" parent="."]
@@ -35,7 +34,7 @@ inertia = 100.0
 gravity_scale = 0.0
 max_contacts_reported = 1
 contact_monitor = true
-sleeping = true
+can_sleep = false
 
 [node name="DoorSprite" type="Sprite2D" parent="Door"]
 scale = Vector2(4, 4)
@@ -43,7 +42,6 @@ texture = ExtResource("1_tokx2")
 offset = Vector2(8, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
-visible = false
 position = Vector2(32, 0)
 shape = SubResource("RectangleShape2D_o6dso")
 
