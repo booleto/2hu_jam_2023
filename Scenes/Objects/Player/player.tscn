@@ -1,12 +1,36 @@
-[gd_scene load_steps=14 format=3 uid="uid://c1qx1q2ylej3m"]
+[gd_scene load_steps=15 format=3 uid="uid://c1qx1q2ylej3m"]
 
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_vfgup"]
 [ext_resource type="Texture2D" uid="uid://bxul2vhtttb31" path="res://Assets/Sprites/Player/Mokou.png" id="2_4ebf5"]
-[ext_resource type="Texture2D" uid="uid://cq4pkckp55o4g" path="res://Assets/Sprites/Player/Mokou_attack.png" id="3_w6b4a"]
+[ext_resource type="Texture2D" uid="uid://j5tw7ejn15ov" path="res://Assets/Sprites/Player/Mokou_attack.png" id="3_w6b4a"]
 [ext_resource type="AnimationNodeStateMachine" uid="uid://b2lxvso4dptkf" path="res://Resources/AnimationNode/Player/player_animation_node_state_machine.tres" id="3_y7nai"]
 
 [sub_resource type="Animation" id="Animation_308ks"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hitbox:process_mode")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationTree:parameters/conditions/player_attack")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_227mn"]
 resource_name = "attack"
@@ -23,6 +47,30 @@ tracks/0/keys = {
 "update": 1,
 "values": [ExtResource("3_w6b4a"), ExtResource("2_4ebf5")]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hitbox:process_mode")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationTree:parameters/conditions/player_attack")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_jwgep"]
 resource_name = "death"
@@ -32,6 +80,7 @@ resource_name = "idle"
 
 [sub_resource type="Animation" id="Animation_6npac"]
 resource_name = "respawn"
+length = 4.0
 
 [sub_resource type="Animation" id="Animation_173l6"]
 resource_name = "walk"
@@ -52,12 +101,15 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_3q74r"]
 radius = 20.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cf71i"]
+size = Vector2(80, 70)
+
 [node name="Player" type="CharacterBody2D"]
+rotation = 81.4509
 collision_layer = 2
 collision_mask = 3
 motion_mode = 1
 script = ExtResource("1_vfgup")
-dmk_damage = 10
 
 [node name="Mokou" type="Sprite2D" parent="."]
 scale = Vector2(4, 4)
@@ -93,7 +145,7 @@ shape = SubResource("CircleShape2D_3q74r")
 debug_color = Color(0, 0.639216, 0.388235, 0.419608)
 
 [node name="FirePosition" type="Marker2D" parent="."]
-position = Vector2(40, 0)
+position = Vector2(60, 0)
 
 [node name="Footstep" type="AudioStreamPlayer" parent="."]
 
@@ -103,4 +155,12 @@ position = Vector2(40, 0)
 shape = SubResource("CircleShape2D_3q74r")
 debug_color = Color(0.937255, 0, 0.647059, 0.419608)
 
+[node name="Hitbox" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(30, 0)
+shape = SubResource("RectangleShape2D_cf71i")
+
 [connection signal="finished" from="Footstep" to="." method="_on_footstep_finished"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

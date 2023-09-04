@@ -9,9 +9,9 @@ const MAX_DANGER: int = 5
 var fairies: Array = [] # ⑨ -> clownpiss -> kaguya cải trang -> sunny -> luna
 
 func _init():
-    reset()
+	reset()
 
 func reset():
-    hp = 3
-    danger = 0
-    fairies = []
+	hp = 3
+	danger = 0
+	fairies = []
