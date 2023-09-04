@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://cbgis62e7l3ws"]
+[gd_scene load_steps=43 format=3 uid="uid://cbgis62e7l3ws"]
 
 [ext_resource type="Script" path="res://Scripts/GameEntities/game_entities.gd" id="1_gdflb"]
 [ext_resource type="PackedScene" uid="uid://c1qx1q2ylej3m" path="res://Scenes/Objects/Player/player.tscn" id="2_khspm"]
@@ -41,8 +41,9 @@
 [ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/TurnRandomly.gd" id="32_nfdnf"]
 [ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Leaves/BTActionWait.gd" id="33_stndg"]
 [ext_resource type="TileSet" uid="uid://bhxmfe0msahhf" path="res://Resources/Tileset/tileset.tres" id="41_2210s"]
+[ext_resource type="PackedScene" uid="uid://dxi0fnvj5y78i" path="res://Scenes/Overlay/HUD.tscn" id="41_aeod0"]
 
-[node name="Main2" type="Node2D"]
+[node name="Main3" type="Node2D"]
 
 [node name="GameEntities" type="Node" parent="."]
 script = ExtResource("1_gdflb")
@@ -60,7 +61,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/EnemyAla" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24809")
+blackboard = NodePath("@Node@38872")
 
 [node name="main" type="Node" parent="GameEntities/EnemyAla/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -218,7 +219,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy2" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24810")
+blackboard = NodePath("@Node@38873")
 
 [node name="main" type="Node" parent="GameEntities/Enemy2/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -365,7 +366,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy3" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24811")
+blackboard = NodePath("@Node@38874")
 
 [node name="main" type="Node" parent="GameEntities/Enemy3/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -511,7 +512,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy4" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24812")
+blackboard = NodePath("@Node@38875")
 
 [node name="main" type="Node" parent="GameEntities/Enemy4/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -658,7 +659,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy5" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24813")
+blackboard = NodePath("@Node@38876")
 
 [node name="main" type="Node" parent="GameEntities/Enemy5/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -804,7 +805,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy9" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24814")
+blackboard = NodePath("@Node@38877")
 
 [node name="main" type="Node" parent="GameEntities/Enemy9/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -950,7 +951,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy11" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24815")
+blackboard = NodePath("@Node@38878")
 
 [node name="main" type="Node" parent="GameEntities/Enemy11/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -1096,7 +1097,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy10" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24816")
+blackboard = NodePath("@Node@38879")
 
 [node name="main" type="Node" parent="GameEntities/Enemy10/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -1242,7 +1243,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy7" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24817")
+blackboard = NodePath("@Node@38880")
 
 [node name="main" type="Node" parent="GameEntities/Enemy7/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -1388,7 +1389,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy25" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24818")
+blackboard = NodePath("@Node@38881")
 
 [node name="main" type="Node" parent="GameEntities/Enemy25/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -1535,7 +1536,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy28" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24819")
+blackboard = NodePath("@Node@38882")
 
 [node name="main" type="Node" parent="GameEntities/Enemy28/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -1681,7 +1682,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy30" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24820")
+blackboard = NodePath("@Node@38883")
 
 [node name="main" type="Node" parent="GameEntities/Enemy30/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -1827,7 +1828,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy32" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24821")
+blackboard = NodePath("@Node@38884")
 
 [node name="main" type="Node" parent="GameEntities/Enemy32/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -1973,7 +1974,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy29" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24822")
+blackboard = NodePath("@Node@38885")
 
 [node name="main" type="Node" parent="GameEntities/Enemy29/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -2120,7 +2121,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy31" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24823")
+blackboard = NodePath("@Node@38886")
 
 [node name="main" type="Node" parent="GameEntities/Enemy31/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -2265,7 +2266,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy33" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24824")
+blackboard = NodePath("@Node@38887")
 
 [node name="main" type="Node" parent="GameEntities/Enemy33/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -2410,7 +2411,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy34" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24825")
+blackboard = NodePath("@Node@38888")
 
 [node name="main" type="Node" parent="GameEntities/Enemy34/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -2556,7 +2557,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy26" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24826")
+blackboard = NodePath("@Node@38889")
 
 [node name="main" type="Node" parent="GameEntities/Enemy26/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -2703,7 +2704,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy27" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24827")
+blackboard = NodePath("@Node@38890")
 
 [node name="main" type="Node" parent="GameEntities/Enemy27/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -2850,7 +2851,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy21" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24828")
+blackboard = NodePath("@Node@38891")
 
 [node name="main" type="Node" parent="GameEntities/Enemy21/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -2996,7 +2997,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy22" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24829")
+blackboard = NodePath("@Node@38892")
 
 [node name="main" type="Node" parent="GameEntities/Enemy22/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -3142,7 +3143,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy23" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24830")
+blackboard = NodePath("@Node@38893")
 
 [node name="main" type="Node" parent="GameEntities/Enemy23/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -3288,7 +3289,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy6" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24831")
+blackboard = NodePath("@Node@38894")
 
 [node name="main" type="Node" parent="GameEntities/Enemy6/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -3434,7 +3435,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy8" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24832")
+blackboard = NodePath("@Node@38895")
 
 [node name="main" type="Node" parent="GameEntities/Enemy8/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -3580,7 +3581,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy12" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24833")
+blackboard = NodePath("@Node@38896")
 
 [node name="main" type="Node" parent="GameEntities/Enemy12/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -3726,7 +3727,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy13" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24834")
+blackboard = NodePath("@Node@38897")
 
 [node name="main" type="Node" parent="GameEntities/Enemy13/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -3872,7 +3873,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy14" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24835")
+blackboard = NodePath("@Node@38898")
 
 [node name="main" type="Node" parent="GameEntities/Enemy14/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -4017,7 +4018,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy15" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24836")
+blackboard = NodePath("@Node@38899")
 
 [node name="main" type="Node" parent="GameEntities/Enemy15/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -4163,7 +4164,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy16" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24837")
+blackboard = NodePath("@Node@38900")
 
 [node name="main" type="Node" parent="GameEntities/Enemy16/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -4309,7 +4310,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy17" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24838")
+blackboard = NodePath("@Node@38901")
 
 [node name="main" type="Node" parent="GameEntities/Enemy17/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -4455,7 +4456,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy18" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24839")
+blackboard = NodePath("@Node@38902")
 
 [node name="main" type="Node" parent="GameEntities/Enemy18/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -4602,7 +4603,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy19" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24840")
+blackboard = NodePath("@Node@38903")
 
 [node name="main" type="Node" parent="GameEntities/Enemy19/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -4748,7 +4749,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy20" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24841")
+blackboard = NodePath("@Node@38904")
 
 [node name="main" type="Node" parent="GameEntities/Enemy20/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -4893,7 +4894,7 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy35" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_vjbpa")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@24842")
+blackboard = NodePath("@Node@38905")
 
 [node name="main" type="Node" parent="GameEntities/Enemy35/BTRoot"]
 script = ExtResource("5_qdbup")
@@ -5193,6 +5194,8 @@ script = ExtResource("10_1a128")
 [node name="Utils" type="Node" parent="."]
 
 [node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="UI" instance=ExtResource("41_aeod0")]
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(4, 4)
