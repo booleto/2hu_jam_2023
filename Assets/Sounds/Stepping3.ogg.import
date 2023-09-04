@@ -2,7 +2,11 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
+<<<<<<< HEAD
+uid="uid://cfq2bbpkjl51h"
+=======
 uid="uid://cq72x1frftcsy"
+>>>>>>> 3ee960f427ed252a16372b07099077d2cefc974a
 path="res://.godot/imported/Stepping3.ogg-7ee0dc46791777f4ff3010d52955ca15.oggvorbisstr"
 
 [deps]
