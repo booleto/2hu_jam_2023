@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cedveobf44rv7"]
+[gd_scene load_steps=13 format=3 uid="uid://cedveobf44rv7"]
 
 [ext_resource type="PackedScene" uid="uid://c1qx1q2ylej3m" path="res://Scenes/Objects/Player/player.tscn" id="1_ifevs"]
 [ext_resource type="Script" path="res://Scripts/GameEntities/game_entities.gd" id="1_rh6ip"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://brycb6r6ppqcb" path="res://Assets/Sprites/Visual effect/dragonjewel.png" id="7_3fwf5"]
 [ext_resource type="PackedScene" uid="uid://d2sasf8vv0m84" path="res://Scenes/Objects/Door/door.tscn" id="8_78w64"]
 [ext_resource type="PackedScene" uid="uid://ctluf3yg2l1l0" path="res://Scenes/Objects/Alarm/alarm.tscn" id="9_grg02"]
+[ext_resource type="PackedScene" uid="uid://dxi0fnvj5y78i" path="res://Scenes/Overlay/HUD.tscn" id="11_8wmpp"]
 
 [node name="Main" type="Node2D"]
 
@@ -26,7 +27,6 @@ designated_alarm = NodePath("../Alarm")
 
 [node name="Enemy2" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("2_xe5fl")]
 position = Vector2(287, -41)
-designated_to_alarm = false
 designated_alarm = NodePath("../Alarm")
 
 [node name="Danmaku" parent="GameEntities" instance=ExtResource("3_7x6lx")]
@@ -53,6 +53,8 @@ script = ExtResource("5_05ol6")
 [node name="Utils" type="Node" parent="."]
 
 [node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="UI" instance=ExtResource("11_8wmpp")]
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(4, 4)

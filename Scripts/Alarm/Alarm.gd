@@ -9,13 +9,14 @@ var alarmed_list = []
 
 func activate():
 	emit_signal("alarm_activated")
-	alarm_duration.start()
-	var overlap_bodies = get_overlapping_bodies()
-	for body in overlap_bodies:
-		if body is Enemy:
-			body.hearing_sounds = true
-			body.sound_position = position
-			alarmed_list.append(body)
+#	alarm_duration.start()
+#	var overlap_bodies = get_overlapping_bodies()
+#	for body in overlap_bodies:
+#		if body is Enemy:
+#			body.hearing_sounds = true
+#			body.sound_position = position
+#			alarmed_list.append(body)
+	PlayerData.danger += 1
 
 
 func _on_alarm_duration_timeout():
