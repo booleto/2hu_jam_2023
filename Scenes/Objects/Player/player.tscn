@@ -106,10 +106,14 @@ _data = {
 radius = 20.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cf71i"]
+<<<<<<< HEAD
+size = Vector2(93.6195, 64.0157)
+=======
 size = Vector2(120, 70)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5lq1e"]
 radius = 367.69
+>>>>>>> fdb6dde832b8b14eded63b93f315d1cd040e9f14
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_di4gt"]
 atlas = ExtResource("5_eqvk1")
@@ -292,7 +296,7 @@ shape = SubResource("CircleShape2D_3q74r")
 debug_color = Color(0, 0.639216, 0.388235, 0.419608)
 
 [node name="FirePosition" type="Marker2D" parent="."]
-position = Vector2(60, 0)
+position = Vector2(49.0151, 1.23134)
 
 [node name="Footstep" type="AudioStreamPlayer" parent="."]
 
@@ -307,7 +311,11 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+<<<<<<< HEAD
+position = Vector2(26.1964, 0.0990739)
+=======
 position = Vector2(30, 0)
+>>>>>>> fdb6dde832b8b14eded63b93f315d1cd040e9f14
 shape = SubResource("RectangleShape2D_cf71i")
 
 [node name="CirnoRange" type="Area2D" parent="."]
