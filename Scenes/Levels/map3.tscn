@@ -62,7 +62,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/EnemyAla" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124834")
+=======
+blackboard = NodePath("@Node@39628")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/EnemyAla/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -220,7 +224,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy2" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124835")
+=======
+blackboard = NodePath("@Node@39629")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy2/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -367,7 +375,11 @@ designated_alarm = NodePath("../Alarm7")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy3" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124836")
+=======
+blackboard = NodePath("@Node@39630")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy3/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -513,7 +525,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy4" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124837")
+=======
+blackboard = NodePath("@Node@39631")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy4/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -659,7 +675,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy24" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124838")
+=======
+blackboard = NodePath("@Node@39632")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy24/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -805,7 +825,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy33" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124839")
+=======
+blackboard = NodePath("@Node@39633")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy33/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -951,7 +975,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy36" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124840")
+=======
+blackboard = NodePath("@Node@39634")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy36/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -1097,7 +1125,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy37" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124841")
+=======
+blackboard = NodePath("@Node@39635")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy37/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -1243,7 +1275,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy38" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124842")
+=======
+blackboard = NodePath("@Node@39636")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy38/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -1389,7 +1425,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy39" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124843")
+=======
+blackboard = NodePath("@Node@39637")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy39/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -1535,7 +1575,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy40" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124844")
+=======
+blackboard = NodePath("@Node@39638")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy40/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -1681,7 +1725,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy41" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124845")
+=======
+blackboard = NodePath("@Node@39639")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy41/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -1827,7 +1875,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy42" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124846")
+=======
+blackboard = NodePath("@Node@39640")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy42/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -1973,7 +2025,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy43" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124847")
+=======
+blackboard = NodePath("@Node@39641")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy43/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -2119,7 +2175,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy44" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124848")
+=======
+blackboard = NodePath("@Node@39642")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy44/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -2265,7 +2325,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy5" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124849")
+=======
+blackboard = NodePath("@Node@39643")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy5/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -2411,7 +2475,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy9" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124850")
+=======
+blackboard = NodePath("@Node@39644")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy9/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -2557,7 +2625,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy11" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124851")
+=======
+blackboard = NodePath("@Node@39645")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy11/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -2704,7 +2776,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy45" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124852")
+=======
+blackboard = NodePath("@Node@39646")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy45/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -2850,7 +2926,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy10" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124853")
+=======
+blackboard = NodePath("@Node@39647")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy10/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -2997,7 +3077,11 @@ designated_alarm = NodePath("../Alarm10")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy7" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124854")
+=======
+blackboard = NodePath("@Node@39648")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy7/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -3144,7 +3228,11 @@ designated_alarm = NodePath("../Alarm5")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy25" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124855")
+=======
+blackboard = NodePath("@Node@39649")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy25/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -3290,7 +3378,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy28" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124856")
+=======
+blackboard = NodePath("@Node@39650")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy28/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -3436,7 +3528,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy30" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124857")
+=======
+blackboard = NodePath("@Node@39651")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy30/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -3582,7 +3678,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy32" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124858")
+=======
+blackboard = NodePath("@Node@39652")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy32/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -3728,7 +3828,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy29" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124859")
+=======
+blackboard = NodePath("@Node@39653")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy29/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -3874,7 +3978,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy31" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124860")
+=======
+blackboard = NodePath("@Node@39654")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy31/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -4020,7 +4128,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy34" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124861")
+=======
+blackboard = NodePath("@Node@39655")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy34/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -4167,7 +4279,11 @@ designated_alarm = NodePath("../Alarm5")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy26" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124862")
+=======
+blackboard = NodePath("@Node@39656")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy26/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -4314,7 +4430,11 @@ designated_alarm = NodePath("../Area2D")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy27" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124863")
+=======
+blackboard = NodePath("@Node@39657")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy27/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -4461,7 +4581,11 @@ designated_alarm = NodePath("../Alarm8")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy21" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124864")
+=======
+blackboard = NodePath("@Node@39658")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy21/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -4608,7 +4732,11 @@ designated_alarm = NodePath("../Alarm9")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy22" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124865")
+=======
+blackboard = NodePath("@Node@39659")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy22/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -4754,7 +4882,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy23" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124866")
+=======
+blackboard = NodePath("@Node@39660")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy23/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -4900,7 +5032,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy6" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124867")
+=======
+blackboard = NodePath("@Node@39661")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy6/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -5046,7 +5182,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy8" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124868")
+=======
+blackboard = NodePath("@Node@39662")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy8/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -5192,7 +5332,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy12" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124869")
+=======
+blackboard = NodePath("@Node@39663")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy12/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -5339,7 +5483,11 @@ designated_alarm = NodePath("../Alarm3")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy13" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124870")
+=======
+blackboard = NodePath("@Node@39664")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy13/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -5485,7 +5633,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy14" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124871")
+=======
+blackboard = NodePath("@Node@39665")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy14/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -5632,7 +5784,11 @@ designated_alarm = NodePath("../Alarm4")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy15" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124872")
+=======
+blackboard = NodePath("@Node@39666")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy15/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -5778,7 +5934,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy16" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124873")
+=======
+blackboard = NodePath("@Node@39667")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy16/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -5924,7 +6084,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy17" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124874")
+=======
+blackboard = NodePath("@Node@39668")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy17/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -6070,7 +6234,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy18" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124875")
+=======
+blackboard = NodePath("@Node@39669")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy18/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -6216,7 +6384,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy19" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124876")
+=======
+blackboard = NodePath("@Node@39670")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy19/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -6362,7 +6534,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy20" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124877")
+=======
+blackboard = NodePath("@Node@39671")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy20/BTRoot"]
 script = ExtResource("5_th1s4")
@@ -6508,7 +6684,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy35" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_mi554")
 actor_path = NodePath("..")
+<<<<<<< HEAD:Scenes/Levels/map3.tscn
 blackboard = NodePath("@Node@124878")
+=======
+blackboard = NodePath("@Node@39672")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0:Scenes/Levels/map1_copy.tscn
 
 [node name="main" type="Node" parent="GameEntities/Enemy35/BTRoot"]
 script = ExtResource("5_th1s4")

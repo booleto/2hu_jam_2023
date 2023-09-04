@@ -18,6 +18,7 @@ signal player_respawn
 @onready var fire_position : Marker2D = $FirePosition
 @onready var cirno_range : Area2D = $CirnoRange
 @onready var sunny_timer : Timer = $SunnyTimer
+@onready var fairy_effect : AnimatedSprite2D = $FairyEffect
 
 var enemies_in_range = []
 
@@ -123,6 +124,7 @@ func activate_fairy():
 		PlayerData.FAIRIES.STAR:
 			is_buff_star = true
 			PlayerData.uses_left -= 2
+			fairy_effect.play("star")
 
 # Đổi tiên
 func switch_fairy():
@@ -183,12 +185,14 @@ func sunny_activate_effect():
 	set_collision_layer_value(2, false)
 	sunny_timer.start()
 	sprite.self_modulate.a = 0.5
+	fairy_effect.play("sunny")
 	
 func sunny_deactivate_effect():
 	is_buff_sunny = false
 	set_collision_layer_value(2, true)
 	sunny_timer.stop()
 	sprite.self_modulate.a = 1
+	fairy_effect.play("default")
 
 func _on_hitbox_body_entered(body):
 	if body is Enemy:
@@ -203,3 +207,4 @@ func _on_hitbox_body_exited(body):
 
 func _on_star_timer_timeout():
 	is_buff_star = false
+	fairy_effect.play("default")

@@ -1,10 +1,11 @@
-[gd_scene load_steps=37 format=3 uid="uid://c1qx1q2ylej3m"]
+[gd_scene load_steps=38 format=3 uid="uid://c1qx1q2ylej3m"]
 
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_vfgup"]
 [ext_resource type="Texture2D" uid="uid://bxul2vhtttb31" path="res://Assets/Sprites/Player/Mokou.png" id="2_4ebf5"]
 [ext_resource type="Texture2D" uid="uid://j5tw7ejn15ov" path="res://Assets/Sprites/Player/Mokou_attack.png" id="3_w6b4a"]
 [ext_resource type="AnimationNodeStateMachine" uid="uid://b2lxvso4dptkf" path="res://Resources/AnimationNode/Player/player_animation_node_state_machine.tres" id="3_y7nai"]
 [ext_resource type="Texture2D" uid="uid://c8vt6oh60vql5" path="res://Assets/Sprites/Fairies/Cirnoball activated.png" id="5_eqvk1"]
+[ext_resource type="AudioStream" uid="uid://cq72x1frftcsy" path="res://Assets/Sounds/Stepping3.ogg" id="5_qkj8h"]
 [ext_resource type="Texture2D" uid="uid://bgungolex0310" path="res://Assets/Sprites/Fairies/Lunaball activated.png" id="5_qlu70"]
 [ext_resource type="Texture2D" uid="uid://bve7fa7was1qq" path="res://Assets/Sprites/Fairies/Starball activated.png" id="7_xjgfr"]
 [ext_resource type="Texture2D" uid="uid://jkpwlq1xcqdn" path="res://Assets/Sprites/Fairies/Sunnyball activated.png" id="8_vm0nl"]
@@ -190,7 +191,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_w8i7k")
 }],
-"loop": true,
+"loop": false,
 "name": &"cirno",
 "speed": 5.0
 }, {
@@ -295,6 +296,7 @@ debug_color = Color(0, 0.639216, 0.388235, 0.419608)
 position = Vector2(49.0151, 1.23134)
 
 [node name="Footstep" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_qkj8h")
 
 [node name="Soundbox" type="Area2D" parent="."]
 
@@ -327,6 +329,7 @@ one_shot = true
 wait_time = 8.0
 
 [node name="FairyEffect" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(0, -63.345)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_mkc2j")

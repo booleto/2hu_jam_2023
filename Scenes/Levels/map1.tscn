@@ -1,5 +1,6 @@
 [gd_scene load_steps=43 format=3 uid="uid://dxtuse1g4bcp1"]
 
+<<<<<<< HEAD
 [ext_resource type="Script" path="res://Scripts/GameEntities/game_entities.gd" id="1_gilyw"]
 [ext_resource type="PackedScene" uid="uid://c1qx1q2ylej3m" path="res://Scenes/Objects/Player/player.tscn" id="2_xtr6q"]
 [ext_resource type="PackedScene" uid="uid://chhsxxwlq64bs" path="res://Scenes/Objects/Enemy/enemy.tscn" id="3_gbh86"]
@@ -42,6 +43,50 @@
 [ext_resource type="Script" path="res://Scripts/GameState/game_state.gd" id="40_ronxj"]
 [ext_resource type="PackedScene" uid="uid://dxi0fnvj5y78i" path="res://Scenes/Overlay/HUD.tscn" id="41_uin4b"]
 [ext_resource type="TileSet" uid="uid://bhxmfe0msahhf" path="res://Resources/Tileset/tileset.tres" id="42_laihw"]
+=======
+[ext_resource type="Script" path="res://Scripts/GameEntities/game_entities.gd" id="1_8a2ta"]
+[ext_resource type="PackedScene" uid="uid://c1qx1q2ylej3m" path="res://Scenes/Objects/Player/player.tscn" id="2_3bguk"]
+[ext_resource type="PackedScene" uid="uid://chhsxxwlq64bs" path="res://Scenes/Objects/Enemy/enemy.tscn" id="3_syx1n"]
+[ext_resource type="PackedScene" uid="uid://dt2kf02le6ak" path="res://Scenes/Objects/Danmaku/danmaku.tscn" id="4_b2qmd"]
+[ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/BTRoot.gd" id="4_v7c2k"]
+[ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Composite/BTSelector.gd" id="5_axjxl"]
+[ext_resource type="PackedScene" uid="uid://cyb7mfpr6ll6d" path="res://Scenes/Objects/PItem/p_item.tscn" id="5_jed56"]
+[ext_resource type="PackedScene" uid="uid://c67qavicmv4cu" path="res://Scenes/Objects/Chest/chest.tscn" id="6_76b0s"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsProcess.gd" id="6_r5mxv"]
+[ext_resource type="Texture2D" uid="uid://brycb6r6ppqcb" path="res://Assets/Sprites/Visual effect/dragonjewel.png" id="7_6ktmx"]
+[ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Composite/BTSequence.gd" id="7_ycyfp"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsDesignatedToAlarm.gd" id="8_1ifia"]
+[ext_resource type="PackedScene" uid="uid://d2sasf8vv0m84" path="res://Scenes/Objects/Door/door.tscn" id="8_5xle7"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsRunningToAlarm.gd" id="9_1ynxu"]
+[ext_resource type="PackedScene" uid="uid://ctluf3yg2l1l0" path="res://Scenes/Objects/Alarm/alarm.tscn" id="9_w73iw"]
+[ext_resource type="Script" path="res://Scripts/GameState/game_state.gd" id="10_eh35l"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/SetActorMoveSpeed.gd" id="10_ni7pq"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/MoveToAlarm.gd" id="11_sifjl"]
+[ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Decorators/BTSuccess.gd" id="12_glj8h"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsNearAlarm.gd" id="13_da36m"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/ActivateAlarm.gd" id="14_ha145"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/RemoveAlarmDesignation.gd" id="15_4js54"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/SetRunningToAlarm.gd" id="16_v0pr1"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/AddToBBoard.gd" id="17_xp8b8"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/SetActorAttackAnim.gd" id="18_noi1c"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/CheckViewbox.gd" id="19_taptg"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/RaycastCheck.gd" id="20_1pc2w"]
+[ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Decorators/BTInverter.gd" id="21_8u83l"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/SetState.gd" id="22_kp4p5"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/MoveToTarget.gd" id="23_klx6h"]
+[ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Leaves/BTActionBlackboardSet.gd" id="24_42vwb"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsAttackCooldown.gd" id="25_ot1gi"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/Attack.gd" id="26_8yj54"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/SetActorAlertAnim.gd" id="27_u37jc"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsHearingSounds.gd" id="28_cx2au"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/CheckTargetDist.gd" id="29_1xrn0"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/MoveToInvestigate.gd" id="30_oxboh"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsTurnCooldown.gd" id="31_0kl85"]
+[ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/TurnRandomly.gd" id="32_86k2t"]
+[ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Leaves/BTActionWait.gd" id="33_shkh2"]
+[ext_resource type="PackedScene" uid="uid://dxi0fnvj5y78i" path="res://Scenes/Overlay/HUD.tscn" id="41_cv5n6"]
+[ext_resource type="TileSet" uid="uid://bhxmfe0msahhf" path="res://Resources/Tileset/tileset.tres" id="42_kuyo0"]
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 
 [node name="Main2" type="Node2D"]
 
@@ -61,7 +106,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/EnemyAla" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_5pp6p")
 actor_path = NodePath("..")
+<<<<<<< HEAD
 blackboard = NodePath("@Node@70926")
+=======
+blackboard = NodePath("@Node@39578")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 
 [node name="main" type="Node" parent="GameEntities/EnemyAla/BTRoot"]
 script = ExtResource("5_4k4ib")
@@ -219,7 +268,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy2" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_5pp6p")
 actor_path = NodePath("..")
+<<<<<<< HEAD
 blackboard = NodePath("@Node@70927")
+=======
+blackboard = NodePath("@Node@39579")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 
 [node name="main" type="Node" parent="GameEntities/Enemy2/BTRoot"]
 script = ExtResource("5_4k4ib")
@@ -365,7 +418,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy3" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_5pp6p")
 actor_path = NodePath("..")
+<<<<<<< HEAD
 blackboard = NodePath("@Node@70928")
+=======
+blackboard = NodePath("@Node@39580")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 
 [node name="main" type="Node" parent="GameEntities/Enemy3/BTRoot"]
 script = ExtResource("5_4k4ib")
@@ -511,7 +568,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy4" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_5pp6p")
 actor_path = NodePath("..")
+<<<<<<< HEAD
 blackboard = NodePath("@Node@70929")
+=======
+blackboard = NodePath("@Node@39581")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 
 [node name="main" type="Node" parent="GameEntities/Enemy4/BTRoot"]
 script = ExtResource("5_4k4ib")
@@ -658,7 +719,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy5" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_5pp6p")
 actor_path = NodePath("..")
+<<<<<<< HEAD
 blackboard = NodePath("@Node@70930")
+=======
+blackboard = NodePath("@Node@39582")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 
 [node name="main" type="Node" parent="GameEntities/Enemy5/BTRoot"]
 script = ExtResource("5_4k4ib")
@@ -796,15 +861,317 @@ script = ExtResource("30_va8cp")
 script = ExtResource("33_c1ksj")
 wait_time_ms = 3
 
+<<<<<<< HEAD
 [node name="Enemy10" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_gbh86")]
 position = Vector2(517, -878)
 default_rotation = -3.6
+=======
+[node name="Enemy9" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(700, 109)
+default_rotation = -2.1
+designated_alarm = NodePath("../Alarm")
+
+[node name="BTRoot" type="Node" parent="GameEntities/Enemy9" node_paths=PackedStringArray("blackboard")]
+script = ExtResource("4_v7c2k")
+actor_path = NodePath("..")
+blackboard = NodePath("@Node@39583")
+
+[node name="main" type="Node" parent="GameEntities/Enemy9/BTRoot"]
+script = ExtResource("5_axjxl")
+
+[node name="IsProcess" type="Node" parent="GameEntities/Enemy9/BTRoot/main"]
+script = ExtResource("6_r5mxv")
+
+[node name="SetOffAlarm" type="Node" parent="GameEntities/Enemy9/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy9/BTRoot/main/SetOffAlarm"]
+script = ExtResource("8_1ifia")
+
+[node name="IsRunningToAlarm" type="Node" parent="GameEntities/Enemy9/BTRoot/main/SetOffAlarm"]
+script = ExtResource("9_1ynxu")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy9/BTRoot/main/SetOffAlarm"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="MoveToAlarm" type="Node" parent="GameEntities/Enemy9/BTRoot/main/SetOffAlarm"]
+script = ExtResource("11_sifjl")
+
+[node name="BTSuccess" type="Node" parent="GameEntities/Enemy9/BTRoot/main/SetOffAlarm"]
+script = ExtResource("12_glj8h")
+
+[node name="BTSequence" type="Node" parent="GameEntities/Enemy9/BTRoot/main/SetOffAlarm/BTSuccess"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsNearAlarm" type="Node" parent="GameEntities/Enemy9/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("13_da36m")
+
+[node name="ActivateAlarm" type="Node" parent="GameEntities/Enemy9/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("14_ha145")
+
+[node name="RemoveAlarmDesignation" type="Node" parent="GameEntities/Enemy9/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("15_4js54")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy9/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("16_v0pr1")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy9/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsAttack" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="AddToBBoard" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("17_xp8b8")
+key = "player_in_view_box"
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("18_noi1c")
+
+[node name="CheckViewbox" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("19_taptg")
+
+[node name="RaycastCheck" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("20_1pc2w")
+
+[node name="BTSelector" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("5_axjxl")
+
+[node name="BTInverter" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("21_8u83l")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Attack/IsAttack/BTSelector/BTInverter"]
+script = ExtResource("8_1ifia")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("16_v0pr1")
+running_to_alarm = true
+
+[node name="SetState" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Attack"]
+script = ExtResource("22_kp4p5")
+
+[node name="MoveAndAttack" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="Move" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("18_noi1c")
+is_attacking = true
+
+[node name="MoveToTarget" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("23_klx6h")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsPlayerInRange" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("24_42vwb")
+blackboard_key = "player_in_range"
+expression = "actor.player_in_range"
+can_overwrite_value = true
+
+[node name="IsAttackCooldown" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("25_ot1gi")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("26_8yj54")
+
+[node name="Alerted" type="Node" parent="GameEntities/Enemy9/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorAlertAnimFalse" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+
+[node name="IsHearingSounds" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Alerted"]
+script = ExtResource("28_cx2au")
+
+[node name="SetActorAlertAnimTrue" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+is_moving = true
+
+[node name="InvestigateSound" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Alerted"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("10_ni7pq")
+
+[node name="CheckTargetDist" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("29_1xrn0")
+
+[node name="MoveToInvestigate" type="Node" parent="GameEntities/Enemy9/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("30_oxboh")
+
+[node name="Idle" type="Node" parent="GameEntities/Enemy9/BTRoot/main"]
+script = ExtResource("33_shkh2")
+wait_time_ms = 3
+
+[node name="Enemy11" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(608, 124)
+default_rotation = -1.8
+designated_alarm = NodePath("../Alarm")
+
+[node name="BTRoot" type="Node" parent="GameEntities/Enemy11" node_paths=PackedStringArray("blackboard")]
+script = ExtResource("4_v7c2k")
+actor_path = NodePath("..")
+blackboard = NodePath("@Node@39584")
+
+[node name="main" type="Node" parent="GameEntities/Enemy11/BTRoot"]
+script = ExtResource("5_axjxl")
+
+[node name="IsProcess" type="Node" parent="GameEntities/Enemy11/BTRoot/main"]
+script = ExtResource("6_r5mxv")
+
+[node name="SetOffAlarm" type="Node" parent="GameEntities/Enemy11/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy11/BTRoot/main/SetOffAlarm"]
+script = ExtResource("8_1ifia")
+
+[node name="IsRunningToAlarm" type="Node" parent="GameEntities/Enemy11/BTRoot/main/SetOffAlarm"]
+script = ExtResource("9_1ynxu")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy11/BTRoot/main/SetOffAlarm"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="MoveToAlarm" type="Node" parent="GameEntities/Enemy11/BTRoot/main/SetOffAlarm"]
+script = ExtResource("11_sifjl")
+
+[node name="BTSuccess" type="Node" parent="GameEntities/Enemy11/BTRoot/main/SetOffAlarm"]
+script = ExtResource("12_glj8h")
+
+[node name="BTSequence" type="Node" parent="GameEntities/Enemy11/BTRoot/main/SetOffAlarm/BTSuccess"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsNearAlarm" type="Node" parent="GameEntities/Enemy11/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("13_da36m")
+
+[node name="ActivateAlarm" type="Node" parent="GameEntities/Enemy11/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("14_ha145")
+
+[node name="RemoveAlarmDesignation" type="Node" parent="GameEntities/Enemy11/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("15_4js54")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy11/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("16_v0pr1")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy11/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsAttack" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="AddToBBoard" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("17_xp8b8")
+key = "player_in_view_box"
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("18_noi1c")
+
+[node name="CheckViewbox" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("19_taptg")
+
+[node name="RaycastCheck" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("20_1pc2w")
+
+[node name="BTSelector" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("5_axjxl")
+
+[node name="BTInverter" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("21_8u83l")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Attack/IsAttack/BTSelector/BTInverter"]
+script = ExtResource("8_1ifia")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("16_v0pr1")
+running_to_alarm = true
+
+[node name="SetState" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Attack"]
+script = ExtResource("22_kp4p5")
+
+[node name="MoveAndAttack" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="Move" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("18_noi1c")
+is_attacking = true
+
+[node name="MoveToTarget" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("23_klx6h")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsPlayerInRange" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("24_42vwb")
+blackboard_key = "player_in_range"
+expression = "actor.player_in_range"
+can_overwrite_value = true
+
+[node name="IsAttackCooldown" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("25_ot1gi")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("26_8yj54")
+
+[node name="Alerted" type="Node" parent="GameEntities/Enemy11/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorAlertAnimFalse" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+
+[node name="IsHearingSounds" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Alerted"]
+script = ExtResource("28_cx2au")
+
+[node name="SetActorAlertAnimTrue" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+is_moving = true
+
+[node name="InvestigateSound" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Alerted"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("10_ni7pq")
+
+[node name="CheckTargetDist" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("29_1xrn0")
+
+[node name="MoveToInvestigate" type="Node" parent="GameEntities/Enemy11/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("30_oxboh")
+
+[node name="Idle" type="Node" parent="GameEntities/Enemy11/BTRoot/main"]
+script = ExtResource("33_shkh2")
+wait_time_ms = 3
+
+[node name="Enemy10" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(694, -225)
+default_rotation = -3.1
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 designated_alarm = NodePath("../Alarm")
 
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy10" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_5pp6p")
 actor_path = NodePath("..")
+<<<<<<< HEAD
 blackboard = NodePath("@Node@70931")
+=======
+blackboard = NodePath("@Node@39585")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 
 [node name="main" type="Node" parent="GameEntities/Enemy10/BTRoot"]
 script = ExtResource("5_4k4ib")
@@ -950,7 +1317,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy7" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_5pp6p")
 actor_path = NodePath("..")
+<<<<<<< HEAD
 blackboard = NodePath("@Node@70932")
+=======
+blackboard = NodePath("@Node@39586")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 
 [node name="main" type="Node" parent="GameEntities/Enemy7/BTRoot"]
 script = ExtResource("5_4k4ib")
@@ -1097,7 +1468,11 @@ designated_alarm = NodePath("../Alarm2")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy25" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_5pp6p")
 actor_path = NodePath("..")
+<<<<<<< HEAD
 blackboard = NodePath("@Node@70933")
+=======
+blackboard = NodePath("@Node@39587")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 
 [node name="main" type="Node" parent="GameEntities/Enemy25/BTRoot"]
 script = ExtResource("5_4k4ib")
@@ -1244,7 +1619,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy28" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_5pp6p")
 actor_path = NodePath("..")
+<<<<<<< HEAD
 blackboard = NodePath("@Node@70934")
+=======
+blackboard = NodePath("@Node@39588")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 
 [node name="main" type="Node" parent="GameEntities/Enemy28/BTRoot"]
 script = ExtResource("5_4k4ib")
@@ -1382,15 +1761,316 @@ script = ExtResource("30_va8cp")
 script = ExtResource("33_c1ksj")
 wait_time_ms = 3
 
+<<<<<<< HEAD
 [node name="Enemy29" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_gbh86")]
 position = Vector2(56, -801)
+=======
+[node name="Enemy30" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(1151, -1006)
+default_rotation = 1.8
+designated_alarm = NodePath("../Alarm")
+
+[node name="BTRoot" type="Node" parent="GameEntities/Enemy30" node_paths=PackedStringArray("blackboard")]
+script = ExtResource("4_v7c2k")
+actor_path = NodePath("..")
+blackboard = NodePath("@Node@39589")
+
+[node name="main" type="Node" parent="GameEntities/Enemy30/BTRoot"]
+script = ExtResource("5_axjxl")
+
+[node name="IsProcess" type="Node" parent="GameEntities/Enemy30/BTRoot/main"]
+script = ExtResource("6_r5mxv")
+
+[node name="SetOffAlarm" type="Node" parent="GameEntities/Enemy30/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy30/BTRoot/main/SetOffAlarm"]
+script = ExtResource("8_1ifia")
+
+[node name="IsRunningToAlarm" type="Node" parent="GameEntities/Enemy30/BTRoot/main/SetOffAlarm"]
+script = ExtResource("9_1ynxu")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy30/BTRoot/main/SetOffAlarm"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="MoveToAlarm" type="Node" parent="GameEntities/Enemy30/BTRoot/main/SetOffAlarm"]
+script = ExtResource("11_sifjl")
+
+[node name="BTSuccess" type="Node" parent="GameEntities/Enemy30/BTRoot/main/SetOffAlarm"]
+script = ExtResource("12_glj8h")
+
+[node name="BTSequence" type="Node" parent="GameEntities/Enemy30/BTRoot/main/SetOffAlarm/BTSuccess"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsNearAlarm" type="Node" parent="GameEntities/Enemy30/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("13_da36m")
+
+[node name="ActivateAlarm" type="Node" parent="GameEntities/Enemy30/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("14_ha145")
+
+[node name="RemoveAlarmDesignation" type="Node" parent="GameEntities/Enemy30/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("15_4js54")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy30/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("16_v0pr1")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy30/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsAttack" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="AddToBBoard" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("17_xp8b8")
+key = "player_in_view_box"
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("18_noi1c")
+
+[node name="CheckViewbox" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("19_taptg")
+
+[node name="RaycastCheck" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("20_1pc2w")
+
+[node name="BTSelector" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("5_axjxl")
+
+[node name="BTInverter" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("21_8u83l")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Attack/IsAttack/BTSelector/BTInverter"]
+script = ExtResource("8_1ifia")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("16_v0pr1")
+running_to_alarm = true
+
+[node name="SetState" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Attack"]
+script = ExtResource("22_kp4p5")
+
+[node name="MoveAndAttack" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="Move" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("18_noi1c")
+is_attacking = true
+
+[node name="MoveToTarget" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("23_klx6h")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsPlayerInRange" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("24_42vwb")
+blackboard_key = "player_in_range"
+expression = "actor.player_in_range"
+can_overwrite_value = true
+
+[node name="IsAttackCooldown" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("25_ot1gi")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("26_8yj54")
+
+[node name="Alerted" type="Node" parent="GameEntities/Enemy30/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorAlertAnimFalse" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+
+[node name="IsHearingSounds" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Alerted"]
+script = ExtResource("28_cx2au")
+
+[node name="SetActorAlertAnimTrue" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+is_moving = true
+
+[node name="InvestigateSound" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Alerted"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("10_ni7pq")
+
+[node name="CheckTargetDist" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("29_1xrn0")
+
+[node name="MoveToInvestigate" type="Node" parent="GameEntities/Enemy30/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("30_oxboh")
+
+[node name="Idle" type="Node" parent="GameEntities/Enemy30/BTRoot/main"]
+script = ExtResource("33_shkh2")
+wait_time_ms = 3
+
+[node name="Enemy32" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(842, -1015)
+default_rotation = 1.8
+designated_alarm = NodePath("../Alarm")
+
+[node name="BTRoot" type="Node" parent="GameEntities/Enemy32" node_paths=PackedStringArray("blackboard")]
+script = ExtResource("4_v7c2k")
+actor_path = NodePath("..")
+blackboard = NodePath("@Node@39590")
+
+[node name="main" type="Node" parent="GameEntities/Enemy32/BTRoot"]
+script = ExtResource("5_axjxl")
+
+[node name="IsProcess" type="Node" parent="GameEntities/Enemy32/BTRoot/main"]
+script = ExtResource("6_r5mxv")
+
+[node name="SetOffAlarm" type="Node" parent="GameEntities/Enemy32/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy32/BTRoot/main/SetOffAlarm"]
+script = ExtResource("8_1ifia")
+
+[node name="IsRunningToAlarm" type="Node" parent="GameEntities/Enemy32/BTRoot/main/SetOffAlarm"]
+script = ExtResource("9_1ynxu")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy32/BTRoot/main/SetOffAlarm"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="MoveToAlarm" type="Node" parent="GameEntities/Enemy32/BTRoot/main/SetOffAlarm"]
+script = ExtResource("11_sifjl")
+
+[node name="BTSuccess" type="Node" parent="GameEntities/Enemy32/BTRoot/main/SetOffAlarm"]
+script = ExtResource("12_glj8h")
+
+[node name="BTSequence" type="Node" parent="GameEntities/Enemy32/BTRoot/main/SetOffAlarm/BTSuccess"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsNearAlarm" type="Node" parent="GameEntities/Enemy32/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("13_da36m")
+
+[node name="ActivateAlarm" type="Node" parent="GameEntities/Enemy32/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("14_ha145")
+
+[node name="RemoveAlarmDesignation" type="Node" parent="GameEntities/Enemy32/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("15_4js54")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy32/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("16_v0pr1")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy32/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsAttack" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="AddToBBoard" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("17_xp8b8")
+key = "player_in_view_box"
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("18_noi1c")
+
+[node name="CheckViewbox" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("19_taptg")
+
+[node name="RaycastCheck" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("20_1pc2w")
+
+[node name="BTSelector" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("5_axjxl")
+
+[node name="BTInverter" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("21_8u83l")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Attack/IsAttack/BTSelector/BTInverter"]
+script = ExtResource("8_1ifia")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("16_v0pr1")
+running_to_alarm = true
+
+[node name="SetState" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Attack"]
+script = ExtResource("22_kp4p5")
+
+[node name="MoveAndAttack" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="Move" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("18_noi1c")
+is_attacking = true
+
+[node name="MoveToTarget" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("23_klx6h")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsPlayerInRange" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("24_42vwb")
+blackboard_key = "player_in_range"
+expression = "actor.player_in_range"
+can_overwrite_value = true
+
+[node name="IsAttackCooldown" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("25_ot1gi")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("26_8yj54")
+
+[node name="Alerted" type="Node" parent="GameEntities/Enemy32/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorAlertAnimFalse" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+
+[node name="IsHearingSounds" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Alerted"]
+script = ExtResource("28_cx2au")
+
+[node name="SetActorAlertAnimTrue" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+is_moving = true
+
+[node name="InvestigateSound" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Alerted"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("10_ni7pq")
+
+[node name="CheckTargetDist" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("29_1xrn0")
+
+[node name="MoveToInvestigate" type="Node" parent="GameEntities/Enemy32/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("30_oxboh")
+
+[node name="Idle" type="Node" parent="GameEntities/Enemy32/BTRoot/main"]
+script = ExtResource("33_shkh2")
+wait_time_ms = 3
+
+[node name="Enemy29" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(1043, -1018)
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 default_rotation = 1.5
 designated_alarm = NodePath("../Alarm")
 
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy29" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_5pp6p")
 actor_path = NodePath("..")
+<<<<<<< HEAD
 blackboard = NodePath("@Node@70935")
+=======
+blackboard = NodePath("@Node@39591")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 
 [node name="main" type="Node" parent="GameEntities/Enemy29/BTRoot"]
 script = ExtResource("5_4k4ib")
@@ -1528,15 +2208,461 @@ script = ExtResource("30_va8cp")
 script = ExtResource("33_c1ksj")
 wait_time_ms = 3
 
+<<<<<<< HEAD
 [node name="Enemy26" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_gbh86")]
 position = Vector2(1838, -579)
+=======
+[node name="Enemy31" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(685, -1027)
+default_rotation = 1.5
+designated_to_alarm = true
+designated_alarm = NodePath("../Alarm")
+
+[node name="BTRoot" type="Node" parent="GameEntities/Enemy31" node_paths=PackedStringArray("blackboard")]
+script = ExtResource("4_v7c2k")
+actor_path = NodePath("..")
+blackboard = NodePath("@Node@39592")
+
+[node name="main" type="Node" parent="GameEntities/Enemy31/BTRoot"]
+script = ExtResource("5_axjxl")
+
+[node name="IsProcess" type="Node" parent="GameEntities/Enemy31/BTRoot/main"]
+script = ExtResource("6_r5mxv")
+
+[node name="SetOffAlarm" type="Node" parent="GameEntities/Enemy31/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy31/BTRoot/main/SetOffAlarm"]
+script = ExtResource("8_1ifia")
+
+[node name="IsRunningToAlarm" type="Node" parent="GameEntities/Enemy31/BTRoot/main/SetOffAlarm"]
+script = ExtResource("9_1ynxu")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy31/BTRoot/main/SetOffAlarm"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="MoveToAlarm" type="Node" parent="GameEntities/Enemy31/BTRoot/main/SetOffAlarm"]
+script = ExtResource("11_sifjl")
+
+[node name="BTSuccess" type="Node" parent="GameEntities/Enemy31/BTRoot/main/SetOffAlarm"]
+script = ExtResource("12_glj8h")
+
+[node name="BTSequence" type="Node" parent="GameEntities/Enemy31/BTRoot/main/SetOffAlarm/BTSuccess"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsNearAlarm" type="Node" parent="GameEntities/Enemy31/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("13_da36m")
+
+[node name="ActivateAlarm" type="Node" parent="GameEntities/Enemy31/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("14_ha145")
+
+[node name="RemoveAlarmDesignation" type="Node" parent="GameEntities/Enemy31/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("15_4js54")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy31/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("16_v0pr1")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy31/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsAttack" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="AddToBBoard" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("17_xp8b8")
+key = "player_in_view_box"
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("18_noi1c")
+
+[node name="CheckViewbox" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("19_taptg")
+
+[node name="RaycastCheck" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("20_1pc2w")
+
+[node name="BTSelector" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("5_axjxl")
+
+[node name="BTInverter" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("21_8u83l")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Attack/IsAttack/BTSelector/BTInverter"]
+script = ExtResource("8_1ifia")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("16_v0pr1")
+running_to_alarm = true
+
+[node name="SetState" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Attack"]
+script = ExtResource("22_kp4p5")
+
+[node name="MoveAndAttack" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="Move" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("18_noi1c")
+is_attacking = true
+
+[node name="MoveToTarget" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("23_klx6h")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsPlayerInRange" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("24_42vwb")
+blackboard_key = "player_in_range"
+expression = "actor.player_in_range"
+can_overwrite_value = true
+
+[node name="IsAttackCooldown" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("25_ot1gi")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("26_8yj54")
+
+[node name="Alerted" type="Node" parent="GameEntities/Enemy31/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorAlertAnimFalse" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+
+[node name="IsHearingSounds" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Alerted"]
+script = ExtResource("28_cx2au")
+
+[node name="SetActorAlertAnimTrue" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+is_moving = true
+
+[node name="InvestigateSound" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Alerted"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("10_ni7pq")
+
+[node name="CheckTargetDist" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("29_1xrn0")
+
+[node name="MoveToInvestigate" type="Node" parent="GameEntities/Enemy31/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("30_oxboh")
+
+[node name="Idle" type="Node" parent="GameEntities/Enemy31/BTRoot/main"]
+script = ExtResource("33_shkh2")
+wait_time_ms = 3
+
+[node name="Enemy33" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(83, -960)
+designated_alarm = NodePath("../Alarm")
+
+[node name="BTRoot" type="Node" parent="GameEntities/Enemy33" node_paths=PackedStringArray("blackboard")]
+script = ExtResource("4_v7c2k")
+actor_path = NodePath("..")
+blackboard = NodePath("@Node@39593")
+
+[node name="main" type="Node" parent="GameEntities/Enemy33/BTRoot"]
+script = ExtResource("5_axjxl")
+
+[node name="IsProcess" type="Node" parent="GameEntities/Enemy33/BTRoot/main"]
+script = ExtResource("6_r5mxv")
+
+[node name="SetOffAlarm" type="Node" parent="GameEntities/Enemy33/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy33/BTRoot/main/SetOffAlarm"]
+script = ExtResource("8_1ifia")
+
+[node name="IsRunningToAlarm" type="Node" parent="GameEntities/Enemy33/BTRoot/main/SetOffAlarm"]
+script = ExtResource("9_1ynxu")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy33/BTRoot/main/SetOffAlarm"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="MoveToAlarm" type="Node" parent="GameEntities/Enemy33/BTRoot/main/SetOffAlarm"]
+script = ExtResource("11_sifjl")
+
+[node name="BTSuccess" type="Node" parent="GameEntities/Enemy33/BTRoot/main/SetOffAlarm"]
+script = ExtResource("12_glj8h")
+
+[node name="BTSequence" type="Node" parent="GameEntities/Enemy33/BTRoot/main/SetOffAlarm/BTSuccess"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsNearAlarm" type="Node" parent="GameEntities/Enemy33/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("13_da36m")
+
+[node name="ActivateAlarm" type="Node" parent="GameEntities/Enemy33/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("14_ha145")
+
+[node name="RemoveAlarmDesignation" type="Node" parent="GameEntities/Enemy33/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("15_4js54")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy33/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("16_v0pr1")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy33/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsAttack" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="AddToBBoard" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("17_xp8b8")
+key = "player_in_view_box"
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("18_noi1c")
+
+[node name="CheckViewbox" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("19_taptg")
+
+[node name="RaycastCheck" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("20_1pc2w")
+
+[node name="BTSelector" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("5_axjxl")
+
+[node name="BTInverter" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("21_8u83l")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Attack/IsAttack/BTSelector/BTInverter"]
+script = ExtResource("8_1ifia")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("16_v0pr1")
+running_to_alarm = true
+
+[node name="SetState" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Attack"]
+script = ExtResource("22_kp4p5")
+
+[node name="MoveAndAttack" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="Move" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("18_noi1c")
+is_attacking = true
+
+[node name="MoveToTarget" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("23_klx6h")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsPlayerInRange" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("24_42vwb")
+blackboard_key = "player_in_range"
+expression = "actor.player_in_range"
+can_overwrite_value = true
+
+[node name="IsAttackCooldown" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("25_ot1gi")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("26_8yj54")
+
+[node name="Alerted" type="Node" parent="GameEntities/Enemy33/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorAlertAnimFalse" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+
+[node name="IsHearingSounds" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Alerted"]
+script = ExtResource("28_cx2au")
+
+[node name="SetActorAlertAnimTrue" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+is_moving = true
+
+[node name="InvestigateSound" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Alerted"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("10_ni7pq")
+
+[node name="CheckTargetDist" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("29_1xrn0")
+
+[node name="MoveToInvestigate" type="Node" parent="GameEntities/Enemy33/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("30_oxboh")
+
+[node name="Idle" type="Node" parent="GameEntities/Enemy33/BTRoot/main"]
+script = ExtResource("33_shkh2")
+wait_time_ms = 3
+
+[node name="Enemy34" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(5, -960)
+designated_alarm = NodePath("../Alarm")
+
+[node name="BTRoot" type="Node" parent="GameEntities/Enemy34" node_paths=PackedStringArray("blackboard")]
+script = ExtResource("4_v7c2k")
+actor_path = NodePath("..")
+blackboard = NodePath("@Node@39594")
+
+[node name="main" type="Node" parent="GameEntities/Enemy34/BTRoot"]
+script = ExtResource("5_axjxl")
+
+[node name="IsProcess" type="Node" parent="GameEntities/Enemy34/BTRoot/main"]
+script = ExtResource("6_r5mxv")
+
+[node name="SetOffAlarm" type="Node" parent="GameEntities/Enemy34/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy34/BTRoot/main/SetOffAlarm"]
+script = ExtResource("8_1ifia")
+
+[node name="IsRunningToAlarm" type="Node" parent="GameEntities/Enemy34/BTRoot/main/SetOffAlarm"]
+script = ExtResource("9_1ynxu")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy34/BTRoot/main/SetOffAlarm"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="MoveToAlarm" type="Node" parent="GameEntities/Enemy34/BTRoot/main/SetOffAlarm"]
+script = ExtResource("11_sifjl")
+
+[node name="BTSuccess" type="Node" parent="GameEntities/Enemy34/BTRoot/main/SetOffAlarm"]
+script = ExtResource("12_glj8h")
+
+[node name="BTSequence" type="Node" parent="GameEntities/Enemy34/BTRoot/main/SetOffAlarm/BTSuccess"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsNearAlarm" type="Node" parent="GameEntities/Enemy34/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("13_da36m")
+
+[node name="ActivateAlarm" type="Node" parent="GameEntities/Enemy34/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("14_ha145")
+
+[node name="RemoveAlarmDesignation" type="Node" parent="GameEntities/Enemy34/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("15_4js54")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy34/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("16_v0pr1")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy34/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsAttack" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="AddToBBoard" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("17_xp8b8")
+key = "player_in_view_box"
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("18_noi1c")
+
+[node name="CheckViewbox" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("19_taptg")
+
+[node name="RaycastCheck" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("20_1pc2w")
+
+[node name="BTSelector" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("5_axjxl")
+
+[node name="BTInverter" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("21_8u83l")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Attack/IsAttack/BTSelector/BTInverter"]
+script = ExtResource("8_1ifia")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("16_v0pr1")
+running_to_alarm = true
+
+[node name="SetState" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Attack"]
+script = ExtResource("22_kp4p5")
+
+[node name="MoveAndAttack" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="Move" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("18_noi1c")
+is_attacking = true
+
+[node name="MoveToTarget" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("23_klx6h")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsPlayerInRange" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("24_42vwb")
+blackboard_key = "player_in_range"
+expression = "actor.player_in_range"
+can_overwrite_value = true
+
+[node name="IsAttackCooldown" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("25_ot1gi")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("26_8yj54")
+
+[node name="Alerted" type="Node" parent="GameEntities/Enemy34/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorAlertAnimFalse" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+
+[node name="IsHearingSounds" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Alerted"]
+script = ExtResource("28_cx2au")
+
+[node name="SetActorAlertAnimTrue" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+is_moving = true
+
+[node name="InvestigateSound" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Alerted"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("10_ni7pq")
+
+[node name="CheckTargetDist" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("29_1xrn0")
+
+[node name="MoveToInvestigate" type="Node" parent="GameEntities/Enemy34/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("30_oxboh")
+
+[node name="Idle" type="Node" parent="GameEntities/Enemy34/BTRoot/main"]
+script = ExtResource("33_shkh2")
+wait_time_ms = 3
+
+[node name="Enemy26" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(1371, -390)
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 default_rotation = 3.3
 designated_alarm = NodePath("../Alarm")
 
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy26" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_5pp6p")
 actor_path = NodePath("..")
+<<<<<<< HEAD
 blackboard = NodePath("@Node@70936")
+=======
+blackboard = NodePath("@Node@39595")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 
 [node name="main" type="Node" parent="GameEntities/Enemy26/BTRoot"]
 script = ExtResource("5_4k4ib")
@@ -1683,7 +2809,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy27" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_5pp6p")
 actor_path = NodePath("..")
+<<<<<<< HEAD
 blackboard = NodePath("@Node@70937")
+=======
+blackboard = NodePath("@Node@39596")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 
 [node name="main" type="Node" parent="GameEntities/Enemy27/BTRoot"]
 script = ExtResource("5_4k4ib")
@@ -1827,10 +2957,163 @@ default_rotation = 4.0
 designated_to_alarm = true
 designated_alarm = NodePath("../Alarm")
 
+<<<<<<< HEAD
+=======
+[node name="BTRoot" type="Node" parent="GameEntities/Enemy21" node_paths=PackedStringArray("blackboard")]
+script = ExtResource("4_v7c2k")
+actor_path = NodePath("..")
+blackboard = NodePath("@Node@39597")
+
+[node name="main" type="Node" parent="GameEntities/Enemy21/BTRoot"]
+script = ExtResource("5_axjxl")
+
+[node name="IsProcess" type="Node" parent="GameEntities/Enemy21/BTRoot/main"]
+script = ExtResource("6_r5mxv")
+
+[node name="SetOffAlarm" type="Node" parent="GameEntities/Enemy21/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy21/BTRoot/main/SetOffAlarm"]
+script = ExtResource("8_1ifia")
+
+[node name="IsRunningToAlarm" type="Node" parent="GameEntities/Enemy21/BTRoot/main/SetOffAlarm"]
+script = ExtResource("9_1ynxu")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy21/BTRoot/main/SetOffAlarm"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="MoveToAlarm" type="Node" parent="GameEntities/Enemy21/BTRoot/main/SetOffAlarm"]
+script = ExtResource("11_sifjl")
+
+[node name="BTSuccess" type="Node" parent="GameEntities/Enemy21/BTRoot/main/SetOffAlarm"]
+script = ExtResource("12_glj8h")
+
+[node name="BTSequence" type="Node" parent="GameEntities/Enemy21/BTRoot/main/SetOffAlarm/BTSuccess"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsNearAlarm" type="Node" parent="GameEntities/Enemy21/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("13_da36m")
+
+[node name="ActivateAlarm" type="Node" parent="GameEntities/Enemy21/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("14_ha145")
+
+[node name="RemoveAlarmDesignation" type="Node" parent="GameEntities/Enemy21/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("15_4js54")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy21/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("16_v0pr1")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy21/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsAttack" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="AddToBBoard" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("17_xp8b8")
+key = "player_in_view_box"
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("18_noi1c")
+
+[node name="CheckViewbox" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("19_taptg")
+
+[node name="RaycastCheck" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("20_1pc2w")
+
+[node name="BTSelector" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("5_axjxl")
+
+[node name="BTInverter" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("21_8u83l")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Attack/IsAttack/BTSelector/BTInverter"]
+script = ExtResource("8_1ifia")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("16_v0pr1")
+running_to_alarm = true
+
+[node name="SetState" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Attack"]
+script = ExtResource("22_kp4p5")
+
+[node name="MoveAndAttack" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="Move" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("18_noi1c")
+is_attacking = true
+
+[node name="MoveToTarget" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("23_klx6h")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsPlayerInRange" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("24_42vwb")
+blackboard_key = "player_in_range"
+expression = "actor.player_in_range"
+can_overwrite_value = true
+
+[node name="IsAttackCooldown" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("25_ot1gi")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("26_8yj54")
+
+[node name="Alerted" type="Node" parent="GameEntities/Enemy21/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorAlertAnimFalse" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+
+[node name="IsHearingSounds" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Alerted"]
+script = ExtResource("28_cx2au")
+
+[node name="SetActorAlertAnimTrue" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+is_moving = true
+
+[node name="InvestigateSound" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Alerted"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("10_ni7pq")
+
+[node name="CheckTargetDist" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("29_1xrn0")
+
+[node name="MoveToInvestigate" type="Node" parent="GameEntities/Enemy21/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("30_oxboh")
+
+[node name="Idle" type="Node" parent="GameEntities/Enemy21/BTRoot/main"]
+script = ExtResource("33_shkh2")
+wait_time_ms = 3
+
+[node name="Enemy22" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(741, -387)
+default_rotation = 4.0
+designated_alarm = NodePath("../Alarm")
+
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy22" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_5pp6p")
 actor_path = NodePath("..")
+<<<<<<< HEAD
 blackboard = NodePath("@Node@70938")
+=======
+blackboard = NodePath("@Node@39598")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 
 [node name="main" type="Node" parent="GameEntities/Enemy22/BTRoot"]
 script = ExtResource("5_4k4ib")
@@ -1968,15 +3251,170 @@ script = ExtResource("30_va8cp")
 script = ExtResource("33_c1ksj")
 wait_time_ms = 3
 
+<<<<<<< HEAD
 [node name="Enemy6" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_gbh86")]
 position = Vector2(1115, 49)
+=======
+[node name="Enemy23" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(882, -439)
+default_rotation = 3.5
+designated_alarm = NodePath("../Alarm")
+
+[node name="BTRoot" type="Node" parent="GameEntities/Enemy23" node_paths=PackedStringArray("blackboard")]
+script = ExtResource("4_v7c2k")
+actor_path = NodePath("..")
+blackboard = NodePath("@Node@39599")
+
+[node name="main" type="Node" parent="GameEntities/Enemy23/BTRoot"]
+script = ExtResource("5_axjxl")
+
+[node name="IsProcess" type="Node" parent="GameEntities/Enemy23/BTRoot/main"]
+script = ExtResource("6_r5mxv")
+
+[node name="SetOffAlarm" type="Node" parent="GameEntities/Enemy23/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy23/BTRoot/main/SetOffAlarm"]
+script = ExtResource("8_1ifia")
+
+[node name="IsRunningToAlarm" type="Node" parent="GameEntities/Enemy23/BTRoot/main/SetOffAlarm"]
+script = ExtResource("9_1ynxu")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy23/BTRoot/main/SetOffAlarm"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="MoveToAlarm" type="Node" parent="GameEntities/Enemy23/BTRoot/main/SetOffAlarm"]
+script = ExtResource("11_sifjl")
+
+[node name="BTSuccess" type="Node" parent="GameEntities/Enemy23/BTRoot/main/SetOffAlarm"]
+script = ExtResource("12_glj8h")
+
+[node name="BTSequence" type="Node" parent="GameEntities/Enemy23/BTRoot/main/SetOffAlarm/BTSuccess"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsNearAlarm" type="Node" parent="GameEntities/Enemy23/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("13_da36m")
+
+[node name="ActivateAlarm" type="Node" parent="GameEntities/Enemy23/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("14_ha145")
+
+[node name="RemoveAlarmDesignation" type="Node" parent="GameEntities/Enemy23/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("15_4js54")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy23/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("16_v0pr1")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy23/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsAttack" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="AddToBBoard" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("17_xp8b8")
+key = "player_in_view_box"
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("18_noi1c")
+
+[node name="CheckViewbox" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("19_taptg")
+
+[node name="RaycastCheck" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("20_1pc2w")
+
+[node name="BTSelector" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("5_axjxl")
+
+[node name="BTInverter" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("21_8u83l")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Attack/IsAttack/BTSelector/BTInverter"]
+script = ExtResource("8_1ifia")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("16_v0pr1")
+running_to_alarm = true
+
+[node name="SetState" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Attack"]
+script = ExtResource("22_kp4p5")
+
+[node name="MoveAndAttack" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="Move" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("18_noi1c")
+is_attacking = true
+
+[node name="MoveToTarget" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("23_klx6h")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsPlayerInRange" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("24_42vwb")
+blackboard_key = "player_in_range"
+expression = "actor.player_in_range"
+can_overwrite_value = true
+
+[node name="IsAttackCooldown" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("25_ot1gi")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("26_8yj54")
+
+[node name="Alerted" type="Node" parent="GameEntities/Enemy23/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorAlertAnimFalse" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+
+[node name="IsHearingSounds" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Alerted"]
+script = ExtResource("28_cx2au")
+
+[node name="SetActorAlertAnimTrue" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+is_moving = true
+
+[node name="InvestigateSound" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Alerted"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("10_ni7pq")
+
+[node name="CheckTargetDist" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("29_1xrn0")
+
+[node name="MoveToInvestigate" type="Node" parent="GameEntities/Enemy23/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("30_oxboh")
+
+[node name="Idle" type="Node" parent="GameEntities/Enemy23/BTRoot/main"]
+script = ExtResource("33_shkh2")
+wait_time_ms = 3
+
+[node name="Enemy6" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(409, -60)
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 default_rotation = 4.4
 designated_alarm = NodePath("../Alarm")
 
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy6" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_5pp6p")
 actor_path = NodePath("..")
+<<<<<<< HEAD
 blackboard = NodePath("@Node@70939")
+=======
+blackboard = NodePath("@Node@39600")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 
 [node name="main" type="Node" parent="GameEntities/Enemy6/BTRoot"]
 script = ExtResource("5_4k4ib")
@@ -2114,15 +3552,462 @@ script = ExtResource("30_va8cp")
 script = ExtResource("33_c1ksj")
 wait_time_ms = 3
 
+<<<<<<< HEAD
 [node name="Enemy14" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_gbh86")]
 position = Vector2(925, 32)
+=======
+[node name="Enemy8" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(461, -183)
+default_rotation = 4.0
+designated_alarm = NodePath("../Alarm")
+
+[node name="BTRoot" type="Node" parent="GameEntities/Enemy8" node_paths=PackedStringArray("blackboard")]
+script = ExtResource("4_v7c2k")
+actor_path = NodePath("..")
+blackboard = NodePath("@Node@39601")
+
+[node name="main" type="Node" parent="GameEntities/Enemy8/BTRoot"]
+script = ExtResource("5_axjxl")
+
+[node name="IsProcess" type="Node" parent="GameEntities/Enemy8/BTRoot/main"]
+script = ExtResource("6_r5mxv")
+
+[node name="SetOffAlarm" type="Node" parent="GameEntities/Enemy8/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy8/BTRoot/main/SetOffAlarm"]
+script = ExtResource("8_1ifia")
+
+[node name="IsRunningToAlarm" type="Node" parent="GameEntities/Enemy8/BTRoot/main/SetOffAlarm"]
+script = ExtResource("9_1ynxu")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy8/BTRoot/main/SetOffAlarm"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="MoveToAlarm" type="Node" parent="GameEntities/Enemy8/BTRoot/main/SetOffAlarm"]
+script = ExtResource("11_sifjl")
+
+[node name="BTSuccess" type="Node" parent="GameEntities/Enemy8/BTRoot/main/SetOffAlarm"]
+script = ExtResource("12_glj8h")
+
+[node name="BTSequence" type="Node" parent="GameEntities/Enemy8/BTRoot/main/SetOffAlarm/BTSuccess"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsNearAlarm" type="Node" parent="GameEntities/Enemy8/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("13_da36m")
+
+[node name="ActivateAlarm" type="Node" parent="GameEntities/Enemy8/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("14_ha145")
+
+[node name="RemoveAlarmDesignation" type="Node" parent="GameEntities/Enemy8/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("15_4js54")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy8/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("16_v0pr1")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy8/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsAttack" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="AddToBBoard" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("17_xp8b8")
+key = "player_in_view_box"
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("18_noi1c")
+
+[node name="CheckViewbox" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("19_taptg")
+
+[node name="RaycastCheck" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("20_1pc2w")
+
+[node name="BTSelector" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("5_axjxl")
+
+[node name="BTInverter" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("21_8u83l")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Attack/IsAttack/BTSelector/BTInverter"]
+script = ExtResource("8_1ifia")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("16_v0pr1")
+running_to_alarm = true
+
+[node name="SetState" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Attack"]
+script = ExtResource("22_kp4p5")
+
+[node name="MoveAndAttack" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="Move" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("18_noi1c")
+is_attacking = true
+
+[node name="MoveToTarget" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("23_klx6h")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsPlayerInRange" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("24_42vwb")
+blackboard_key = "player_in_range"
+expression = "actor.player_in_range"
+can_overwrite_value = true
+
+[node name="IsAttackCooldown" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("25_ot1gi")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("26_8yj54")
+
+[node name="Alerted" type="Node" parent="GameEntities/Enemy8/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorAlertAnimFalse" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+
+[node name="IsHearingSounds" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Alerted"]
+script = ExtResource("28_cx2au")
+
+[node name="SetActorAlertAnimTrue" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+is_moving = true
+
+[node name="InvestigateSound" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Alerted"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("10_ni7pq")
+
+[node name="CheckTargetDist" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("29_1xrn0")
+
+[node name="MoveToInvestigate" type="Node" parent="GameEntities/Enemy8/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("30_oxboh")
+
+[node name="Idle" type="Node" parent="GameEntities/Enemy8/BTRoot/main"]
+script = ExtResource("33_shkh2")
+wait_time_ms = 3
+
+[node name="Enemy12" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(1032, -157)
+default_rotation = 4.0
+designated_alarm = NodePath("../Alarm")
+
+[node name="BTRoot" type="Node" parent="GameEntities/Enemy12" node_paths=PackedStringArray("blackboard")]
+script = ExtResource("4_v7c2k")
+actor_path = NodePath("..")
+blackboard = NodePath("@Node@39602")
+
+[node name="main" type="Node" parent="GameEntities/Enemy12/BTRoot"]
+script = ExtResource("5_axjxl")
+
+[node name="IsProcess" type="Node" parent="GameEntities/Enemy12/BTRoot/main"]
+script = ExtResource("6_r5mxv")
+
+[node name="SetOffAlarm" type="Node" parent="GameEntities/Enemy12/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy12/BTRoot/main/SetOffAlarm"]
+script = ExtResource("8_1ifia")
+
+[node name="IsRunningToAlarm" type="Node" parent="GameEntities/Enemy12/BTRoot/main/SetOffAlarm"]
+script = ExtResource("9_1ynxu")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy12/BTRoot/main/SetOffAlarm"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="MoveToAlarm" type="Node" parent="GameEntities/Enemy12/BTRoot/main/SetOffAlarm"]
+script = ExtResource("11_sifjl")
+
+[node name="BTSuccess" type="Node" parent="GameEntities/Enemy12/BTRoot/main/SetOffAlarm"]
+script = ExtResource("12_glj8h")
+
+[node name="BTSequence" type="Node" parent="GameEntities/Enemy12/BTRoot/main/SetOffAlarm/BTSuccess"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsNearAlarm" type="Node" parent="GameEntities/Enemy12/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("13_da36m")
+
+[node name="ActivateAlarm" type="Node" parent="GameEntities/Enemy12/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("14_ha145")
+
+[node name="RemoveAlarmDesignation" type="Node" parent="GameEntities/Enemy12/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("15_4js54")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy12/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("16_v0pr1")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy12/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsAttack" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="AddToBBoard" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("17_xp8b8")
+key = "player_in_view_box"
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("18_noi1c")
+
+[node name="CheckViewbox" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("19_taptg")
+
+[node name="RaycastCheck" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("20_1pc2w")
+
+[node name="BTSelector" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("5_axjxl")
+
+[node name="BTInverter" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("21_8u83l")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Attack/IsAttack/BTSelector/BTInverter"]
+script = ExtResource("8_1ifia")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("16_v0pr1")
+running_to_alarm = true
+
+[node name="SetState" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Attack"]
+script = ExtResource("22_kp4p5")
+
+[node name="MoveAndAttack" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="Move" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("18_noi1c")
+is_attacking = true
+
+[node name="MoveToTarget" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("23_klx6h")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsPlayerInRange" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("24_42vwb")
+blackboard_key = "player_in_range"
+expression = "actor.player_in_range"
+can_overwrite_value = true
+
+[node name="IsAttackCooldown" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("25_ot1gi")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("26_8yj54")
+
+[node name="Alerted" type="Node" parent="GameEntities/Enemy12/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorAlertAnimFalse" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+
+[node name="IsHearingSounds" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Alerted"]
+script = ExtResource("28_cx2au")
+
+[node name="SetActorAlertAnimTrue" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+is_moving = true
+
+[node name="InvestigateSound" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Alerted"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("10_ni7pq")
+
+[node name="CheckTargetDist" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("29_1xrn0")
+
+[node name="MoveToInvestigate" type="Node" parent="GameEntities/Enemy12/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("30_oxboh")
+
+[node name="Idle" type="Node" parent="GameEntities/Enemy12/BTRoot/main"]
+script = ExtResource("33_shkh2")
+wait_time_ms = 3
+
+[node name="Enemy13" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(997, 179)
+default_rotation = 4.0
+designated_alarm = NodePath("../Alarm")
+
+[node name="BTRoot" type="Node" parent="GameEntities/Enemy13" node_paths=PackedStringArray("blackboard")]
+script = ExtResource("4_v7c2k")
+actor_path = NodePath("..")
+blackboard = NodePath("@Node@39603")
+
+[node name="main" type="Node" parent="GameEntities/Enemy13/BTRoot"]
+script = ExtResource("5_axjxl")
+
+[node name="IsProcess" type="Node" parent="GameEntities/Enemy13/BTRoot/main"]
+script = ExtResource("6_r5mxv")
+
+[node name="SetOffAlarm" type="Node" parent="GameEntities/Enemy13/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy13/BTRoot/main/SetOffAlarm"]
+script = ExtResource("8_1ifia")
+
+[node name="IsRunningToAlarm" type="Node" parent="GameEntities/Enemy13/BTRoot/main/SetOffAlarm"]
+script = ExtResource("9_1ynxu")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy13/BTRoot/main/SetOffAlarm"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="MoveToAlarm" type="Node" parent="GameEntities/Enemy13/BTRoot/main/SetOffAlarm"]
+script = ExtResource("11_sifjl")
+
+[node name="BTSuccess" type="Node" parent="GameEntities/Enemy13/BTRoot/main/SetOffAlarm"]
+script = ExtResource("12_glj8h")
+
+[node name="BTSequence" type="Node" parent="GameEntities/Enemy13/BTRoot/main/SetOffAlarm/BTSuccess"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsNearAlarm" type="Node" parent="GameEntities/Enemy13/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("13_da36m")
+
+[node name="ActivateAlarm" type="Node" parent="GameEntities/Enemy13/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("14_ha145")
+
+[node name="RemoveAlarmDesignation" type="Node" parent="GameEntities/Enemy13/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("15_4js54")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy13/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("16_v0pr1")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy13/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsAttack" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="AddToBBoard" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("17_xp8b8")
+key = "player_in_view_box"
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("18_noi1c")
+
+[node name="CheckViewbox" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("19_taptg")
+
+[node name="RaycastCheck" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("20_1pc2w")
+
+[node name="BTSelector" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("5_axjxl")
+
+[node name="BTInverter" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("21_8u83l")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Attack/IsAttack/BTSelector/BTInverter"]
+script = ExtResource("8_1ifia")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("16_v0pr1")
+running_to_alarm = true
+
+[node name="SetState" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Attack"]
+script = ExtResource("22_kp4p5")
+
+[node name="MoveAndAttack" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="Move" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("18_noi1c")
+is_attacking = true
+
+[node name="MoveToTarget" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("23_klx6h")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsPlayerInRange" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("24_42vwb")
+blackboard_key = "player_in_range"
+expression = "actor.player_in_range"
+can_overwrite_value = true
+
+[node name="IsAttackCooldown" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("25_ot1gi")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("26_8yj54")
+
+[node name="Alerted" type="Node" parent="GameEntities/Enemy13/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorAlertAnimFalse" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+
+[node name="IsHearingSounds" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Alerted"]
+script = ExtResource("28_cx2au")
+
+[node name="SetActorAlertAnimTrue" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+is_moving = true
+
+[node name="InvestigateSound" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Alerted"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("10_ni7pq")
+
+[node name="CheckTargetDist" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("29_1xrn0")
+
+[node name="MoveToInvestigate" type="Node" parent="GameEntities/Enemy13/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("30_oxboh")
+
+[node name="Idle" type="Node" parent="GameEntities/Enemy13/BTRoot/main"]
+script = ExtResource("33_shkh2")
+wait_time_ms = 3
+
+[node name="Enemy14" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(849, 177)
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 default_rotation = 5.0
 designated_alarm = NodePath("../Alarm")
 
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy14" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_5pp6p")
 actor_path = NodePath("..")
+<<<<<<< HEAD
 blackboard = NodePath("@Node@70940")
+=======
+blackboard = NodePath("@Node@39604")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 
 [node name="main" type="Node" parent="GameEntities/Enemy14/BTRoot"]
 script = ExtResource("5_4k4ib")
@@ -2260,14 +4145,899 @@ script = ExtResource("30_va8cp")
 script = ExtResource("33_c1ksj")
 wait_time_ms = 3
 
+<<<<<<< HEAD
 [node name="Enemy35" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_gbh86")]
 position = Vector2(600, -1235)
+=======
+[node name="Enemy15" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(851, -170)
+designated_alarm = NodePath("../Alarm")
+
+[node name="BTRoot" type="Node" parent="GameEntities/Enemy15" node_paths=PackedStringArray("blackboard")]
+script = ExtResource("4_v7c2k")
+actor_path = NodePath("..")
+blackboard = NodePath("@Node@39605")
+
+[node name="main" type="Node" parent="GameEntities/Enemy15/BTRoot"]
+script = ExtResource("5_axjxl")
+
+[node name="IsProcess" type="Node" parent="GameEntities/Enemy15/BTRoot/main"]
+script = ExtResource("6_r5mxv")
+
+[node name="SetOffAlarm" type="Node" parent="GameEntities/Enemy15/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy15/BTRoot/main/SetOffAlarm"]
+script = ExtResource("8_1ifia")
+
+[node name="IsRunningToAlarm" type="Node" parent="GameEntities/Enemy15/BTRoot/main/SetOffAlarm"]
+script = ExtResource("9_1ynxu")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy15/BTRoot/main/SetOffAlarm"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="MoveToAlarm" type="Node" parent="GameEntities/Enemy15/BTRoot/main/SetOffAlarm"]
+script = ExtResource("11_sifjl")
+
+[node name="BTSuccess" type="Node" parent="GameEntities/Enemy15/BTRoot/main/SetOffAlarm"]
+script = ExtResource("12_glj8h")
+
+[node name="BTSequence" type="Node" parent="GameEntities/Enemy15/BTRoot/main/SetOffAlarm/BTSuccess"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsNearAlarm" type="Node" parent="GameEntities/Enemy15/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("13_da36m")
+
+[node name="ActivateAlarm" type="Node" parent="GameEntities/Enemy15/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("14_ha145")
+
+[node name="RemoveAlarmDesignation" type="Node" parent="GameEntities/Enemy15/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("15_4js54")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy15/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("16_v0pr1")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy15/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsAttack" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="AddToBBoard" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("17_xp8b8")
+key = "player_in_view_box"
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("18_noi1c")
+
+[node name="CheckViewbox" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("19_taptg")
+
+[node name="RaycastCheck" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("20_1pc2w")
+
+[node name="BTSelector" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("5_axjxl")
+
+[node name="BTInverter" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("21_8u83l")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Attack/IsAttack/BTSelector/BTInverter"]
+script = ExtResource("8_1ifia")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("16_v0pr1")
+running_to_alarm = true
+
+[node name="SetState" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Attack"]
+script = ExtResource("22_kp4p5")
+
+[node name="MoveAndAttack" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="Move" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("18_noi1c")
+is_attacking = true
+
+[node name="MoveToTarget" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("23_klx6h")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsPlayerInRange" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("24_42vwb")
+blackboard_key = "player_in_range"
+expression = "actor.player_in_range"
+can_overwrite_value = true
+
+[node name="IsAttackCooldown" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("25_ot1gi")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("26_8yj54")
+
+[node name="Alerted" type="Node" parent="GameEntities/Enemy15/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorAlertAnimFalse" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+
+[node name="IsHearingSounds" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Alerted"]
+script = ExtResource("28_cx2au")
+
+[node name="SetActorAlertAnimTrue" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+is_moving = true
+
+[node name="InvestigateSound" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Alerted"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("10_ni7pq")
+
+[node name="CheckTargetDist" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("29_1xrn0")
+
+[node name="MoveToInvestigate" type="Node" parent="GameEntities/Enemy15/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("30_oxboh")
+
+[node name="Idle" type="Node" parent="GameEntities/Enemy15/BTRoot/main"]
+script = ExtResource("33_shkh2")
+wait_time_ms = 3
+
+[node name="Enemy16" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(1375, 15)
+default_rotation = 2.0
+designated_alarm = NodePath("../Alarm")
+
+[node name="BTRoot" type="Node" parent="GameEntities/Enemy16" node_paths=PackedStringArray("blackboard")]
+script = ExtResource("4_v7c2k")
+actor_path = NodePath("..")
+blackboard = NodePath("@Node@39606")
+
+[node name="main" type="Node" parent="GameEntities/Enemy16/BTRoot"]
+script = ExtResource("5_axjxl")
+
+[node name="IsProcess" type="Node" parent="GameEntities/Enemy16/BTRoot/main"]
+script = ExtResource("6_r5mxv")
+
+[node name="SetOffAlarm" type="Node" parent="GameEntities/Enemy16/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy16/BTRoot/main/SetOffAlarm"]
+script = ExtResource("8_1ifia")
+
+[node name="IsRunningToAlarm" type="Node" parent="GameEntities/Enemy16/BTRoot/main/SetOffAlarm"]
+script = ExtResource("9_1ynxu")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy16/BTRoot/main/SetOffAlarm"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="MoveToAlarm" type="Node" parent="GameEntities/Enemy16/BTRoot/main/SetOffAlarm"]
+script = ExtResource("11_sifjl")
+
+[node name="BTSuccess" type="Node" parent="GameEntities/Enemy16/BTRoot/main/SetOffAlarm"]
+script = ExtResource("12_glj8h")
+
+[node name="BTSequence" type="Node" parent="GameEntities/Enemy16/BTRoot/main/SetOffAlarm/BTSuccess"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsNearAlarm" type="Node" parent="GameEntities/Enemy16/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("13_da36m")
+
+[node name="ActivateAlarm" type="Node" parent="GameEntities/Enemy16/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("14_ha145")
+
+[node name="RemoveAlarmDesignation" type="Node" parent="GameEntities/Enemy16/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("15_4js54")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy16/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("16_v0pr1")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy16/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsAttack" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="AddToBBoard" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("17_xp8b8")
+key = "player_in_view_box"
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("18_noi1c")
+
+[node name="CheckViewbox" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("19_taptg")
+
+[node name="RaycastCheck" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("20_1pc2w")
+
+[node name="BTSelector" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("5_axjxl")
+
+[node name="BTInverter" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("21_8u83l")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Attack/IsAttack/BTSelector/BTInverter"]
+script = ExtResource("8_1ifia")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("16_v0pr1")
+running_to_alarm = true
+
+[node name="SetState" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Attack"]
+script = ExtResource("22_kp4p5")
+
+[node name="MoveAndAttack" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="Move" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("18_noi1c")
+is_attacking = true
+
+[node name="MoveToTarget" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("23_klx6h")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsPlayerInRange" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("24_42vwb")
+blackboard_key = "player_in_range"
+expression = "actor.player_in_range"
+can_overwrite_value = true
+
+[node name="IsAttackCooldown" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("25_ot1gi")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("26_8yj54")
+
+[node name="Alerted" type="Node" parent="GameEntities/Enemy16/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorAlertAnimFalse" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+
+[node name="IsHearingSounds" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Alerted"]
+script = ExtResource("28_cx2au")
+
+[node name="SetActorAlertAnimTrue" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+is_moving = true
+
+[node name="InvestigateSound" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Alerted"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("10_ni7pq")
+
+[node name="CheckTargetDist" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("29_1xrn0")
+
+[node name="MoveToInvestigate" type="Node" parent="GameEntities/Enemy16/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("30_oxboh")
+
+[node name="Idle" type="Node" parent="GameEntities/Enemy16/BTRoot/main"]
+script = ExtResource("33_shkh2")
+wait_time_ms = 3
+
+[node name="Enemy17" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(1170, 14)
+default_rotation = 1.0
+designated_alarm = NodePath("../Alarm")
+
+[node name="BTRoot" type="Node" parent="GameEntities/Enemy17" node_paths=PackedStringArray("blackboard")]
+script = ExtResource("4_v7c2k")
+actor_path = NodePath("..")
+blackboard = NodePath("@Node@39607")
+
+[node name="main" type="Node" parent="GameEntities/Enemy17/BTRoot"]
+script = ExtResource("5_axjxl")
+
+[node name="IsProcess" type="Node" parent="GameEntities/Enemy17/BTRoot/main"]
+script = ExtResource("6_r5mxv")
+
+[node name="SetOffAlarm" type="Node" parent="GameEntities/Enemy17/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy17/BTRoot/main/SetOffAlarm"]
+script = ExtResource("8_1ifia")
+
+[node name="IsRunningToAlarm" type="Node" parent="GameEntities/Enemy17/BTRoot/main/SetOffAlarm"]
+script = ExtResource("9_1ynxu")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy17/BTRoot/main/SetOffAlarm"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="MoveToAlarm" type="Node" parent="GameEntities/Enemy17/BTRoot/main/SetOffAlarm"]
+script = ExtResource("11_sifjl")
+
+[node name="BTSuccess" type="Node" parent="GameEntities/Enemy17/BTRoot/main/SetOffAlarm"]
+script = ExtResource("12_glj8h")
+
+[node name="BTSequence" type="Node" parent="GameEntities/Enemy17/BTRoot/main/SetOffAlarm/BTSuccess"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsNearAlarm" type="Node" parent="GameEntities/Enemy17/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("13_da36m")
+
+[node name="ActivateAlarm" type="Node" parent="GameEntities/Enemy17/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("14_ha145")
+
+[node name="RemoveAlarmDesignation" type="Node" parent="GameEntities/Enemy17/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("15_4js54")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy17/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("16_v0pr1")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy17/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsAttack" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="AddToBBoard" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("17_xp8b8")
+key = "player_in_view_box"
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("18_noi1c")
+
+[node name="CheckViewbox" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("19_taptg")
+
+[node name="RaycastCheck" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("20_1pc2w")
+
+[node name="BTSelector" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("5_axjxl")
+
+[node name="BTInverter" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("21_8u83l")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Attack/IsAttack/BTSelector/BTInverter"]
+script = ExtResource("8_1ifia")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("16_v0pr1")
+running_to_alarm = true
+
+[node name="SetState" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Attack"]
+script = ExtResource("22_kp4p5")
+
+[node name="MoveAndAttack" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="Move" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("18_noi1c")
+is_attacking = true
+
+[node name="MoveToTarget" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("23_klx6h")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsPlayerInRange" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("24_42vwb")
+blackboard_key = "player_in_range"
+expression = "actor.player_in_range"
+can_overwrite_value = true
+
+[node name="IsAttackCooldown" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("25_ot1gi")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("26_8yj54")
+
+[node name="Alerted" type="Node" parent="GameEntities/Enemy17/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorAlertAnimFalse" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+
+[node name="IsHearingSounds" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Alerted"]
+script = ExtResource("28_cx2au")
+
+[node name="SetActorAlertAnimTrue" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+is_moving = true
+
+[node name="InvestigateSound" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Alerted"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("10_ni7pq")
+
+[node name="CheckTargetDist" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("29_1xrn0")
+
+[node name="MoveToInvestigate" type="Node" parent="GameEntities/Enemy17/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("30_oxboh")
+
+[node name="Idle" type="Node" parent="GameEntities/Enemy17/BTRoot/main"]
+script = ExtResource("33_shkh2")
+wait_time_ms = 3
+
+[node name="Enemy18" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(1146, -134)
+designated_to_alarm = true
+designated_alarm = NodePath("../Alarm")
+
+[node name="BTRoot" type="Node" parent="GameEntities/Enemy18" node_paths=PackedStringArray("blackboard")]
+script = ExtResource("4_v7c2k")
+actor_path = NodePath("..")
+blackboard = NodePath("@Node@39608")
+
+[node name="main" type="Node" parent="GameEntities/Enemy18/BTRoot"]
+script = ExtResource("5_axjxl")
+
+[node name="IsProcess" type="Node" parent="GameEntities/Enemy18/BTRoot/main"]
+script = ExtResource("6_r5mxv")
+
+[node name="SetOffAlarm" type="Node" parent="GameEntities/Enemy18/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy18/BTRoot/main/SetOffAlarm"]
+script = ExtResource("8_1ifia")
+
+[node name="IsRunningToAlarm" type="Node" parent="GameEntities/Enemy18/BTRoot/main/SetOffAlarm"]
+script = ExtResource("9_1ynxu")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy18/BTRoot/main/SetOffAlarm"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="MoveToAlarm" type="Node" parent="GameEntities/Enemy18/BTRoot/main/SetOffAlarm"]
+script = ExtResource("11_sifjl")
+
+[node name="BTSuccess" type="Node" parent="GameEntities/Enemy18/BTRoot/main/SetOffAlarm"]
+script = ExtResource("12_glj8h")
+
+[node name="BTSequence" type="Node" parent="GameEntities/Enemy18/BTRoot/main/SetOffAlarm/BTSuccess"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsNearAlarm" type="Node" parent="GameEntities/Enemy18/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("13_da36m")
+
+[node name="ActivateAlarm" type="Node" parent="GameEntities/Enemy18/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("14_ha145")
+
+[node name="RemoveAlarmDesignation" type="Node" parent="GameEntities/Enemy18/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("15_4js54")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy18/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("16_v0pr1")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy18/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsAttack" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="AddToBBoard" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("17_xp8b8")
+key = "player_in_view_box"
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("18_noi1c")
+
+[node name="CheckViewbox" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("19_taptg")
+
+[node name="RaycastCheck" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("20_1pc2w")
+
+[node name="BTSelector" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("5_axjxl")
+
+[node name="BTInverter" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("21_8u83l")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Attack/IsAttack/BTSelector/BTInverter"]
+script = ExtResource("8_1ifia")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("16_v0pr1")
+running_to_alarm = true
+
+[node name="SetState" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Attack"]
+script = ExtResource("22_kp4p5")
+
+[node name="MoveAndAttack" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="Move" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("18_noi1c")
+is_attacking = true
+
+[node name="MoveToTarget" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("23_klx6h")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsPlayerInRange" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("24_42vwb")
+blackboard_key = "player_in_range"
+expression = "actor.player_in_range"
+can_overwrite_value = true
+
+[node name="IsAttackCooldown" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("25_ot1gi")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("26_8yj54")
+
+[node name="Alerted" type="Node" parent="GameEntities/Enemy18/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorAlertAnimFalse" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+
+[node name="IsHearingSounds" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Alerted"]
+script = ExtResource("28_cx2au")
+
+[node name="SetActorAlertAnimTrue" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+is_moving = true
+
+[node name="InvestigateSound" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Alerted"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("10_ni7pq")
+
+[node name="CheckTargetDist" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("29_1xrn0")
+
+[node name="MoveToInvestigate" type="Node" parent="GameEntities/Enemy18/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("30_oxboh")
+
+[node name="Idle" type="Node" parent="GameEntities/Enemy18/BTRoot/main"]
+script = ExtResource("33_shkh2")
+wait_time_ms = 3
+
+[node name="Enemy19" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(1369, -143)
+default_rotation = 3.0
+designated_to_alarm = true
+designated_alarm = NodePath("../Alarm")
+
+[node name="BTRoot" type="Node" parent="GameEntities/Enemy19" node_paths=PackedStringArray("blackboard")]
+script = ExtResource("4_v7c2k")
+actor_path = NodePath("..")
+blackboard = NodePath("@Node@39609")
+
+[node name="main" type="Node" parent="GameEntities/Enemy19/BTRoot"]
+script = ExtResource("5_axjxl")
+
+[node name="IsProcess" type="Node" parent="GameEntities/Enemy19/BTRoot/main"]
+script = ExtResource("6_r5mxv")
+
+[node name="SetOffAlarm" type="Node" parent="GameEntities/Enemy19/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy19/BTRoot/main/SetOffAlarm"]
+script = ExtResource("8_1ifia")
+
+[node name="IsRunningToAlarm" type="Node" parent="GameEntities/Enemy19/BTRoot/main/SetOffAlarm"]
+script = ExtResource("9_1ynxu")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy19/BTRoot/main/SetOffAlarm"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="MoveToAlarm" type="Node" parent="GameEntities/Enemy19/BTRoot/main/SetOffAlarm"]
+script = ExtResource("11_sifjl")
+
+[node name="BTSuccess" type="Node" parent="GameEntities/Enemy19/BTRoot/main/SetOffAlarm"]
+script = ExtResource("12_glj8h")
+
+[node name="BTSequence" type="Node" parent="GameEntities/Enemy19/BTRoot/main/SetOffAlarm/BTSuccess"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsNearAlarm" type="Node" parent="GameEntities/Enemy19/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("13_da36m")
+
+[node name="ActivateAlarm" type="Node" parent="GameEntities/Enemy19/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("14_ha145")
+
+[node name="RemoveAlarmDesignation" type="Node" parent="GameEntities/Enemy19/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("15_4js54")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy19/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("16_v0pr1")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy19/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsAttack" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="AddToBBoard" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("17_xp8b8")
+key = "player_in_view_box"
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("18_noi1c")
+
+[node name="CheckViewbox" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("19_taptg")
+
+[node name="RaycastCheck" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("20_1pc2w")
+
+[node name="BTSelector" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("5_axjxl")
+
+[node name="BTInverter" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("21_8u83l")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Attack/IsAttack/BTSelector/BTInverter"]
+script = ExtResource("8_1ifia")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("16_v0pr1")
+running_to_alarm = true
+
+[node name="SetState" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Attack"]
+script = ExtResource("22_kp4p5")
+
+[node name="MoveAndAttack" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="Move" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("18_noi1c")
+is_attacking = true
+
+[node name="MoveToTarget" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("23_klx6h")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsPlayerInRange" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("24_42vwb")
+blackboard_key = "player_in_range"
+expression = "actor.player_in_range"
+can_overwrite_value = true
+
+[node name="IsAttackCooldown" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("25_ot1gi")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("26_8yj54")
+
+[node name="Alerted" type="Node" parent="GameEntities/Enemy19/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorAlertAnimFalse" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+
+[node name="IsHearingSounds" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Alerted"]
+script = ExtResource("28_cx2au")
+
+[node name="SetActorAlertAnimTrue" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+is_moving = true
+
+[node name="InvestigateSound" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Alerted"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("10_ni7pq")
+
+[node name="CheckTargetDist" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("29_1xrn0")
+
+[node name="MoveToInvestigate" type="Node" parent="GameEntities/Enemy19/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("30_oxboh")
+
+[node name="Idle" type="Node" parent="GameEntities/Enemy19/BTRoot/main"]
+script = ExtResource("33_shkh2")
+wait_time_ms = 3
+
+[node name="Enemy20" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(1543, -1)
+default_rotation = 1.6
+designated_alarm = NodePath("../Alarm")
+
+[node name="BTRoot" type="Node" parent="GameEntities/Enemy20" node_paths=PackedStringArray("blackboard")]
+script = ExtResource("4_v7c2k")
+actor_path = NodePath("..")
+blackboard = NodePath("@Node@39610")
+
+[node name="main" type="Node" parent="GameEntities/Enemy20/BTRoot"]
+script = ExtResource("5_axjxl")
+
+[node name="IsProcess" type="Node" parent="GameEntities/Enemy20/BTRoot/main"]
+script = ExtResource("6_r5mxv")
+
+[node name="SetOffAlarm" type="Node" parent="GameEntities/Enemy20/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy20/BTRoot/main/SetOffAlarm"]
+script = ExtResource("8_1ifia")
+
+[node name="IsRunningToAlarm" type="Node" parent="GameEntities/Enemy20/BTRoot/main/SetOffAlarm"]
+script = ExtResource("9_1ynxu")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy20/BTRoot/main/SetOffAlarm"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="MoveToAlarm" type="Node" parent="GameEntities/Enemy20/BTRoot/main/SetOffAlarm"]
+script = ExtResource("11_sifjl")
+
+[node name="BTSuccess" type="Node" parent="GameEntities/Enemy20/BTRoot/main/SetOffAlarm"]
+script = ExtResource("12_glj8h")
+
+[node name="BTSequence" type="Node" parent="GameEntities/Enemy20/BTRoot/main/SetOffAlarm/BTSuccess"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsNearAlarm" type="Node" parent="GameEntities/Enemy20/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("13_da36m")
+
+[node name="ActivateAlarm" type="Node" parent="GameEntities/Enemy20/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("14_ha145")
+
+[node name="RemoveAlarmDesignation" type="Node" parent="GameEntities/Enemy20/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("15_4js54")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy20/BTRoot/main/SetOffAlarm/BTSuccess/BTSequence"]
+script = ExtResource("16_v0pr1")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy20/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsAttack" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="AddToBBoard" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("17_xp8b8")
+key = "player_in_view_box"
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("18_noi1c")
+
+[node name="CheckViewbox" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("19_taptg")
+
+[node name="RaycastCheck" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("20_1pc2w")
+
+[node name="BTSelector" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Attack/IsAttack"]
+script = ExtResource("5_axjxl")
+
+[node name="BTInverter" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("21_8u83l")
+
+[node name="IsDesignatedToAlarm" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Attack/IsAttack/BTSelector/BTInverter"]
+script = ExtResource("8_1ifia")
+
+[node name="SetRunningToAlarm" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Attack/IsAttack/BTSelector"]
+script = ExtResource("16_v0pr1")
+running_to_alarm = true
+
+[node name="SetState" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Attack"]
+script = ExtResource("22_kp4p5")
+
+[node name="MoveAndAttack" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Attack"]
+script = ExtResource("7_ycyfp")
+
+[node name="Move" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("10_ni7pq")
+is_run_speed = true
+
+[node name="SetActorAttackAnim" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("18_noi1c")
+is_attacking = true
+
+[node name="MoveToTarget" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Attack/MoveAndAttack/Move"]
+script = ExtResource("23_klx6h")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Attack/MoveAndAttack"]
+script = ExtResource("7_ycyfp")
+
+[node name="IsPlayerInRange" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("24_42vwb")
+blackboard_key = "player_in_range"
+expression = "actor.player_in_range"
+can_overwrite_value = true
+
+[node name="IsAttackCooldown" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("25_ot1gi")
+
+[node name="Attack" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Attack/MoveAndAttack/Attack"]
+script = ExtResource("26_8yj54")
+
+[node name="Alerted" type="Node" parent="GameEntities/Enemy20/BTRoot/main"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorAlertAnimFalse" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+
+[node name="IsHearingSounds" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Alerted"]
+script = ExtResource("28_cx2au")
+
+[node name="SetActorAlertAnimTrue" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Alerted"]
+script = ExtResource("27_u37jc")
+is_moving = true
+
+[node name="InvestigateSound" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Alerted"]
+script = ExtResource("7_ycyfp")
+
+[node name="SetActorMoveSpeed" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("10_ni7pq")
+
+[node name="CheckTargetDist" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("29_1xrn0")
+
+[node name="MoveToInvestigate" type="Node" parent="GameEntities/Enemy20/BTRoot/main/Alerted/InvestigateSound"]
+script = ExtResource("30_oxboh")
+
+[node name="Idle" type="Node" parent="GameEntities/Enemy20/BTRoot/main"]
+script = ExtResource("33_shkh2")
+wait_time_ms = 3
+
+[node name="Enemy35" parent="GameEntities" node_paths=PackedStringArray("designated_alarm") instance=ExtResource("3_syx1n")]
+position = Vector2(1286, -690)
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 designated_alarm = NodePath("../Alarm")
 
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy35" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_5pp6p")
 actor_path = NodePath("..")
+<<<<<<< HEAD
 blackboard = NodePath("@Node@70941")
+=======
+blackboard = NodePath("@Node@39611")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 
 [node name="main" type="Node" parent="GameEntities/Enemy35/BTRoot"]
 script = ExtResource("5_4k4ib")
@@ -2516,11 +5286,19 @@ script = ExtResource("40_ronxj")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
+<<<<<<< HEAD
 [node name="HUD" parent="UI" instance=ExtResource("41_uin4b")]
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(4, 4)
 tile_set = ExtResource("42_laihw")
+=======
+[node name="HUD" parent="UI" instance=ExtResource("41_cv5n6")]
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(4, 4)
+tile_set = ExtResource("42_kuyo0")
+>>>>>>> 77b215617eae90aec1943a356f05b017d6433bb0
 format = 2
 layer_0/name = "floor"
 layer_0/tile_data = PackedInt32Array(65537, 196610, 2, 1, 196610, 1, -65535, 196610, 1, -131071, 196610, 1, -196607, 196610, 0, -262143, 2, 0, -327679, 2, 0, -393215, 2, 0, -458751, 2, 0, -524287, 2, 0, -589823, 2, 0, -655359, 2, 0, -720895, 2, 0, -786431, 2, 0, -851967, 2, 0, -917503, 2, 0, 65536, 131074, 2, 0, 131074, 1, -65536, 131074, 1, -131072, 131074, 1, -196608, 131074, 0, -262144, 2, 0, -327680, 2, 0, -393216, 2, 0, -458752, 2, 0, -524288, 2, 0, -589824, 2, 0, -655360, 2, 0, -720896, 2, 0, -786432, 2, 0, -851968, 2, 0, -917504, 2, 0, 131071, 131074, 2, 65535, 131074, 1, -1, 131074, 1, -65537, 131074, 1, -196609, 2, 0, -262145, 2, 0, -327681, 2, 0, -393217, 2, 0, -458753, 2, 0, -524289, 2, 0, -589825, 2, 0, -655361, 2, 0, -720897, 2, 0, -786433, 2, 0, -851969, 2, 0, 131070, 131074, 2, 65534, 131074, 1, -2, 131074, 1, -65538, 131074, 1, -131074, 131074, 0, -196610, 2, 0, -262146, 2, 0, -327682, 2, 0, -393218, 2, 0, -458754, 2, 0, -524290, 2, 0, -589826, 2, 0, -655362, 2, 0, -720898, 2, 0, -786434, 2, 0, -851970, 2, 0, 131069, 65538, 2, 65533, 65538, 1, -3, 65538, 1, -65539, 65538, 1, -131075, 65538, 0, -196611, 2, 0, -262147, 2, 0, -327683, 2, 0, -393219, 2, 0, -458755, 2, 0, -524291, 2, 0, -589827, 2, 0, -655363, 2, 0, -720899, 2, 0, -786435, 2, 0, -851971, 2, 0, -786412, 2, 0, -851948, 2, 0, -917484, 2, 0, -983020, 2, 0, -786413, 2, 0, -851949, 2, 0, -917485, 2, 0, -983021, 2, 0, -786414, 2, 0, -851950, 2, 0, -917486, 2, 0, -983022, 2, 0, -851951, 2, 0, -917487, 2, 0, -983023, 2, 0, -786416, 2, 0, -851952, 2, 0, -917488, 2, 0, -983024, 2, 0, -786417, 2, 0, -851953, 2, 0, -917489, 2, 0, -983025, 2, 0, -851954, 2, 0, -917490, 2, 0, -983026, 2, 0, -786419, 2, 0, -851955, 2, 0, -917491, 2, 0, -983027, 2, 0, -786420, 2, 0, -851956, 2, 0, -917492, 2, 0, -983028, 2, 0, -786421, 2, 0, -851957, 2, 0, -917493, 2, 0, -983029, 2, 0, -786422, 2, 0, -851958, 2, 0, -917494, 2, 0, -983030, 2, 0, -786423, 2, 0, -851959, 2, 0, -917495, 2, 0, -983031, 2, 0, -786424, 2, 0, -851960, 2, 0, -917496, 2, 0, -983032, 2, 0, -786425, 2, 0, -851961, 2, 0, -917497, 2, 0, -983033, 2, 0, -786426, 2, 0, -851962, 2, 0, -917498, 2, 0, -983034, 2, 0, -786427, 2, 0, -851963, 2, 0, -917499, 2, 0, -983035, 2, 0, -393197, 2, 0, -458733, 2, 0, -524269, 2, 0, -589805, 2, 0, -655341, 2, 0, -720877, 2, 0, -393198, 2, 0, -458734, 2, 0, -524270, 2, 0, -589806, 2, 0, -655342, 2, 0, -720878, 2, 0, -393199, 2, 0, -458735, 2, 0, -524271, 2, 0, -655343, 2, 0, -720879, 2, 0, -393200, 2, 0, -458736, 2, 0, -524272, 2, 0, -589808, 2, 0, -393201, 2, 0, -458737, 2, 0, -524273, 2, 0, -589809, 2, 0, -393202, 2, 0, -458738, 2, 0, -524274, 2, 0, -655346, 2, 0, -720882, 2, 0, -393203, 2, 0, -458739, 2, 0, -524275, 2, 0, -589811, 2, 0, -655347, 2, 0, -720883, 2, 0, -393204, 2, 0, -458740, 2, 0, -524276, 2, 0, -589812, 2, 0, -655348, 2, 0, -720884, 2, 0, -393205, 2, 0, -458741, 2, 0, -524277, 2, 0, -589813, 2, 0, -655349, 2, 0, -720885, 2, 0, -393206, 2, 0, -458742, 2, 0, -524278, 2, 0, -589814, 2, 0, -655350, 2, 0, -720886, 2, 0, -393195, 2, 0, -458731, 2, 0, -524267, 2, 0, -589803, 2, 0, -655339, 2, 0, -720875, 2, 0, -786411, 2, 0, -393196, 2, 0, -458732, 2, 0, -524268, 2, 0, -589804, 2, 0, -655340, 2, 0, -720876, 2, 0, 65554, 2, 0, 18, 2, 0, -65518, 2, 0, -131054, 2, 0, -196590, 2, 0, -262126, 2, 0, 65553, 2, 0, 17, 2, 0, -65519, 2, 0, -131055, 2, 0, -196591, 2, 0, -262127, 2, 0, 65552, 2, 0, 16, 2, 0, -65520, 2, 0, -131056, 2, 0, -196592, 2, 0, -262128, 2, 0, 65551, 2, 0, 15, 2, 0, -65521, 2, 0, -131057, 2, 0, -196593, 2, 0, -262129, 2, 0, 14, 2, 0, -65522, 2, 0, -131058, 2, 0, -196594, 2, 0, -262130, 2, 0, 65549, 2, 0, 13, 2, 0, -65523, 2, 0, -131059, 2, 0, -196595, 2, 0, -262131, 2, 0, 12, 2, 0, -65524, 2, 0, -131060, 2, 0, -196596, 2, 0, -262132, 2, 0, 65547, 2, 0, 11, 2, 0, -65525, 2, 0, -131061, 2, 0, -196597, 2, 0, -262133, 2, 0, 65546, 2, 0, 10, 2, 0, -65526, 2, 0, -131062, 2, 0, -196598, 2, 0, -262134, 2, 0, -327664, 2, 0, -327665, 2, 0, -851947, 2, 0, -917483, 2, 0, -983019, 2, 0, -720869, 2, 0, -786405, 2, 0, -720870, 2, 0, -786406, 2, 0, -720871, 2, 0, -786407, 2, 0, -720872, 2, 0, -786408, 2, 0, -720873, 2, 0, -786409, 2, 0, -720874, 2, 0, -786410, 2, 0, -524259, 2, 0, -589795, 2, 0, -655331, 2, 0, -720867, 2, 0, -786403, 2, 0, -851939, 2, 0, -917475, 2, 0, -983011, 2, 0, -524260, 2, 0, -589796, 2, 0, -655332, 2, 0, -720868, 2, 0, -786404, 2, 0, -851940, 2, 0, -917476, 2, 0, -983012, 2, 0, -524261, 2, 0, -589797, 2, 0, -655333, 2, 0, -851941, 2, 0, -917477, 2, 0, -983013, 2, 0, -524262, 2, 0, -589798, 2, 0, -655334, 2, 0, -851942, 2, 0, -917478, 2, 0, -983014, 2, 0, -524263, 2, 0, -589799, 2, 0, -655335, 2, 0, -851943, 2, 0, -917479, 2, 0, -983015, 2, 0, -786428, 2, 0, -851964, 2, 0, -786429, 2, 0, -851965, 2, 0, -786430, 2, 0, -851966, 2, 0, -655351, 2, 0, -720887, 2, 0, -655352, 2, 0, -720888, 2, 0, -655353, 2, 0, -720889, 2, 0, -655354, 2, 0, -720890, 2, 0, -655355, 2, 0, -720891, 2, 0, -1048561, 2, 0, -1114097, 2, 0, -1179633, 2, 0, -1245169, 2, 0, -1048562, 2, 0, -1114098, 2, 0, -1179634, 2, 0, -1245170, 2, 0, -1245168, 2, 0, -1310704, 2, 0, -1376240, 2, 0, -1441776, 2, 0, -1507312, 2, 0, -1572848, 2, 0, -1310705, 2, 0, -1376241, 2, 0, -1441777, 2, 0, -1507313, 2, 0, -1572849, 2, 0, -1310706, 2, 0, -1376242, 2, 0, -1441778, 2, 0, -1507314, 2, 0, -1572850, 2, 0, -1245171, 2, 0, -1310707, 2, 0, -1376243, 2, 0, -1441779, 2, 0, -1507315, 2, 0, -1572851, 2, 0, -1245172, 2, 0, -1310708, 2, 0, -1376244, 2, 0, -1441780, 2, 0, -1507316, 2, 0, -1572852, 2, 0, -1245173, 2, 0, -1310709, 2, 0, -1376245, 2, 0, -1441781, 2, 0, -1507317, 2, 0, -1572853, 2, 0, -1245174, 2, 0, -1310710, 2, 0, -1376246, 2, 0, -1441782, 2, 0, -1507318, 2, 0, -1572854, 2, 0, -1245175, 2, 0, -1310711, 2, 0, -1376247, 2, 0, -1441783, 2, 0, -1507319, 2, 0, -1572855, 2, 0, -1245176, 2, 0, -1310712, 2, 0, -1376248, 2, 0, -1441784, 2, 0, -1507320, 2, 0, -1572856, 2, 0, 262158, 2, 0, 196622, 2, 0, 131086, 2, 0, 262157, 2, 0, 196621, 2, 0, 131085, 2, 0, 262156, 2, 0, 196620, 2, 0, 262155, 2, 0, 196619, 2, 0, 131083, 2, 0, 262154, 2, 0, 196618, 2, 0, 131082, 2, 0, -655326, 2, 0, -720862, 2, 0, -786398, 2, 0, -851934, 2, 0, -655327, 2, 0, -720863, 2, 0, -786399, 2, 0, -851935, 2, 0, -655328, 2, 0, -720864, 2, 0, -786400, 2, 0, -851936, 2, 0, -655329, 2, 0, -720865, 2, 0, -786401, 2, 0, -851937, 2, 0, -1310714, 2, 0, -1376250, 2, 0, -1441786, 2, 0, -1507322, 2, 0, -1310715, 2, 0, -1376251, 2, 0, -1441787, 2, 0, -1507323, 2, 0, -1310716, 2, 0, -1376252, 2, 0, -1441788, 2, 0, -1507324, 2, 0, -1310717, 2, 0, -1376253, 2, 0, -1441789, 2, 0, -1507325, 2, 0, -1376249, 2, 0, -1441785, 2, 0, -720866, 2, 0, -786402, 2, 0, -131073, 131074, 0, 131084, 2, 0, 65548, 2, 0, 65550, 2, 0)
