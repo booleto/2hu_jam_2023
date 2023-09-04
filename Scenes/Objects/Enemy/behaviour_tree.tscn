@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://da010n85citpj"]
+[gd_scene load_steps=31 format=3 uid="uid://da010n85citpj"]
 
 [ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/BTRoot.gd" id="1_cklwv"]
 [ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Composite/BTSelector.gd" id="2_hgjyo"]
@@ -30,12 +30,11 @@
 [ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/IsTurnCooldown.gd" id="28_c7522"]
 [ext_resource type="Script" path="res://Scripts/Enemy/BehaviorTree/TurnRandomly.gd" id="29_gmm5b"]
 [ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Nodes/Leaves/BTActionWait.gd" id="30_uevi5"]
-[ext_resource type="Script" path="res://addons/yet_another_behavior_tree/src/Blackboard/BTBlackboard.gd" id="31_1tvs3"]
 
 [node name="BehaviourTree" type="Node" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("1_cklwv")
 actor_path = NodePath("..")
-blackboard = NodePath("@Node@21163")
+blackboard = NodePath("@Node@19989")
 
 [node name="main" type="Node" parent="."]
 script = ExtResource("2_hgjyo")
@@ -184,8 +183,3 @@ script = ExtResource("29_gmm5b")
 [node name="Idle" type="Node" parent="main/BTSelector"]
 script = ExtResource("30_uevi5")
 wait_time_ms = 3
-
-[node name="_Node_127477" type="Node" parent="."]
-script = ExtResource("31_1tvs3")
-
-[node name="Node" type="Node" parent="."]
