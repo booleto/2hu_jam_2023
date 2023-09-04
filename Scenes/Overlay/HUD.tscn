@@ -1,9 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://dxi0fnvj5y78i"]
+[gd_scene load_steps=19 format=3 uid="uid://dxi0fnvj5y78i"]
 
 [ext_resource type="Script" path="res://Scenes/Overlay/hp_label.gd" id="1_m10vh"]
 [ext_resource type="Script" path="res://Scenes/Overlay/hp_bar.gd" id="1_ubtj7"]
+[ext_resource type="Texture2D" uid="uid://6m2ymt8gujgl" path="res://Assets/Sprites/HUD/danger.png" id="3_n1vt6"]
 [ext_resource type="Script" path="res://Scenes/Overlay/danger_bar.gd" id="3_xhd2x"]
 [ext_resource type="Script" path="res://addons/segmented_bar/segmented_bar.gd" id="4_2br3r"]
+[ext_resource type="Texture2D" uid="uid://diemqdxg1vao0" path="res://Assets/Sprites/Fairies/Cirnoidle.png" id="6_8kwu5"]
+[ext_resource type="Texture2D" uid="uid://ijafuuyq4mx3" path="res://Assets/Sprites/Fairies/Clownidle.png" id="7_swlhf"]
+[ext_resource type="Texture2D" uid="uid://br6kc3ix5y8k4" path="res://Assets/Sprites/Fairies/Staridle.png" id="8_skm3k"]
+[ext_resource type="Texture2D" uid="uid://duisj0whkl5yl" path="res://Assets/Sprites/Fairies/SunnyIdle.png" id="9_vd3qs"]
+[ext_resource type="Texture2D" uid="uid://b5cl3s0qwnodt" path="res://Assets/Sprites/Fairies/Lunaidle.png" id="10_tl43p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pjxci"]
 bg_color = Color(0.705882, 0, 0, 1)
@@ -14,6 +20,26 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_60418"]
 gradient = SubResource("Gradient_d8f16")
 width = 20
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16qoa"]
+atlas = ExtResource("6_8kwu5")
+region = Rect2(8, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypjn2"]
+atlas = ExtResource("7_swlhf")
+region = Rect2(8, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcb6d"]
+atlas = ExtResource("8_skm3k")
+region = Rect2(8, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_soy6g"]
+atlas = ExtResource("9_vd3qs")
+region = Rect2(8, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvs53"]
+atlas = ExtResource("10_tl43p")
+region = Rect2(8, 0, 16, 16)
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -27,7 +53,7 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_top = -50.0
-offset_right = 272.0
+offset_right = 192.0
 grow_vertical = 0
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -37,7 +63,25 @@ theme_override_constants/margin_bottom = 5
 [node name="Panel" type="Panel" parent="HP"]
 layout_mode = 2
 
-[node name="Bar" type="ProgressBar" parent="HP"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HP"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Text" type="Label" parent="HP/HBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "HP"
+horizontal_alignment = 1
+
+[node name="HP" type="MarginContainer" parent="HP/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Bar" type="ProgressBar" parent="HP/HBoxContainer/HP"]
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_styles/fill = SubResource("StyleBoxFlat_pjxci")
@@ -48,7 +92,7 @@ rounded = true
 show_percentage = false
 script = ExtResource("1_ubtj7")
 
-[node name="Text" type="Label" parent="HP"]
+[node name="Text" type="Label" parent="HP/HBoxContainer/HP"]
 layout_mode = 2
 text = "0 / 5"
 horizontal_alignment = 1
@@ -80,6 +124,8 @@ layout_mode = 2
 [node name="TextureRect" type="TextureRect" parent="Danger/HBoxContainer"]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
+texture = ExtResource("3_n1vt6")
+expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Danger/HBoxContainer"]
 layout_mode = 2
@@ -108,8 +154,8 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -272.0
-offset_top = -50.0
+offset_left = -192.0
+offset_top = -60.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_constants/margin_left = 5
@@ -120,15 +166,44 @@ theme_override_constants/margin_bottom = 5
 [node name="Panel" type="Panel" parent="Fairies"]
 layout_mode = 2
 
-[node name="Bar" type="ProgressBar" parent="Fairies"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Fairies"]
 layout_mode = 2
-size_flags_vertical = 1
-rounded = true
-show_percentage = false
-script = ExtResource("1_ubtj7")
 
-[node name="Text" type="Label" parent="Fairies"]
+[node name="MarginContainer" type="MarginContainer" parent="Fairies/HBoxContainer"]
 layout_mode = 2
-text = "0 / 5"
-horizontal_alignment = 1
-script = ExtResource("1_m10vh")
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="Selected" type="TextureRect" parent="Fairies/HBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+texture = SubResource("AtlasTexture_16qoa")
+
+[node name="CenterContainer" type="CenterContainer" parent="Fairies/HBoxContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="HBoxContainer" parent="Fairies/HBoxContainer/CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="1" type="TextureRect" parent="Fairies/HBoxContainer/CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = SubResource("AtlasTexture_ypjn2")
+
+[node name="2" type="TextureRect" parent="Fairies/HBoxContainer/CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = SubResource("AtlasTexture_lcb6d")
+
+[node name="3" type="TextureRect" parent="Fairies/HBoxContainer/CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = SubResource("AtlasTexture_soy6g")
+
+[node name="4" type="TextureRect" parent="Fairies/HBoxContainer/CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = SubResource("AtlasTexture_hvs53")
