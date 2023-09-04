@@ -59,7 +59,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_ttxk2")
 actor_path = NodePath("..")
+<<<<<<< HEAD
+blackboard = NodePath("@Node@46291")
+=======
 blackboard = NodePath("@Node@34209")
+>>>>>>> 4957f5afdfccd95dd6f148e71d75d28423f2ad89
 
 [node name="main" type="Node" parent="GameEntities/Enemy/BTRoot"]
 script = ExtResource("5_vyara")
@@ -217,7 +221,11 @@ designated_alarm = NodePath("../Alarm")
 [node name="BTRoot" type="Node" parent="GameEntities/Enemy2" node_paths=PackedStringArray("blackboard")]
 script = ExtResource("4_ttxk2")
 actor_path = NodePath("../../Enemy")
+<<<<<<< HEAD
+blackboard = NodePath("@Node@46292")
+=======
 blackboard = NodePath("@Node@34210")
+>>>>>>> 4957f5afdfccd95dd6f148e71d75d28423f2ad89
 
 [node name="main" type="Node" parent="GameEntities/Enemy2/BTRoot"]
 script = ExtResource("5_vyara")
