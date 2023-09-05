@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="2hu_jam_2023"
-run/main_scene="res://Scenes/Levels/map2.tscn"
+run/main_scene="res://Scenes/Levels/map1.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 GameState="*res://Scripts/GameState/game_state.gd"
 PlayerData="*res://Scripts/Player/player_data.gd"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [editor_plugins]
 
@@ -85,3 +89,4 @@ ui_pause={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"

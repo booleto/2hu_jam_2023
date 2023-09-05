@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dtc0jokav0104"
+path="res://.godot/imported/Stage theme Not Too Quiet Zikweb.mp3-8e2b385417b92e6836fd32de0ec1b2d0.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Stage theme Not Too Quiet Zikweb.mp3"
+dest_files=["res://.godot/imported/Stage theme Not Too Quiet Zikweb.mp3-8e2b385417b92e6836fd32de0ec1b2d0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

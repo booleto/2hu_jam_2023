@@ -16,6 +16,11 @@ var uses_left: int = 4 # số lần dùng tiên còn lại
 func _init():
 	reset()
 
+func _process(delta):
+	if danger == MAX_DANGER:
+		reset()
+		get_tree().reload_current_scene()
+
 func reset():
 	hp = 3
 	danger = 0

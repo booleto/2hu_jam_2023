@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqv2lewrayt0a"]
+
+[ext_resource type="Script" path="res://Scripts/PlayButton/PlayButton.gd" id="1_j3gvd"]
+[ext_resource type="Texture2D" uid="uid://cupfqhqreokru" path="res://Assets/Sprites/HUD/cg1.png" id="2_h546k"]
+
+[node name="menu" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_h546k")
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 427.0
+offset_top = 261.0
+offset_right = 690.0
+offset_bottom = 368.0
+script = ExtResource("1_j3gvd")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 538.0
+offset_top = 307.0
+offset_right = 577.0
+offset_bottom = 333.0
+text = "PLAY"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
